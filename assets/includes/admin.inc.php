@@ -22,9 +22,9 @@
                     $_SESSION['username'] = $admin_username;
                     $_SESSION['privilege'] = $db_privilege;
 
-                    $feedback = "success!";
+                    $feedback = "Inloggningen lyckades!";
                 } else {
-                    $feedback = "Incorrect username or password. Please try again.";
+                    $feedback = "Felaktigt lösenord eller användarnamn, försök igen!";
                 }
                 $stmt->close();
             } 
