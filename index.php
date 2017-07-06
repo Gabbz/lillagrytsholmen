@@ -38,7 +38,7 @@ include 'assets/includes/register.php';
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-pp"></span>
+							<span class="icon fa-anchor"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
