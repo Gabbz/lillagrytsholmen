@@ -8,7 +8,6 @@ session_start();
 <?php
 
 include 'assets/includes/admin.inc.php';
-include 'assets/includes/logout.inc.php';
 
 ?>
 
@@ -58,7 +57,7 @@ include 'assets/includes/logout.inc.php';
 								<ul>
 									<?php 
 										if (isset($_SESSION['username'])) {
-											echo "<li><a href=''>Logga ut</a></li>";
+											echo "<li><a href='assets/includes/logout.inc.php'>Logga ut</a></li>";
 										} else {
 											echo "<li><a href='#login'>Logga in</a></li>";
 										} 
