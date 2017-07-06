@@ -9,11 +9,7 @@
     $priv ="1";
     $feedback ="Login, register or choose another tab!";
 
-    
-    $username = htmlspecialchars(trim($_POST['username_register']));
-    $password = htmlspecialchars(trim($_POST['password_register']));
-
-    $password_encrypt = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]); // Encrypted Password
+    $password_encrypt = password_hash($password, PASSWORD_DEFAULT); // Encrypted Password
 
     // Query som skapar en ny användare i databasen
     $query = "INSERT INTO admin VALUE(?,?,?)";

@@ -3,32 +3,26 @@
 <?php
     include('db_connect.inc.php');
 
-    // VARIABLE INITIATION
-    $username ="reggiepalmer";
-    $password ="hejsan123";
-    $priv ="1";
-    $feedback ="Login, register or choose another tab!";
+    if (isset($_POST['register_submit']) && $_SESSION['privilege'] == 1) {
 
-    $password_encrypt = password_hash($password, PASSWORD_DEFAULT); // Encrypted Password
+        $register_username = htmlspecialchars(trim($_POST['register_username']));
+        $register_password = htmlspecialchars(trim($_POST['register_password']));
+        $priv = "0";
 
-    // Query som skapar en ny användare i databasen
-    $query = "INSERT INTO admin VALUE(?,?,?)";
-    if ($stmt = $mysqli->prepare($query)) {
-        $stmt->bind_param("ssi", $username, $password_encrypt, $priv);
-        if ($stmt->execute()) {
-            $feedback = "User "  .$username. " created successfully! You can now log in.";
-        } else {
-            $feedback = "Could not create user " .$username. ".";
+        $password_encrypt = password_hash($register_password, PASSWORD_DEFAULT); // Encrypted Password
+
+        // Query som skapar en ny användare i databasen
+        $query = "INSERT INTO users VALUE(?,?,?)";
+        if ($stmt = $mysqli->prepare($query)) {
+            $stmt->bind_param("ssi", $register_username, $password_encrypt, $priv);
+            if ($stmt->execute()) {
+                $feedback = "User "  .$register_username. " created successfully!";
+            } else {
+                $feedback = "Could not create user " .$register_username. ".";
+            }
+            $stmt->close();
+            
         }
-        $stmt->close();
-        
     }
 ?>
 
-
-<html>
-    <body>
-        <p>ALIVE</p>
-        <?php print $feedback; ?>
-    </body>
-</html>

@@ -1,5 +1,4 @@
 <?php
-//session_save_path('tmp/');
 session_start();
 ?>
 
@@ -77,9 +76,7 @@ include 'assets/includes/admin.inc.php';
 						<!-- admin_login -->
 							<article id="admin">
 								<h2 class="major">admin login</h2>
-								<p> <?php print $feedback; ?></p>
-								<span class="image main"><img src="images/success.jpg" alt="" /></span>
-								<form name="admin_form" id="admin_form" method="post">
+								<form name="admin_form" id="admin_form" method="post" action="#">
 									<label for="admin_login">Username</label>
 									<input type="text" name="admin_username" id="admin_username" value="<?php print $admin_username;?>" placeholder="Enter admin username" />
 									
@@ -101,11 +98,10 @@ include 'assets/includes/admin.inc.php';
 						<!-- login -->
 							<article id="login">
 								<h2 class="major">login</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) { echo "action='assets/includes/logout.inc.php'"; } ?> >
+								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) {echo "action='assets/includes/logout.inc.php'";}else {echo "action='#'";} ?> >
 									<label>Username</label>
 									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
-									<br />
+									
 									<label for="password_login">Password</label>
 									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
 									
@@ -114,7 +110,7 @@ include 'assets/includes/admin.inc.php';
 											if (isset($_SESSION['username'])) {
 												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
 											} else {
-												echo "<li><input type='submit' id='admin_submit' name='admin_submit' value='Login' /></li>";
+												echo "<li><input type='submit' id='login_submit' name='login_submit' value='Login' /></li>";
 											} 
 										?>
 									</ul>
@@ -123,18 +119,17 @@ include 'assets/includes/admin.inc.php';
 
 						<!-- register -->
 							<article id="register">
-								<h2 class="major"><a href="#login">login</a></h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<h2 class="major">Register</h2>
 								<form name="register_form" id="login_form" method="post">
+									<?php echo $feedback; ?>
 									<label>Username</label>
 									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
-									<br />
+
 									<label>Password</label>
 									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
-									<br />
-									<div class="action_btns">
-										<div class="one_half last"><input type="submit" id="login_submit" name="login_submit" value="Login" class="btn_login" /></div>
-									</div>
+									<ul class="actions">
+										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
+									</ul>
 								</form>
 							</article>
 
