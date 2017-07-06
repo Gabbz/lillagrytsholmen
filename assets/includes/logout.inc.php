@@ -3,7 +3,7 @@
     session_save_path('tmp/');
     session_start();
 
-    if (isset($_SESSION['username'])) {
+    //if (isset($_SESSION['username'])) {
         
         // Förstör sessionen
         session_destroy();
@@ -17,7 +17,7 @@
 
         $_SESSION = [];
 
-    }
+    //}
     
     //header("Location: /lillagrytsholmen.se/"); /* Redirect browser */
     //exit();
