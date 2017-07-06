@@ -8,6 +8,6 @@
         session_destroy();
     }
 
-    header("Location: /lillagrytsholmen.se"); /* Redirect browser */
+    header("Location: http://google.se"); /* Redirect browser */
     exit();
 ?>
