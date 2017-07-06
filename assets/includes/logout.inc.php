@@ -1,24 +1,24 @@
 <?php
 
-    session_save_path('tmp/');
+    //session_save_path('tmp/');
     session_start();
 
     //if (isset($_SESSION['username'])) {
+
         
-        // Förstör sessionen
-        if (session_destroy()) {
-            echo "True!";
+        $_SESSION = array();
+
+        if (ini_get("session.use_cookies")) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 42000,
+                $params["path"], $params["domain"],
+                $params["secure"], $params["httponly"]
+            );
         }
 
-        // Tar bort alla sessionsvariabler
-        session_unset();
+        // Förstör sessionen
+        session_destroy()
 
-
-        echo $_SESSION['username'];
-
-
-
-        $_SESSION = [];
 
     //}
     
