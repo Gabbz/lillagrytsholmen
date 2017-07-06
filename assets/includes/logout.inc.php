@@ -7,7 +7,5 @@
     // Förstör sessionen
         session_destroy();
     }
-
-    header("Location: https://www.google.se"); /* Redirect browser */
-    exit();
+    echo '<script>(function (){window.location.href = "/lillagrytsholmen.se/index.php";}();</script>';
 ?>
