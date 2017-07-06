@@ -8,5 +8,6 @@
         session_destroy();
     }
 
-    header("Location: http://google.se"); /* Redirect browser */
+    header("Location: https://www.google.se"); /* Redirect browser */
+    exit();
 ?>
