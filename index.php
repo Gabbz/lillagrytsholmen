@@ -66,7 +66,7 @@ include 'assets/includes/logout.inc.php';
 									<li><a href="#docs">Styrelsedokument</a></li>
 									<li><a href="#photos">Fotoalbum</a></li>
 									<li><a href="#book">Boka Stugan</a></li>
-									<!--<li><a href="#elements">Elements</a></li>-->
+									
 								</ul>
 							</form>
 						</nav>
