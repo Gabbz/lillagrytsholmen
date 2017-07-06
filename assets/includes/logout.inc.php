@@ -17,7 +17,7 @@
         } */
 
         // Förstör sessionen
-        session_destroy()
+        session_destroy();
 
 
     }
