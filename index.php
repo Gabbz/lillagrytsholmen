@@ -58,7 +58,7 @@ include 'assets/includes/logout.inc.php';
 								<ul>
 									<?php 
 										if (isset($_SESSION['username'])) {
-											echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+											echo "<li><a href=''>Logga ut</a></li>";
 										} else {
 											echo "<li><a href='#login'>Logga in</a></li>";
 										} 
@@ -66,7 +66,7 @@ include 'assets/includes/logout.inc.php';
 									<li><a href="#docs">Styrelsedokument</a></li>
 									<li><a href="#photos">Fotoalbum</a></li>
 									<li><a href="#book">Boka Stugan</a></li>
-									
+									<!--<li><a href="#elements">Elements</a></li>-->
 								</ul>
 							</form>
 						</nav>
@@ -103,7 +103,7 @@ include 'assets/includes/logout.inc.php';
 							<article id="login">
 								<h2 class="major">login</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<form name="login_form" id="login_form" method="post">
+								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) { echo "action='assets/includes/logout.inc.php'"; } ?> >
 									<label>Username</label>
 									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
 									<br />
