@@ -7,6 +7,8 @@ session_start();
 <?php
 
 include 'assets/includes/admin.inc.php';
+include 'assets/includes/login.inc.php';
+include 'assets/includes/register.php';
 
 ?>
 
