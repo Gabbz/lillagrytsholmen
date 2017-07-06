@@ -6,13 +6,16 @@
     //if (isset($_SESSION['username'])) {
         
         // Förstör sessionen
-        echo session_destroy();
+        if (session_destroy()) {
+            echo "True!";
+        }
 
         // Tar bort alla sessionsvariabler
         session_unset();
 
 
         echo $_SESSION['username'];
+
 
 
         $_SESSION = [];
