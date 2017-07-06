@@ -1,0 +1,477 @@
+<?php
+session_save_path('tmp/');
+session_start();
+?>
+
+<!DOCTYPE HTML>
+
+<?php
+
+include 'assets/includes/admin.inc.php';
+include 'assets/includes/logout.inc.php';
+
+?>
+
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lilla Grytsholmen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+				<?php include 'assets/includes/db_connect.inc.php'; ?>
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-diamond"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Lilla Grytsholmen</h1>
+								<p>Ett paradis <a href="https://www.google.se/maps/place/Krusenhov+Lilla+Grytsholmen+6,+616+90+%C3%85by/@58.631264,16.245232,13z/data=!4m5!3m4!1s0x465930741ff80d99:0x2ee6ed98cac42bca!8m2!3d58.6293777!4d16.2734717" target="_blank">
+								beläget längst in i bråviken</a>, strax utanför lindö småbåtshamn, Norrköping</p>
+								<p>
+									<!-- MAKE PRETTIER -->
+									<ul class="icons" style="margin:0px;">
+										<li><a href="https://www.facebook.com/Kustkrokarna/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									</ul>
+								</p>
+							</div>
+						</div>
+						<nav>
+							<form method="post">
+								<ul>
+									<?php 
+										if (isset($_SESSION['username'])) {
+											echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+										} else {
+											echo "<li><a href='#login'>Logga in</a></li>";
+										} 
+									?>
+									<li><a href="#docs">Styrelsedokument</a></li>
+									<li><a href="#photos">Fotoalbum</a></li>
+									<li><a href="#book">Boka Stugan</a></li>
+									<!--<li><a href="#elements">Elements</a></li>-->
+								</ul>
+							</form>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- admin_login -->
+							<article id="admin">
+								<h2 class="major">admin login</h2>
+								<p> <?php print $feedback; ?></p>
+								<span class="image main"><img src="images/success.jpg" alt="" /></span>
+								<form name="admin_form" id="admin_form" method="post">
+									<label for="admin_login">Username</label>
+									<input type="text" name="admin_username" id="admin_username" value="<?php print $admin_username;?>" placeholder="Enter admin username" />
+									
+									<label for="admin_password">Password</label>
+									<input type="password" name="admin_password" id="admin_password" value="<?php print $admin_password;?>" placeholder="Enter admin password" />
+									
+									<ul class="actions">
+										<?php 
+											if (isset($_SESSION['username'])) {
+												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+											} else {
+												echo "<li><input type='submit' id='admin_submit' name='admin_submit' value='Login' /></li>";
+											} 
+										?>
+									</ul>
+								</form>
+							</article>
+
+						<!-- login -->
+							<article id="login">
+								<h2 class="major">login</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<form name="login_form" id="login_form" method="post">
+									<label>Username</label>
+									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
+									<br />
+									<label for="password_login">Password</label>
+									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
+									
+									<ul class="actions">
+										<?php 
+											if (isset($_SESSION['username'])) {
+												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+											} else {
+												echo "<li><input type='submit' id='admin_submit' name='admin_submit' value='Login' /></li>";
+											} 
+										?>
+									</ul>
+								</form>
+							</article>
+
+						<!-- register -->
+							<article id="register">
+								<h2 class="major"><a href="#login">login</a></h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<form name="register_form" id="login_form" method="post">
+									<label>Username</label>
+									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
+									<br />
+									<label>Password</label>
+									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
+									<br />
+									<div class="action_btns">
+										<div class="one_half last"><input type="submit" id="login_submit" name="login_submit" value="Login" class="btn_login" /></div>
+									</div>
+								</form>
+							</article>
+
+						<!-- docs -->
+							<article id="docs">
+								<h2 class="major">Styrelsedokument</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								
+							</article>
+
+						<!-- photos -->
+							<article id="photos">
+								<h2 class="major">Fotoalbum</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							</article>
+
+						<!-- book -->
+							<article id="book">
+								<h2 class="major">Boka Stugan</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+									
+							</article>
+
+							<!-- contact -->
+							<article id="contact">
+								<h2 class="major">Kontakta administratör</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- DEBUG -->
+
+							<!-- Elements -->
+								<article id="elements">
+									<h2 class="major">Elements</h2>
+
+									<section>
+										<h3 class="major">Text</h3>
+										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+										<hr />
+										<h2>Heading Level 2</h2>
+										<h3>Heading Level 3</h3>
+										<h4>Heading Level 4</h4>
+										<h5>Heading Level 5</h5>
+										<h6>Heading Level 6</h6>
+										<hr />
+										<h4>Blockquote</h4>
+										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+										<h4>Preformatted</h4>
+										<pre><code>i = 0;
+
+										while (!deck.isInOrder()) {
+											print 'Iteration ' + i;
+											deck.shuffle();
+											i++;
+										}
+
+										print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+									</section>
+
+									<section>
+										<h3 class="major">Lists</h3>
+
+										<h4>Unordered</h4>
+										<ul>
+											<li>Dolor pulvinar etiam.</li>
+											<li>Sagittis adipiscing.</li>
+											<li>Felis enim feugiat.</li>
+										</ul>
+
+										<h4>Alternate</h4>
+										<ul class="alt">
+											<li>Dolor pulvinar etiam.</li>
+											<li>Sagittis adipiscing.</li>
+											<li>Felis enim feugiat.</li>
+										</ul>
+
+										<h4>Ordered</h4>
+										<ol>
+											<li>Dolor pulvinar etiam.</li>
+											<li>Etiam vel felis viverra.</li>
+											<li>Felis enim feugiat.</li>
+											<li>Dolor pulvinar etiam.</li>
+											<li>Etiam vel felis lorem.</li>
+											<li>Felis enim et feugiat.</li>
+										</ol>
+										<h4>Icons</h4>
+										<ul class="icons">
+											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										</ul>
+
+										<h4>Actions</h4>
+										<ul class="actions">
+											<li><a href="#" class="button special">Default</a></li>
+											<li><a href="#" class="button">Default</a></li>
+										</ul>
+										<ul class="actions vertical">
+											<li><a href="#" class="button special">Default</a></li>
+											<li><a href="#" class="button">Default</a></li>
+										</ul>
+									</section>
+
+									<section>
+										<h3 class="major">Table</h3>
+										<h4>Default</h4>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+										<h4>Alternate</h4>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+
+									<section>
+										<h3 class="major">Buttons</h3>
+										<ul class="actions">
+											<li><a href="#" class="button special">Special</a></li>
+											<li><a href="#" class="button">Default</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button small">Small</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button special icon fa-download">Icon</a></li>
+											<li><a href="#" class="button icon fa-download">Icon</a></li>
+										</ul>
+										<ul class="actions">
+											<li><span class="button special disabled">Disabled</span></li>
+											<li><span class="button disabled">Disabled</span></li>
+										</ul>
+									</section>
+
+									<section>
+										<h3 class="major">Form</h3>
+										<form method="post" action="#">
+											<div class="field half first">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<div class="select-wrapper">
+													<select name="demo-category" id="demo-category">
+														<option value="">-</option>
+														<option value="1">Manufacturing</option>
+														<option value="1">Shipping</option>
+														<option value="1">Administration</option>
+														<option value="1">Human Resources</option>
+													</select>
+												</div>
+											</div>
+											<div class="field half first">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half first">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="special" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</form>
+									</section>
+
+								</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Jonas Borg - 2017 - Frågor? <a href="#contact">Kontakta mig!</a> <?php if (isset($_SESSION['username'])) echo "Inloggad: " . $_SESSION['username']; ?></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
