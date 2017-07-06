@@ -4,16 +4,21 @@
     session_start();
 
     if (isset($_SESSION['username'])) {
+        
+        // Förstör sessionen
+        session_destroy();
+
         // Tar bort alla sessionsvariabler
         session_unset();
 
-        // Förstör sessionen
-        session_destroy();
+
+        echo "Inne!";
+
 
         $_SESSION = [];
 
     }
     
-    header("Location: /lillagrytsholmen.se/"); /* Redirect browser */
-    exit();
+    //header("Location: /lillagrytsholmen.se/"); /* Redirect browser */
+    //exit();
 ?>
