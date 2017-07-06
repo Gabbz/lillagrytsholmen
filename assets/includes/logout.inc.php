@@ -1,5 +1,8 @@
 <?php
 
+    session_save_path('tmp/');
+    session_start();
+
     if (isset($_SESSION['username'])) {
         // Tar bort alla sessionsvariabler
         session_unset();
@@ -8,8 +11,6 @@
         session_destroy();
     }
     
-    header("Location: /lillagrytsholmen.se/index.php"); /* Redirect browser */
+    header("Location: /lillagrytsholmen.se/"); /* Redirect browser */
     exit();
-
-    //echo '<script>(function (){window.location.href = "/lillagrytsholmen.se/index.php";}();</script>';
 ?>
