@@ -12,7 +12,7 @@
         session_unset();
 
 
-        echo "Inne!";
+        echo $_SESSION['username'];
 
 
         $_SESSION = [];
