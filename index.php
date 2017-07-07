@@ -54,7 +54,7 @@ include 'assets/includes/register.php';
 							</div>
 						</div>
 						<nav>
-							<form method="post">
+							<form style="margin: 0;" method="post">
 								<ul>
 									<?php 
 										if (isset($_SESSION['username'])) {
