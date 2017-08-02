@@ -32,6 +32,8 @@ include 'assets/includes/register.php';
 		<!-- Wrapper -->
 			<div id="wrapper">
 
+			<div id="snackbar"><?php print $feedback; ?></div>
+
 				<?php include 'assets/includes/db_connect.inc.php'; ?>
 
 				<!-- Header -->
@@ -46,7 +48,6 @@ include 'assets/includes/register.php';
 								beläget längst in i bråviken</a>, strax utanför lindö småbåtshamn, Norrköping</p>
 
 								<button onclick="toggleSnackbar()">Show Snackbar</button>
-								<div id="snackbar"><?php print $feedback; ?></div>
 
 								<p>
 									<!-- MAKE PRETTIER -->
