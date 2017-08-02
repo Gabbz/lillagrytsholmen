@@ -32,7 +32,7 @@ include 'assets/includes/register.php';
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-			<div id="snackbar"><?php print $feedback; ?></div>
+			<div id="snackbar"><?php echo $feedback; ?></div>
 
 				<?php include 'assets/includes/db_connect.inc.php'; ?>
 
@@ -60,7 +60,6 @@ include 'assets/includes/register.php';
 									<?php 
 										if (isset($_SESSION['username'])) {
 											echo "<li><a href='assets/includes/logout.inc.php'>Logga ut</a></li>";
-											$feedback = "Du är nu utloggad!";
 										} else {
 											echo "<li><a href='#login'>Logga in</a></li>";
 										} 
@@ -473,7 +472,7 @@ include 'assets/includes/register.php';
 			<script src="assets/js/snackbar.js"></script>
 
 			<?php if (isset($feedback)) {
-				print "<script>(function(){toggleSnackbar()})();</script>";
+				echo "<script>(function(){toggleSnackbar()})();</script>";
 			} ?>
 
 	</body>
