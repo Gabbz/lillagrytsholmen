@@ -60,6 +60,7 @@ include 'assets/includes/register.php';
 									<?php 
 										if (isset($_SESSION['username'])) {
 											echo "<li><a href='assets/includes/logout.inc.php'>Logga ut</a></li>";
+											$feedback = "Du är nu utloggad!";
 										} else {
 											echo "<li><a href='#login'>Logga in</a></li>";
 										} 
