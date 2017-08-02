@@ -22,7 +22,7 @@
                     $_SESSION['username'] = $username;
                     $_SESSION['privilege'] = $db_privilege;
 
-                    $feedback = "Inloggningen lyckades!";
+                    $feedback = "Välkommen " . $_SESSION['username'];
                 } else {
                     $feedback = "Felaktigt lösenord eller användarnamn, försök igen!";
                 }
