@@ -32,7 +32,6 @@ include 'assets/includes/register.php';
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-
 				<?php include 'assets/includes/db_connect.inc.php'; ?>
 
 				<!-- Header -->
@@ -45,6 +44,10 @@ include 'assets/includes/register.php';
 								<h1>Lilla Grytsholmen</h1>
 								<p>Ett paradis <a href="https://www.google.se/maps/place/Krusenhov+Lilla+Grytsholmen+6,+616+90+%C3%85by/@58.631264,16.245232,13z/data=!4m5!3m4!1s0x465930741ff80d99:0x2ee6ed98cac42bca!8m2!3d58.6293777!4d16.2734717" target="_blank">
 								beläget längst in i bråviken</a>, strax utanför lindö småbåtshamn, Norrköping</p>
+
+								<button onclick="myFunction()">Show Snackbar</button>
+								<div id="snackbar">Some text some message..</div>
+
 								<p>
 									<!-- MAKE PRETTIER -->
 									<ul class="icons" style="margin:0px;">
@@ -468,6 +471,7 @@ include 'assets/includes/register.php';
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/snackbar.js"></script>
 
 	</body>
 </html>
