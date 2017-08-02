@@ -474,5 +474,9 @@ include 'assets/includes/register.php';
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/snackbar.js"></script>
 
+			<?php if (isset($feedback)) {
+				print "<script>(function(){toggleSnackbar()})();</script>";
+			} ?>
+
 	</body>
 </html>
