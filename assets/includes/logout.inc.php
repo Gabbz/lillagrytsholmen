@@ -1,11 +1,8 @@
 <?php
 
-    $feedback = "Du är nu utloggad!";
-
     session_start();
 
     if (isset($_SESSION['username'])) {
-
         
         $_SESSION = array();
 
