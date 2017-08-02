@@ -1,3 +1,6 @@
+<script src="assets/js/snackbar.js"></script>
+<script>(function(){toggleSnackbar()})();</script>
+
 <?php
 
     $feedback = "Du är nu utloggad!";
