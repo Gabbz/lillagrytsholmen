@@ -279,7 +279,7 @@ include 'assets/includes/settings.inc.php';
 											</div>
 										</td>
 										<td>
-											<div class="module mid">
+											<div class="module2 mid">
 												<h2>Till fotogalleriet</h2>
 											</div>
 										</td>
