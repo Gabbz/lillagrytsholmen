@@ -28,7 +28,7 @@
             $stmt->close();
             
         }
-    } elseif (isset($_POST['register_submit']) && $_SESSION['privilege'] == 1) {
+    } elseif (isset($_POST['register_submit']) && $_SESSION['privilege'] == 0) {
         $feedback = "Insufficient permissions.";
     }
 ?>
