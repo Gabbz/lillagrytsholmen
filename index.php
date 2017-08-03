@@ -124,17 +124,37 @@ include 'assets/includes/register.php';
 							<article id="register">
 								<h2 class="major">Register</h2>
 								<form name="register_form" id="login_form" method="post" action="#">
-									<label>Username</label>
-									<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
+									<ul>
+										<li>
+											<label>Username</label>
+											<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
 
-									<label>Password</label>
-									<input type="password" name="register_password" id="register_password" value="<?php print $register_password;?>" placeholder="Enter password" />
+											<label>Password</label>
+											<input type="password" name="register_password" id="register_password" value="<?php print $register_password;?>" placeholder="Enter password" />
 
-									<label>Fullständigt namn</label>
-									<input type="text" name="register_fullname" id="register_fullname" value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
+											<label>Fullständigt namn</label>
+											<input type="text" name="register_fullname" id="register_fullname" value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
 
-									<ul class="actions">
-										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
+											<label>Telefonnummer</label>
+											<input type="text" name="register_phone" id="register_phone" value="<?php print $register_phone;?>" placeholder="Enter phone" />
+										</li>
+										<li>
+											<label>E-mail</label>
+											<input type="text" name="register_email" id="register_email" value="<?php print $register_email;?>" placeholder="Enter email" />
+
+											<label>Adress</label>
+											<input type="text" name="register_adress" id="register_adress" value="<?php print $register_adress;?>" placeholder="Enter adress" />
+
+											<label>Postnummer</label>
+											<input type="text" name="register_postal" id="register_postal" value="<?php print $register_postal;?>" placeholder="Enter postal" />
+
+											<label>Stad</label>
+											<input type="text" name="register_city" id="register_city" value="<?php print $register_city;?>" placeholder="Enter city" />
+
+											<ul class="actions">
+												<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
+											</ul>
+										</li>
 									</ul>
 								</form>
 							</article>
