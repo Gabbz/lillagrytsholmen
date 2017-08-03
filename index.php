@@ -123,8 +123,7 @@ include 'assets/includes/register.php';
 						<!-- register -->
 							<article id="register">
 								<h2 class="major">Register</h2>
-								<form name="register_form" id="login_form" method="post">
-									<?php echo $feedback; ?>
+								<form name="register_form" id="login_form" method="post" action="#">
 									<label>Username</label>
 									<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
 

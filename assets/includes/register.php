@@ -17,9 +17,9 @@
         if ($stmt = $mysqli->prepare($query)) {
             $stmt->bind_param("sssi", $register_username, $password_encrypt, $register_fullname, $priv);
             if ($stmt->execute()) {
-                $feedback = "User "  .$register_username. " created successfully!";
+                $feedback = "User "  . $register_fullname . " created successfully!";
             } else {
-                $feedback = "Could not create user " .$register_username. ".";
+                $feedback = "Could not create user " . $register_username . ".";
             }
             $stmt->close();
             
