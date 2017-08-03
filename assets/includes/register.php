@@ -17,7 +17,7 @@
         // Query som skapar en ny användare i databasen
         $query = "INSERT INTO users VALUE(?,?,?,?,?,?,?,?,?)";
         if ($stmt = $mysqli->prepare($query)) {
-            $stmt->bind_param("sssissisi", $register_username, $password_encrypt, 
+            $stmt->bind_param("ssssssisi", $register_username, $password_encrypt, 
                 $register_fullname, $register_phone, $register_email, $register_adress, 
                 $register_postal, $register_city, $priv);
             if ($stmt->execute()) {
@@ -28,6 +28,8 @@
             $stmt->close();
             
         }
+    } else {
+        $feedback = "Insufficient permissions.";
     }
 ?>
 

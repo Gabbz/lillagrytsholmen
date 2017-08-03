@@ -132,7 +132,7 @@ include 'assets/includes/register.php';
 											</td>
 											<td>
 												<label>E-mail</label>
-												<input type="text" name="register_email" id="register_email" value="<?php print $register_email;?>" placeholder="Enter email" />
+												<input type="email" name="register_email" id="register_email" value="<?php print $register_email;?>" placeholder="Enter email" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
@@ -214,7 +214,7 @@ include 'assets/includes/register.php';
 											</td>
 											<td>
 												<label>E-mail</label>
-												<input type="text" name="settings_email" id="settings_email" value="<?php print $_SESSION['email'];?>" placeholder="Ange E-mail" />
+												<input type="email" name="settings_email" id="settings_email" value="<?php print $_SESSION['email'];?>" placeholder="Ange E-mail" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
