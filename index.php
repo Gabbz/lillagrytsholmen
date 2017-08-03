@@ -274,9 +274,9 @@ include 'assets/includes/settings.inc.php';
 								<table>
 									<tr style="background-color: inherit; border: inherit;"> 
 										<td>
-											<div class="module mid">
+											<a href="#login"><div class="module mid">
 												<h2>Ladda upp bild</h2>
-											</div>
+											</div></a>
 										</td>
 										<td>
 											<div class="module2 mid">
