@@ -125,7 +125,7 @@ include 'assets/includes/register.php';
 								<h2 class="major">Register</h2>
 								<form name="register_form" id="login_form" method="post" action="#">
 									<table>
-										<tr>
+										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Username</label>
 												<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
@@ -135,7 +135,7 @@ include 'assets/includes/register.php';
 												<input type="text" name="register_email" id="register_email" value="<?php print $register_email;?>" placeholder="Enter email" />
 											</td>
 										</tr>
-										<tr>
+										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Password</label>
 												<input type="password" name="register_password" id="register_password" value="<?php print $register_password;?>" placeholder="Enter password" />
@@ -145,7 +145,7 @@ include 'assets/includes/register.php';
 												<input type="text" name="register_adress" id="register_adress" value="<?php print $register_adress;?>" placeholder="Enter adress" />
 											</td>
 										</tr>
-										<tr>
+										<tr style="background-color: inherit; border: inherit;"> 
 											<td>
 												<label>Fullständigt namn</label>
 												<input type="text" name="register_fullname" id="register_fullname" value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
@@ -155,7 +155,7 @@ include 'assets/includes/register.php';
 												<input type="text" name="register_postal" id="register_postal" value="<?php print $register_postal;?>" placeholder="Enter postal" />
 											</td>
 										</tr>
-										<tr>
+										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Telefonnummer</label>
 												<input type="text" name="register_phone" id="register_phone" value="<?php print $register_phone;?>" placeholder="Enter phone" />
