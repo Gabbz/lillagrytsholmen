@@ -194,12 +194,12 @@ include 'assets/includes/settings.inc.php';
 											<td>
 												<label>Nytt lösenord</label>
 												<input type="password" name="settings_password" id="settings_password" 
-													value="<?php print $settings_password;?>" placeholder="Ange nytt lösenord" />
+													value="" placeholder="Ange nytt lösenord" />
 											</td>
 											<td>
 												<label>Konfirmera det nya lösenordet</label>
 												<input type="password" name="settings_password2" id="settings_password2" 
-													value="<?php print $settings_password2;?>" placeholder="Ange det nya lösenordet igen" />
+													value="" placeholder="Ange det nya lösenordet igen" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;"> 
