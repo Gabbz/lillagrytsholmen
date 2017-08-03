@@ -31,7 +31,8 @@
             strlen($settings_adress) > 3 && 
             strlen($settings_postal) == 5 && 
             strlen($settings_city) > 2 &&
-            $skip != 1) {
+            $skip != 1 && 
+            is_numeric($settings_postal)) {
 
             // Query som skapar en ny användare i databasen
             if ($password_encrypt != "") {
@@ -93,6 +94,9 @@
                     $feedback = "Dina personliga inställningar är uppdaterade!";
                 } else {
                     $feedback = "Någonting, gick fel! :( Försök igen eller kontakta administratör!";
+                    if (mysql_errno() == 1062) {
+                        $feedback = "Användarnamnet finns redan, försök med ett annat!";
+                    }
                 }
                 $stmt->close();
             } 

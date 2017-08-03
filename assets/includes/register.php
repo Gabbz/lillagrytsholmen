@@ -15,18 +15,20 @@
         $password_encrypt = password_hash($register_password, PASSWORD_DEFAULT); // Encrypted Password
 
         // Query som skapar en ny användare i databasen
-        $query = "INSERT INTO users VALUE(?,?,?,?,?,?,?,?,?)";
-        if ($stmt = $mysqli->prepare($query)) {
-            $stmt->bind_param("ssssssisi", $register_username, $password_encrypt, 
-                $register_fullname, $register_phone, $register_email, $register_adress, 
-                $register_postal, $register_city, $priv);
-            if ($stmt->execute()) {
-                $feedback = "User "  . $register_fullname . " created successfully!";
-            } else {
-                $feedback = "Could not create user " . $register_username . ".";
+        if (is_numeric($register_postal)) {
+            $query = "INSERT INTO users VALUE(?,?,?,?,?,?,?,?,?)";
+            if ($stmt = $mysqli->prepare($query)) {
+                $stmt->bind_param("ssssssisi", $register_username, $password_encrypt, 
+                    $register_fullname, $register_phone, $register_email, $register_adress, 
+                    $register_postal, $register_city, $priv);
+                if ($stmt->execute()) {
+                    $feedback = "User "  . $register_fullname . " created successfully!";
+                } else {
+                    $feedback = "Could not create user " . $register_username . ".";
+                }
+                $stmt->close();
+                
             }
-            $stmt->close();
-            
         }
     } elseif (isset($_POST['register_submit']) && $_SESSION['privilege'] == 0) {
         $feedback = "Insufficient permissions.";
