@@ -1033,7 +1033,6 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	.label_btn,
 	button,
 	.button {
 		-moz-appearance: none;
