@@ -3,8 +3,8 @@
     include("db_connect.inc.php");
 
     if (isset($_POST['login_submit'])) {
-        $username = htmlspecialchars(trim($_POST['username']));
-        $password = htmlspecialchars(trim($_POST['password']));
+        $username = htmlspecialchars(trim($_POST['username_login']));
+        $password = htmlspecialchars(trim($_POST['password_login']));
 
         $feedback = $username . " " . $password;
 
