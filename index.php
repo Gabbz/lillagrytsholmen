@@ -270,9 +270,10 @@ include 'assets/includes/settings.inc.php';
 
 						<!-- photos -->
 							<article id="photos">
-								<h2 class="major">Fotoalbum</h2>	
+								<h2 class="major">Fotoalbum</h2>
+								<span></span>	
 								<div class="module mid">
-									<h2>Skyscrapers</h2>
+									<h2>Ladda upp bild</h2>
 								</div>
 							</article>
 
