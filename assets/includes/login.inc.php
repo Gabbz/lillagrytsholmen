@@ -6,8 +6,7 @@
         $username = htmlspecialchars(trim($_POST['username']));
         $password = htmlspecialchars(trim($_POST['password']));
 
-        echo $username;
-        echo $password;
+        $feedback = $username . " " . $password;
 
         // Query som hämtar userID och lösenord från tabellen users där username är det som användaren skrivit in
         $query = "SELECT username, password, fullname, privilege FROM users WHERE username = (?)";
@@ -28,7 +27,7 @@
 
                     $feedback = "Välkommen " . $_SESSION['fullname'];
                 } else {
-                    $feedback = "Felaktigt lösenord eller användarnamn, försök igen!";
+                    $feedback .= "Felaktigt lösenord eller användarnamn, försök igen!";
                 }
                 $stmt->close();
             } 
