@@ -123,7 +123,7 @@ include 'assets/includes/register.php';
 						<!-- register --> 
 							<article id="register">
 								<h2 class="major">Register</h2>
-								<form name="register_form" id="login_form" style="margin: 0;" method="post" action="#">
+								<form name="register_form" id="register_form" style="margin: 0;" method="post" action="#">
 									<table>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
@@ -169,6 +169,66 @@ include 'assets/includes/register.php';
 									<ul class="actions" style="padding-left: 0.75rem">
 										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
 									</ul>
+								</form>
+							</article>
+
+						<!-- personal settings --> 
+							<article id="settings">
+								<h2 class="major">Ändra personliga inställningar</h2>
+								<form name="settings_form" id="settings_form" style="margin: 0;" method="post" action="#">
+									<table>
+										<tr style="background-color: inherit; border: inherit;">
+											<td>
+												<label>Anändarnamn</label>
+												<input type="text" name="settings_username" id="settings_username" value="<?php print $_SESSION['username'];?>" placeholder="Ange det nya användarnamnet" />
+											</td>
+											<td>
+												<label>Fullständigt namn</label>
+												<input type="text" name="settings_fullname" id="settings_fullname" value="<?php print $_SESSION['fullname'];?>" placeholder="Ange ditt namn" />
+											</td>
+										</tr>
+										<tr style="background-color: inherit; border: inherit;">
+											<td>
+												<label>Nytt lösenord</label>
+												<input type="password" name="settings_password" id="settings_password" value="<?php print $settings_password;?>" placeholder="Ange nytt lösenord" />
+											</td>
+											<td>
+												<label>Konfirmera det nya lösenordet</label>
+												<input type="password" name="settings_password" id="settings_password" value="<?php print $settings_password2;?>" placeholder="Ange det nya lösenordet igen" />
+											</td>
+										</tr>
+										<tr style="background-color: inherit; border: inherit;"> 
+											<td>
+												<label>Adress</label>
+												<input type="text" name="settings_adress" id="settings_adress" value="<?php print $_SESSION['adress'];?>" placeholder="Ange adress" />
+											</td>
+											<td>
+												<label>Postnummer</label>
+												<input type="text" name="settings_postal" id="settings_postal" value="<?php print $_SESSION['postal'];?>" placeholder="Ange postnummer" />
+											</td>
+										</tr>
+										<tr style="background-color: inherit; border: inherit;">
+											<td>
+												<label>Stad</label>
+												<input type="text" name="settings_city" id="settings_city" value="<?php print $_SESSION['city'];?>" placeholder="Ange stad" />
+											</td>
+											<td>
+												<label>E-mail</label>
+												<input type="text" name="settings_email" id="settings_email" value="<?php print $_SESSION['email'];?>" placeholder="Ange E-mail" />
+											</td>
+										</tr>
+										<tr style="background-color: inherit; border: inherit;">
+											<td>
+												<label>Telefonnummer</label>
+												<input type="text" name="settings_phone" id="settings_phone" value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
+											</td>
+											<td>
+												<ul class="actions" style="padding-left: 0.75rem">
+													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
+												</ul>
+											</td>
+										</tr>
+									</table>
 								</form>
 							</article>
 
