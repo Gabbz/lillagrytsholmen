@@ -39,7 +39,7 @@
                     email = (?), 
                     adress = (?), 
                     postal = (?), 
-                    city = (?),  
+                    city = (?) 
                     WHERE username = (?)";
             } else {
                 $query = "UPDATE users SET username = (?),
@@ -48,7 +48,7 @@
                     email = (?), 
                     adress = (?), 
                     postal = (?), 
-                    city = (?),  
+                    city = (?) 
                     WHERE username = (?)";
             }
 
