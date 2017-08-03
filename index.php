@@ -290,9 +290,11 @@ include 'assets/includes/settings.inc.php';
 							<article id="upload">
 								<h2 class="major">Ladda upp bild</h2>
 								<form action="upload.php" method="post" enctype="multipart/form-data">
-									<span>Select image to upload:</span>
-									<input type="file" name="fileToUpload" id="fileToUpload">
 									<ul class="actions" style="padding-left: 0.75rem">
+										<div>
+											<label for="fileToUpload" >Välj bild</label>
+											<input type="file" name="fileToUpload" id="fileToUpload" style="display:none;" >
+										</div>
 										<li><input type="submit" value="Ladda upp bild" name="submit" /></li>
 									</ul>
 									
