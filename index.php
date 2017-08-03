@@ -271,8 +271,9 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>	
-								<span></span>
-								<button type="submit" name="beer" value="beer_btn_was_clicked">Ladda upp bild<img src="images/pic02.jpg" /></button>
+								<div class="module mid">
+									<h2>Skyscrapers</h2>
+								</div>
 							</article>
 
 						<!-- book -->
