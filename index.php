@@ -271,13 +271,20 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>
-								<span></span>	
-								<div class="module mid">
-									<h2>Ladda upp bild</h2>
-								</div>
-								<div class="module mid">
-									<h2>Till fotogalleriet</h2>
-								</div>
+								<table>
+									<tr>
+										<td>
+											<div class="module mid">
+												<h2>Ladda upp bild</h2>
+											</div>
+										</td>
+										<td>
+											<div class="module mid">
+												<h2>Till fotogalleriet</h2>
+											</div>
+										</td>
+									</tr>
+								</table>
 							</article>
 
 						<!-- book -->
