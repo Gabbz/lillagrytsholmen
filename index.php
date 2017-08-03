@@ -271,6 +271,7 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>	
+								Ladda upp bild
 								<button type="submit" name="beer" value="beer_btn_was_clicked"><img src="images/pic02.jpg" /></button>
 							</article>
 
