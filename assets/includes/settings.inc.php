@@ -81,6 +81,6 @@
         } else {
             $feedback = "no fk u";
         }
-    } 
+    } else {$feedback = "no";}
 ?>
 
