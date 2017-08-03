@@ -174,7 +174,7 @@ include 'assets/includes/register.php';
 
 						<!-- personal settings --> 
 							<article id="settings">
-								<h2 class="major">Ändra personliga inställningar</h2>
+								<h2 class="major">Personliga inställningar</h2>
 								<form name="settings_form" id="settings_form" style="margin: 0;" method="post" action="#">
 									<table>
 										<tr style="background-color: inherit; border: inherit;">
