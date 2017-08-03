@@ -157,7 +157,7 @@ include 'assets/includes/register.php';
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
-												<label>Telefonnummer</label>
+												<label>Mobilnummer</label>
 												<input type="text" name="register_phone" id="register_phone" value="<?php print $register_phone;?>" placeholder="Enter phone" />
 											</td>
 											<td>
@@ -219,7 +219,7 @@ include 'assets/includes/register.php';
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
-												<label>Telefonnummer</label>
+												<label>Mobilnummer</label>
 												<input type="text" name="settings_phone" id="settings_phone" value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
 											</td>
 											<td>
