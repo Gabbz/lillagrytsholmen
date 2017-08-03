@@ -16,7 +16,7 @@
         $settings_city = strtoupper(htmlspecialchars(trim($_POST['settings_city'])));
 
         if ($settings_password != "") {
-            if ($settings_password === $settings_password2) {
+            if ($settings_password == $settings_password2) {
                 $password_encrypt = password_hash($settings_password, PASSWORD_DEFAULT); // Encrypted Password
             } else {
                 $feedback = "Lösenorden matchade inte, försök igen";
