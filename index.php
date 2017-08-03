@@ -198,7 +198,7 @@ include 'assets/includes/settings.inc.php';
 											</td>
 											<td>
 												<label>Konfirmera det nya lösenordet</label>
-												<input type="password" name="settings_password" id="settings_password" 
+												<input type="password" name="settings_password2" id="settings_password2" 
 													value="<?php print $settings_password2;?>" placeholder="Ange det nya lösenordet igen" />
 											</td>
 										</tr>
