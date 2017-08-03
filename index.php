@@ -275,6 +275,9 @@ include 'assets/includes/settings.inc.php';
 								<div class="module mid">
 									<h2>Ladda upp bild</h2>
 								</div>
+								<div class="module mid">
+									<h2>Till fotogalleriet</h2>
+								</div>
 							</article>
 
 						<!-- book -->

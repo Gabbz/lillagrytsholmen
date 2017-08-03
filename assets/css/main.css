@@ -922,11 +922,11 @@
 		rgba(0, 0, 0, 0.6),
 		rgba(0, 0, 0, 0.6)
 		),
-		url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+		url(../../images/pic01.jpg);
 	background-size: cover;
 	width: 300px;
 	height: 200px;
-	margin: 10px 0 0 10px;
+	margin: 2rem;
 	position: relative;
 	float: left;
 	}
