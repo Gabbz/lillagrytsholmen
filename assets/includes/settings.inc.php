@@ -3,6 +3,7 @@
 
     if (isset($_POST['settings_submit']) && $_SESSION['privilege'] == 0) {
         $password_encrypt = "";
+        $skip = 0;
 
         $settings_username = htmlspecialchars(trim($_POST['settings_username']));
         $settings_password = htmlspecialchars(trim($_POST['settings_password']));
@@ -14,11 +15,12 @@
         $settings_postal = htmlspecialchars(trim($_POST['settings_postal']));
         $settings_city = strtoupper(htmlspecialchars(trim($_POST['settings_city'])));
 
-        if ($register_password != "") {
-            if ($register_password === $register_password2) {
+        if ($settings_password != "") {
+            if ($settings_password === $settings_password2) {
                 $password_encrypt = password_hash($settings_password, PASSWORD_DEFAULT); // Encrypted Password
             } else {
                 $feedback = "Lösenorden matchade inte, försök igen";
+                $skip = 1;
             }
         }
 
@@ -28,7 +30,8 @@
             strlen($settings_email) > 5 &&
             strlen($settings_adress) > 3 && 
             strlen($settings_postal) == 5 && 
-            strlen($settings_city) > 2) {
+            strlen($settings_city) > 2 &&
+            $skip != 1) {
 
             // Query som skapar en ny användare i databasen
             if ($password_encrypt != "") {
@@ -92,10 +95,8 @@
                     $feedback = "Någonting, gick fel! :( Försök igen eller kontakta administratör!";
                 }
                 $stmt->close();
-            } else {$feedback = "hee yoo";}
-        } else {
-            $feedback = "no fk u";
-        }
+            } 
+        } 
     }
 ?>
 
