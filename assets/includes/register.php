@@ -24,7 +24,7 @@
                 if ($stmt->execute()) {
                     $feedback = "User "  . $register_fullname . " created successfully!";
                 } else {
-                    $feedback = "Could not create user " . $register_username . ".";
+                    $feedback = "Could not create user " . $register_username . "." . " Error: " . mysql_errno();
                 }
                 $stmt->close();
                 
