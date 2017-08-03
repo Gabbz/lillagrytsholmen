@@ -32,7 +32,7 @@
 
             // Query som skapar en ny användare i databasen
             if ($password_encrypt != "") {
-                $query = "Update users SET username = (?), 
+                $query = "UPDATE users SET username = (?), 
                     password = (?), 
                     fullname = (?), 
                     phone = (?), 
@@ -42,7 +42,7 @@
                     city = (?),  
                     WHERE username = (?)";
             } else {
-                $query = "Update users SET username = (?),
+                $query = "UPDATE users SET username = (?),
                     fullname = (?), 
                     phone = (?), 
                     email = (?), 
