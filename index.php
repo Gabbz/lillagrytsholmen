@@ -176,7 +176,7 @@ include 'assets/includes/register.php';
 							<article id="settings">
 								<h2 class="major">Personliga inställningar</h2>
 								<form name="settings_form" id="settings_form" style="margin: 0;" method="post" action="#">
-									<table>
+									<table style="margin: 0;">
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Anändarnamn</label>
@@ -223,7 +223,8 @@ include 'assets/includes/register.php';
 												<input type="text" name="settings_phone" id="settings_phone" value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
 											</td>
 											<td>
-												<ul class="actions" style="padding-left: 0.75rem">
+												<label></label>
+												<ul class="actions">
 													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
 												</ul>
 											</td>
