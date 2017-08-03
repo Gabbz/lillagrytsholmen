@@ -223,7 +223,7 @@ include 'assets/includes/register.php';
 												<input type="text" name="settings_phone" id="settings_phone" value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
 											</td>
 											<td>
-												<label></label>
+												<label style="opacity: 0%;">spacer</label>
 												<ul class="actions">
 													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
 												</ul>
