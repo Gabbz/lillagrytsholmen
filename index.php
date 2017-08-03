@@ -82,10 +82,12 @@ include 'assets/includes/settings.inc.php';
 								<h2 class="major">admin login</h2>
 								<form name="admin_form" id="admin_form" method="post" action="#">
 									<label for="admin_login">Username</label>
-									<input type="text" name="admin_username" id="admin_username" value="<?php print $admin_username;?>" placeholder="Enter admin username" />
+									<input type="text" name="admin_username" id="admin_username" 
+										value="<?php print $admin_username;?>" placeholder="Enter admin username" />
 									
 									<label for="admin_password">Password</label>
-									<input type="password" name="admin_password" id="admin_password" value="<?php print $admin_password;?>" placeholder="Enter admin password" />
+									<input type="password" name="admin_password" id="admin_password" 
+										value="<?php print $admin_password;?>" placeholder="Enter admin password" />
 									
 									<ul class="actions">
 										<?php 
@@ -104,10 +106,12 @@ include 'assets/includes/settings.inc.php';
 								<h2 class="major">login</h2>
 								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) {echo "action='assets/includes/logout.inc.php'";}else {echo "action='#'";} ?> >
 									<label>Username</label>
-									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
+									<input type="text" name="username_login" id="username_login" 
+										value="<?php print $username;?>" placeholder="Enter your username" />
 									
 									<label for="password_login">Password</label>
-									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
+									<input type="password" name="password_login" id="password_login" 
+										value="<?php print $password;?>" placeholder="Enter your password" />
 									
 									<ul class="actions">
 										<?php 
@@ -129,41 +133,49 @@ include 'assets/includes/settings.inc.php';
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Username</label>
-												<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
+												<input type="text" name="register_username" id="register_username" 
+													value="<?php print $register_username;?>" placeholder="Enter username" />
 											</td>
 											<td>
 												<label>E-mail</label>
-												<input type="email" name="register_email" id="register_email" value="<?php print $register_email;?>" placeholder="Enter email" />
+												<input type="email" name="register_email" id="register_email" 
+													value="<?php print $register_email;?>" placeholder="Enter email" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Password</label>
-												<input type="password" name="register_password" id="register_password" value="<?php print $register_password;?>" placeholder="Enter password" />
+												<input type="password" name="register_password" id="register_password" 
+													value="<?php print $register_password;?>" placeholder="Enter password" />
 											</td>
 											<td>
 												<label>Adress</label>
-												<input type="text" name="register_adress" id="register_adress" value="<?php print $register_adress;?>" placeholder="Enter adress" />
+												<input type="text" name="register_adress" id="register_adress" 
+													value="<?php print $register_adress;?>" placeholder="Enter adress" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;"> 
 											<td>
 												<label>Fullständigt namn</label>
-												<input type="text" name="register_fullname" id="register_fullname" value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
+												<input type="text" name="register_fullname" id="register_fullname" 
+													value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
 											</td>
 											<td>
 												<label>Postnummer</label>
-												<input type="text" name="register_postal" id="register_postal" value="<?php print $register_postal;?>" placeholder="Enter postal" />
+												<input type="text" name="register_postal" id="register_postal" 
+													value="<?php print $register_postal;?>" placeholder="Enter postal" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Mobilnummer</label>
-												<input type="text" name="register_phone" id="register_phone" value="<?php print $register_phone;?>" placeholder="Enter phone" />
+												<input type="text" name="register_phone" id="register_phone" 
+													value="<?php print $register_phone;?>" placeholder="Enter phone" />
 											</td>
 											<td>
 												<label>Stad</label>
-												<input type="text" name="register_city" id="register_city" value="<?php print $register_city;?>" placeholder="Enter city" />
+												<input type="text" name="register_city" id="register_city" 
+													value="<?php print $register_city;?>" placeholder="Enter city" />
 											</td>
 										</tr>
 									</table>
