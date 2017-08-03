@@ -126,10 +126,14 @@ include 'assets/includes/register.php';
 								<form name="register_form" id="login_form" method="post">
 									<?php echo $feedback; ?>
 									<label>Username</label>
-									<input type="text" name="username_login" id="username_login" value="<?php print $username;?>" placeholder="Enter your username" />
+									<input type="text" name="register_username" id="register_username" value="<?php print $register_username;?>" placeholder="Enter username" />
 
 									<label>Password</label>
-									<input type="password" name="password_login" id="password_login" value="<?php print $password;?>" placeholder="Enter your password" />
+									<input type="password" name="register_password" id="register_password" value="<?php print $register_password;?>" placeholder="Enter password" />
+
+									<label>Fullständigt namn</label>
+									<input type="text" name="register_fullname" id="register_fullname" value="<?php print $register_fullname;?>" placeholder="Enter fullname" />
+
 									<ul class="actions">
 										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
 									</ul>
