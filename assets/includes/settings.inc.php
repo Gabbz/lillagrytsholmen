@@ -77,10 +77,10 @@
                     $feedback = "Någonting, gick fel! :( Försök igen eller kontakta administratör!";
                 }
                 $stmt->close();
-            }
+            } else {$feedback = "hee yoo";}
         } else {
             $feedback = "no fk u";
         }
-    } else {$feedback = "no";}
+    }
 ?>
 

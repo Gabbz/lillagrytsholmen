@@ -181,52 +181,62 @@ include 'assets/includes/settings.inc.php';
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Anändarnamn</label>
-												<input type="text" name="settings_username" id="settings_username" value="<?php print $_SESSION['username'];?>" placeholder="Ange det nya användarnamnet" />
+												<input type="text" name="settings_username" id="settings_username" 
+													value="<?php print $_SESSION['username'];?>" placeholder="Ange det nya användarnamnet" />
 											</td>
 											<td>
 												<label>Fullständigt namn</label>
-												<input type="text" name="settings_fullname" id="settings_fullname" value="<?php print $_SESSION['fullname'];?>" placeholder="Ange ditt namn" />
+												<input type="text" name="settings_fullname" id="settings_fullname" 
+													value="<?php print $_SESSION['fullname'];?>" placeholder="Ange ditt namn" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Nytt lösenord</label>
-												<input type="password" name="settings_password" id="settings_password" value="<?php print $settings_password;?>" placeholder="Ange nytt lösenord" />
+												<input type="password" name="settings_password" id="settings_password" 
+													value="<?php print $settings_password;?>" placeholder="Ange nytt lösenord" />
 											</td>
 											<td>
 												<label>Konfirmera det nya lösenordet</label>
-												<input type="password" name="settings_password" id="settings_password" value="<?php print $settings_password2;?>" placeholder="Ange det nya lösenordet igen" />
+												<input type="password" name="settings_password" id="settings_password" 
+													value="<?php print $settings_password2;?>" placeholder="Ange det nya lösenordet igen" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;"> 
 											<td>
 												<label>Adress</label>
-												<input type="text" name="settings_adress" id="settings_adress" value="<?php print $_SESSION['adress'];?>" placeholder="Ange adress" />
+												<input type="text" name="settings_adress" id="settings_adress" 
+													value="<?php print $_SESSION['adress'];?>" placeholder="Ange adress" />
 											</td>
 											<td>
 												<label>Postnummer</label>
-												<input type="text" name="settings_postal" id="settings_postal" value="<?php print $_SESSION['postal'];?>" placeholder="Ange postnummer" />
+												<input type="text" name="settings_postal" id="settings_postal" 
+													value="<?php print $_SESSION['postal'];?>" placeholder="Ange postnummer" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Stad</label>
-												<input type="text" name="settings_city" id="settings_city" value="<?php print $_SESSION['city'];?>" placeholder="Ange stad" />
+												<input type="text" name="settings_city" id="settings_city" 
+													value="<?php print $_SESSION['city'];?>" placeholder="Ange stad" />
 											</td>
 											<td>
 												<label>E-mail</label>
-												<input type="email" name="settings_email" id="settings_email" value="<?php print $_SESSION['email'];?>" placeholder="Ange E-mail" />
+												<input type="email" name="settings_email" id="settings_email" 
+													value="<?php print $_SESSION['email'];?>" placeholder="Ange E-mail" />
 											</td>
 										</tr>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
 												<label>Mobilnummer</label>
-												<input type="text" name="settings_phone" id="settings_phone" value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
+												<input type="text" name="settings_phone" id="settings_phone" 
+													value="<?php print $_SESSION['phone'];?>" placeholder="Ange telefonnummer" />
 											</td>
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
+													<li><input type="submit" id="settings_submit" name="settings_submit" 
+													value="Verkställ" /></li>
 												</ul>
 											</td>
 										</tr>
