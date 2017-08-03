@@ -272,7 +272,7 @@ include 'assets/includes/settings.inc.php';
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>
 								<table>
-									<tr>
+									<tr style="background-color: inherit; border: inherit;"> 
 										<td>
 											<div class="module mid">
 												<h2>Ladda upp bild</h2>
