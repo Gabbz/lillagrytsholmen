@@ -123,7 +123,7 @@ include 'assets/includes/register.php';
 						<!-- register -->
 							<article id="register">
 								<h2 class="major">Register</h2>
-								<form name="register_form" id="login_form" stryle="margin: 0;" method="post" action="#">
+								<form name="register_form" id="login_form" style="margin: 0;" method="post" action="#">
 									<table>
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
