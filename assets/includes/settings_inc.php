@@ -61,7 +61,7 @@
                     $settings_city, 
                     $_SESSION['username']);
                 }
-                
+
                 if ($stmt->execute()) {
 
                     $_SESSION['username'] = $settings_username;
@@ -78,7 +78,9 @@
                 }
                 $stmt->close();
             }
-        } 
+        } else {
+            $feedback = "no fk u";
+        }
     } 
 ?>
 
