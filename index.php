@@ -247,8 +247,7 @@ include 'assets/includes/settings.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="submit" id="settings_submit" name="settings_submit" 
-													value="Verkställ" /></li>
+													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
 												</ul>
 											</td>
 										</tr>
@@ -271,10 +270,10 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>
-								<table>
+								<table style="margin: 3rem 0 2rem 0;">
 									<tr style="background-color: inherit; border: inherit;"> 
 										<td>
-											<a href="#login"><div class="module mid">
+											<a href="#upload"><div class="module mid">
 												<h2>Ladda upp bild</h2>
 											</div></a>
 										</td>
@@ -286,6 +285,21 @@ include 'assets/includes/settings.inc.php';
 									</tr>
 								</table>
 							</article>
+
+						<!-- upload -->
+							<article id="upload">
+								<h2 class="major">Ladda upp bild</h2>
+								<form action="upload.php" method="post" enctype="multipart/form-data">
+									<span>Select image to upload:</span>
+									<input type="file" name="fileToUpload" id="fileToUpload">
+									<ul class="actions" style="padding-left: 0.75rem">
+										<li><input type="submit" value="Ladda upp bild" name="submit" /></li>
+									</ul>
+									
+								</form>
+							</article>
+
+						<!-- photo gallery -->
 
 						<!-- book -->
 							<article id="book">
