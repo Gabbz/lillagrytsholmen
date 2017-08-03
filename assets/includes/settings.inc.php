@@ -32,9 +32,24 @@
 
             // Query som skapar en ny användare i databasen
             if ($password_encrypt != "") {
-                $query = "Update users SET VALUE(?,?,?,?,?,?,?,?) WHERE username = (?)";
+                $query = "Update users SET username = (?), 
+                    password = (?), 
+                    fullname = (?), 
+                    phone = (?), 
+                    email = (?), 
+                    adress = (?), 
+                    postal = (?), 
+                    city = (?),  
+                    WHERE username = (?)";
             } else {
-                $query = "Update users SET VALUE(?,?,?,?,?,?,?) WHERE username = (?)";
+                $query = "Update users SET username = (?),
+                    fullname = (?), 
+                    phone = (?), 
+                    email = (?), 
+                    adress = (?), 
+                    postal = (?), 
+                    city = (?),  
+                    WHERE username = (?)";
             }
 
             if ($stmt = $mysqli->prepare($query)) {
