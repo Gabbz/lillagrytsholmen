@@ -1,7 +1,7 @@
 <?php
     include('db_connect.inc.php');
 
-    if (isset($_POST['settings_submit']) && $_SESSION['privilege'] == 1) {
+    if (isset($_POST['settings_submit']) && $_SESSION['privilege'] == 0) {
         $password_encrypt = "";
 
         $settings_username = htmlspecialchars(trim($_POST['settings_username']));
