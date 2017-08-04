@@ -247,8 +247,7 @@ include 'assets/includes/settings.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="submit" id="settings_submit" name="settings_submit" 
-													value="Verkställ" /></li>
+													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
 												</ul>
 											</td>
 										</tr>
@@ -271,9 +270,33 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<table style="margin: 3rem 0 2rem 0;">
+									<tr style="background-color: inherit; border: inherit;"> 
+										<td>
+											<a href="#upload"><div class="module mid">
+												<h2>Ladda upp bild</h2>
+											</div></a>
+										</td>
+										<td>
+											<div class="module2 mid">
+												<h2>Till fotogalleriet</h2>
+											</div>
+										</td>
+									</tr>
+								</table>
 							</article>
+
+						<!-- upload -->
+							<article id="upload">
+								<h2 class="major">Ladda upp bild</h2>
+								<form action="upload.php" method="post" enctype="multipart/form-data">
+									<ul class="actions" style="padding-left: 0.75rem">
+										<li><input type="submit" value="Ladda upp bild" name="submit" /></li>
+									</ul>
+								</form>
+							</article>
+
+						<!-- photo gallery -->
 
 						<!-- book -->
 							<article id="book">
