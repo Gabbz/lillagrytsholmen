@@ -926,7 +926,7 @@
 	background-size: cover;
 	width: 300px;
 	height: 200px;
-	margin: 1rem;
+	margin:  1rem 0 0 0;
 	position: relative;
 	float: left;
 	}
@@ -941,7 +941,7 @@
 	background-size: cover;
 	width: 300px;
 	height: 200px;
-	margin: 1rem;
+	margin: 1rem 0 0 0;
 	position: relative;
 	float: left;
 	}
