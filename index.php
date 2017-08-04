@@ -273,7 +273,7 @@ include 'assets/includes/settings.inc.php';
 								<div>
 									<a href="#upload">
 										<div class="module mid">
-											<h2>Ladda upp bild</h2>
+											<h2>Ladda upp bilder</h2>
 										</div>
 									</a>
 									<a href=#gallery>
@@ -287,10 +287,10 @@ include 'assets/includes/settings.inc.php';
 
 						<!-- upload -->
 							<article id="upload">
-								<h2 class="major">Ladda upp bild</h2>
+								<h2 class="major">Ladda upp bilder</h2>
 								<form action="upload.php" method="post" enctype="multipart/form-data">
 									<ul class="actions" style="padding-left: 0.75rem">
-										<li><input type="submit" value="Ladda upp bild" name="submit" /></li>
+										<li><input type="submit" value="Ladda upp bilder" name="submit" /></li>
 									</ul>
 								</form>
 							</article>
