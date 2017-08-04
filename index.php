@@ -309,7 +309,7 @@ include 'assets/includes/settings.inc.php';
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<input type="email" name="email" id="email" />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
@@ -321,10 +321,9 @@ include 'assets/includes/settings.inc.php';
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://twitter.com/BorgJonas" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/jonas.borg1337" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/jonasborgs/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</article>
 
