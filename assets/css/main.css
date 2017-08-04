@@ -141,7 +141,9 @@
 	}
 
 		a:hover {
-			border-bottom-color: transparent;
+			border-bottom-color: transparent !important;
+			color: inherit;
+			text-decoration: inherit;		
 		}
 
 	strong, b {
