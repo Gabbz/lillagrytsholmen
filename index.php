@@ -296,7 +296,7 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- photo gallery -->
-							<article id="gellery">
+							<article id="gallery">
 							</article>
 
 						<!-- book -->
