@@ -270,19 +270,18 @@ include 'assets/includes/settings.inc.php';
 						<!-- photos -->
 							<article id="photos">
 								<h2 class="major">Fotoalbum</h2>
-								<table style="margin: 3rem 0 2rem 0;">
-									<tr style="background-color: inherit; border: inherit;"> 
-										<td>
-											<a href="#upload"><div class="module mid">
-												<h2>Ladda upp bild</h2>
-											</div></a>
-										</td>
-										<td>
-											<div class="module2 mid">
-												<h2>Till fotogalleriet</h2>
-											</div>
-										</td>
-									</tr>
+								<div>
+									<a href="#upload">
+										<div class="module mid">
+											<h2>Ladda upp bild</h2>
+										</div>
+									</a>
+									<a href=#gallery>
+										<div class="module2 mid">
+											<h2>Till fotogalleriet</h2>
+										</div>
+									</a>
+								</div>
 								</table>
 							</article>
 
@@ -297,6 +296,8 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- photo gallery -->
+							<article id="gellery">
+							</article>
 
 						<!-- book -->
 							<article id="book">
