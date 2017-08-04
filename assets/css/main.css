@@ -287,45 +287,45 @@
 
 /* Snackbar */
 
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 30px;
-    position: fixed;
-    z-index: 1;
-    bottom: 30px;
-    font-size: 18px;
-}
+	#snackbar {
+		visibility: hidden;
+		min-width: 250px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		border-radius: 2px;
+		padding: 30px;
+		position: fixed;
+		z-index: 1;
+		bottom: 30px;
+		font-size: 18px;
+	}
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
-    animation: fadein 0.5s, fadeout 0.5s 5.5s;
-}
+	#snackbar.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+		animation: fadein 0.5s, fadeout 0.5s 5.5s;
+	}
 
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
+	@-webkit-keyframes fadein {
+		from {bottom: 0; opacity: 0;} 
+		to {bottom: 30px; opacity: 1;}
+	}
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+	@keyframes fadein {
+		from {bottom: 0; opacity: 0;}
+		to {bottom: 30px; opacity: 1;}
+	}
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
+	@-webkit-keyframes fadeout {
+		from {bottom: 30px; opacity: 1;} 
+		to {bottom: 0; opacity: 0;}
+	}
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+	@keyframes fadeout {
+		from {bottom: 30px; opacity: 1;}
+		to {bottom: 0; opacity: 0;}
+	}
 
 /* Form */
 
@@ -961,6 +961,15 @@
 		font-size: 0.75rem;
 		text-align: center;
 		transform: translate(-50%, -50%);
+	}
+
+	.krajee-default.file-preview-frame {
+		width: 18%;
+	}
+
+	.krajee-default .file-preview-image {
+		width: 100% !important;
+		height: 100% !important;
 	}
 
 /* Table */
