@@ -291,12 +291,12 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- upload -->
-							<article id="upload">
+							<article id="upload" width="100%">
 								<h2 class="major">Ladda upp bilder</h2>
 								
 								
 								
-								<form enctype="multipart/form-data">
+								<form enctype="multipart/form-data" style="margin: 2rem 0 2rem 0;">
 									<input id="file-sv" name="file-sv[]" type="file" multiple>
 								</form>
 								
