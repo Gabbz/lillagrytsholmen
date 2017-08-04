@@ -27,6 +27,10 @@ include 'assets/includes/settings.inc.php';
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+		
+
 	</head>
 	<body>
 
@@ -288,11 +292,34 @@ include 'assets/includes/settings.inc.php';
 						<!-- upload -->
 							<article id="upload">
 								<h2 class="major">Ladda upp bilder</h2>
-								<form action="upload.php" method="post" enctype="multipart/form-data">
+								
+								
+								
+								<form enctype="multipart/form-data">
+									<label>Svensk Input</label>
+									<input id="file-sv" name="file-sv[]" type="file" multiple>
+								</form>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 									<ul class="actions" style="padding-left: 0.75rem">
 										<li><input type="submit" value="Ladda upp bilder" name="submit" /></li>
 									</ul>
-								</form>
+								</form> -->
 							</article>
 
 						<!-- photo gallery -->
@@ -613,6 +640,20 @@ include 'assets/includes/settings.inc.php';
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/snackbar.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/plugins/sortable.js" type="text/javascript"></script>
+			<script src="assets/js/fileinput.js" type="text/javascript"></script>
+			<script src="assets/js/locales/sv.js" type="text/javascript"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+			<script>
+				$('#file-sv').fileinput({
+					language: 'sv',
+					uploadUrl: '#',
+					allowedFileExtensions: ['jpg', 'png', 'gif'],
+					maxFileSize: 5000,
+					maxFileNum: 10
+				});
+			</script>
 
 			<?php if (isset($feedback)) {
 				echo "<script>(function(){toggleSnackbar()})();</script>";
