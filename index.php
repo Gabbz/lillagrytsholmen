@@ -23,12 +23,13 @@ include 'assets/includes/settings.inc.php';
 		<title>Lilla Grytholmen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+		
 		
 
 	</head>
@@ -296,7 +297,6 @@ include 'assets/includes/settings.inc.php';
 								
 								
 								<form enctype="multipart/form-data">
-									<label>Svensk Input</label>
 									<input id="file-sv" name="file-sv[]" type="file" multiple>
 								</form>
 								
@@ -651,7 +651,7 @@ include 'assets/includes/settings.inc.php';
 					uploadUrl: '#',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
 					maxFileSize: 5000,
-					maxFileNum: 10
+					maxFileNum: 5
 				});
 			</script>
 
