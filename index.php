@@ -291,7 +291,7 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- upload -->
-							<article id="upload" width="100%">
+							<article id="upload" style="width:90%;">
 								<h2 class="major">Ladda upp bilder</h2>
 								
 								
