@@ -972,12 +972,22 @@
 		height: 100% !important;
 	}
 
-	.krajee-upload-indicator {
+	.file-upload-indicator {
 		bottom: -28px;
+	}
+
+	.fileinput-remove-button {
+		letter-spacing: normal;
+		text-transform: inherit;
 	}
 
 	.btn {
 		height: inherit;
+	}
+
+	.btn-default {
+		color: #333;
+		padding: 6px 12px;
 	}
 
 /* Table */
