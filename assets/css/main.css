@@ -973,7 +973,7 @@
 	}
 
 	.file-upload-indicator {
-		bottom: -28px;
+		bottom: -28px !important;
 	}
 
 	.fileinput-remove-button {
@@ -986,7 +986,7 @@
 	}
 
 	.btn-default {
-		color: #333;
+		color: #333 !important;
 		padding: 6px 12px;
 	}
 
