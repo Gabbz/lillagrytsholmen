@@ -972,6 +972,14 @@
 		height: 100% !important;
 	}
 
+	.krajee-upload-indicator {
+		bottom: -28px;
+	}
+
+	.btn {
+		height: inherit;
+	}
+
 /* Table */
 
 	.table-wrapper {
