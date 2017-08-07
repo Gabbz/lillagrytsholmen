@@ -651,7 +651,14 @@ include 'assets/includes/settings.inc.php';
 					uploadUrl: '#',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
 					maxFileSize: 5000,
-					maxFileNum: 5
+					maxFileNum: 5,
+				});
+
+				$('#file-sv').on("change", function(e){
+					if(e.target.files > 5) {
+						e.parentDefault();
+						alert("no");
+					}
 				});
 			</script>
 
