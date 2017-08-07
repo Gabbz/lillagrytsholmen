@@ -990,6 +990,10 @@
 		padding: 6px 12px;
 	}
 
+	.kv-error-close ul li b {
+		color: inherit;
+	}
+
 /* Table */
 
 	.table-wrapper {
