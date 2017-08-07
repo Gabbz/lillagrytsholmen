@@ -293,27 +293,9 @@ include 'assets/includes/settings.inc.php';
 						<!-- upload -->
 							<article id="upload" style="width:90%;">
 								<h2 class="major">Ladda upp bilder</h2>
-								
-								
-								
 								<form enctype="multipart/form-data" style="margin: 2rem 0 2rem 0;">
 									<input id="file-sv" name="file-sv[]" type="file" multiple>
 								</form>
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
 								
 								<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
 									<ul class="actions" style="padding-left: 0.75rem">
@@ -650,6 +632,7 @@ include 'assets/includes/settings.inc.php';
 					language: 'sv',
 					uploadUrl: '#',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
+					showZoom: false,
 					maxFileSize: 5000,
 					maxFileNum: 5,
 					maxFileCount: 5

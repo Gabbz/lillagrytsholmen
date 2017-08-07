@@ -969,11 +969,11 @@
 
 	.krajee-default .file-preview-image {
 		width: 100% !important;
-		height: 100% !important;
+		height: 80% !important;
 	}
 
 	.file-upload-indicator {
-		bottom: -28px !important;
+		display: none !important;
 	}
 
 	.fileinput-remove-button {
@@ -992,10 +992,6 @@
 
 	.file-error-message ul li b {
 		color: inherit;
-	}
-
-	.file-upload-indicatior {
-		display: none;
 	}
 
 /* Table */
