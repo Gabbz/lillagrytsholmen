@@ -652,13 +652,7 @@ include 'assets/includes/settings.inc.php';
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
 					maxFileSize: 5000,
 					maxFileNum: 5,
-				});
-
-				$('#file-sv').on("change", function(e){
-					if(e.target.files.length > 5) {
-						e.parentDefault();
-						alert("no");
-					}
+					maxFileCount: 5
 				});
 			</script>
 
