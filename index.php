@@ -655,7 +655,7 @@ include 'assets/includes/settings.inc.php';
 				});
 
 				$('#file-sv').on("change", function(e){
-					if(e.target.files > 5) {
+					if(e.target.files.length > 5) {
 						e.parentDefault();
 						alert("no");
 					}
