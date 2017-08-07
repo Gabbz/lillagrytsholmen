@@ -994,6 +994,10 @@
 		color: inherit;
 	}
 
+	.file-upload-indicatior {
+		display: none;
+	}
+
 /* Table */
 
 	.table-wrapper {
