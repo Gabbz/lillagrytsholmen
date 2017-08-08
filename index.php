@@ -630,7 +630,7 @@ include 'assets/includes/settings.inc.php';
 			<script>
 				$('#file-sv').fileinput({
 					language: 'sv',
-					uploadUrl: 'assets/includes/upload.php',
+					uploadUrl: 'assets/includes/upload.inc.php',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
 					showZoom: false,
 					maxFileSize: 5000,
