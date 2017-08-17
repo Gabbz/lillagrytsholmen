@@ -46,6 +46,7 @@
         // $output = ['uploaded' => $paths];
     } elseif ($success === false) {
         $output = ['error'=>'Error while uploading images. Contact the system administrator'];
+        $output = $target;
         // delete any uploaded files
         foreach ($paths as $file) {
             unlink($file);
