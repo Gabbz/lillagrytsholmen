@@ -21,7 +21,7 @@
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
-        $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
         if(move_uploaded_file($images['tmp_name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
