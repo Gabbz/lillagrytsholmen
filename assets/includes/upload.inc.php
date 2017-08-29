@@ -30,9 +30,9 @@
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
-        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-        echo "<script>console.log('$target');</script>";
+        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);        
         if(move_uploaded_file($images['name'][$i], $target)) {
+            echo "<script>console.log('inne här');</script>";
             $success = true;
             $paths[] = $target;
         } else {
