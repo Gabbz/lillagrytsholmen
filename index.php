@@ -632,7 +632,7 @@ include 'assets/includes/settings.inc.php';
 					language: 'sv',
 					uploadUrl: 'assets/includes/upload.inc.php',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
-					removeIcon: "<i class=\"glyphicon glyphicon-zoom-in\"></i> ",
+					removeIcon: "<i class=\"glyphicon glyphicon-zoom-in\"></i>",
 					browseLabel: "Välj filer",
 					maxFileSize: 5000,
 					maxFileNum: 5,
