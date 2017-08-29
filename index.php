@@ -294,7 +294,7 @@ include 'assets/includes/settings.inc.php';
 							<article id="upload" style="width:90%;">
 								<h2 class="major">Ladda upp bilder</h2>
 								<form enctype="multipart/form-data" style="margin: 2rem 0 2rem 0;">
-									<input id="file-sv" name="file-sv[]" type="file" multiple>
+									<input id="files" name="files[]" type="file" multiple>
 								</form>
 								
 								<!-- <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -628,14 +628,21 @@ include 'assets/includes/settings.inc.php';
 			<script src="assets/js/locales/sv.js" type="text/javascript"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 			<script>
-				$('#file-sv').fileinput({
+				$('#files').fileinput({
 					language: 'sv',
 					uploadUrl: 'assets/includes/upload.inc.php',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
 					browseLabel: "Välj filer",
 					maxFileSize: 5000,
 					maxFileNum: 5,
-					maxFileCount: 5
+					maxFileCount: 5 
+					/* Ev tagga uploaden
+					uploadExtraData: function() {
+						return {
+							userid: $("#userid").val(),
+							username: $("#username").val()
+						};
+					} */
 				});
 			</script>
 

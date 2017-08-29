@@ -1,18 +1,27 @@
 <?php
     // 'images' refers to your file input name attribute
-    if (empty($_FILES['file-sv'])) {
-        echo json_encode(['error'=>'No files found for upload.']); 
+    if (empty($_FILES['files'])) {
+        echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
         // or you can throw an exception 
         return; // terminate
     }
 
     // get the files posted
-    $images = $_FILES['file-sv'];
+    $images = $_FILES['files'];
+
+    /*  OM EXTRA INFO SKA FÄSTAS PÅ BILDEN
+    // get user id posted
+    $userid = empty($_POST['userid']) ? '' : $_POST['userid'];
+
+    // get user name posted
+    $username = empty($_POST['username']) ? '' : $_POST['username'];
+    */
 
     // a flag to see if everything is ok
     $success = null;
 
     // file paths to store
+    //$paths= [../../uploads];
     $paths= [];
 
     // get file names
@@ -20,8 +29,10 @@
 
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
+        echo "<script>console.log('$images[$i]');</script>";
         $ext = explode('.', basename($filenames[$i]));
-        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+        $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+        echo "<script>console.log('$target');</script>";
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
