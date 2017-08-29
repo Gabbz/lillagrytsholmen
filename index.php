@@ -632,7 +632,6 @@ include 'assets/includes/settings.inc.php';
 					language: 'sv',
 					uploadUrl: 'assets/includes/upload.inc.php',
 					allowedFileExtensions: ['jpg', 'png', 'gif'],
-					showZoom: false,
 					maxFileSize: 5000,
 					maxFileNum: 5,
 					maxFileCount: 5
