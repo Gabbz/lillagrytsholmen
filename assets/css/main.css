@@ -964,7 +964,8 @@
 	}
 
 	.krajee-default.file-preview-frame {
-		width: 18%;
+		width: 19%;
+		margin: 7.8px;
 	}
 
 	.krajee-default .file-preview-image {
