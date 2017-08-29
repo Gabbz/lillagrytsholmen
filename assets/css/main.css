@@ -968,6 +968,10 @@
 		margin: 7.8px;
 	}
 
+	.kv-file-zoom {
+		display: none;
+	}
+
 	.file-upload-indicator {
 		display: none !important;
 	}
