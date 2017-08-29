@@ -968,11 +968,6 @@
 		margin: 7.8px;
 	}
 
-	.krajee-default .file-preview-image {
-		width: 100% !important;
-		height: 80% !important;
-	}
-
 	.file-upload-indicator {
 		display: none !important;
 	}
