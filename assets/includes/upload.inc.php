@@ -26,7 +26,7 @@
 
     // get file names
     $filenames = $images['name'];
-    echo "<script>console.log(count($filenames));</script>";
+    echo "<script>console.log(" + count($filenames)+");</script>";
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
