@@ -29,7 +29,6 @@
 
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
-        echo "<script>console.log('$images[$i]');</script>";
         $ext = explode('.', basename($filenames[$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
         echo "<script>console.log('$target');</script>";
