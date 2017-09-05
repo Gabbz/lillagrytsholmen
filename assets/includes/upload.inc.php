@@ -1,6 +1,6 @@
 <?php
     include 'ChromePhp.php';
-    
+
     // 'images' refers to your file input name attribute
     if (empty($_FILES['files'])) {
         echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
@@ -32,7 +32,8 @@
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
-        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);        
+        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
+        ChromePhp::log($target);    
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
