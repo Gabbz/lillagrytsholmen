@@ -1,4 +1,6 @@
 <?php
+    include 'ChromePhp.php';
+    
     // 'images' refers to your file input name attribute
     if (empty($_FILES['files'])) {
         echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
