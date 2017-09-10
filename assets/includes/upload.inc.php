@@ -51,7 +51,7 @@
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
         debug_to_console($ext);
-        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
+        $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
         debug_to_console($target);
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
