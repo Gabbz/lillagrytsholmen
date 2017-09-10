@@ -6,7 +6,12 @@
         // or you can throw an exception 
         return; // terminate
     }
+    ?> 
+    <script>
+        console.log(<?php print $_FILES['files']?>);
+    </script>
 
+<?
     // get the files posted
     $images = $_FILES['files'];
 
