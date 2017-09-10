@@ -42,12 +42,13 @@
 
     // file paths to store
     //$paths= [../../uploads];
-    $target_dir = "uploads/";
     $paths= [];
 
     // get file names
     $filenames = $images['name'];
     
+
+    $target_dir = "uploads/";
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         /*$ext = explode('.', basename($filenames[$i]));
@@ -58,14 +59,14 @@
         } else {
             $success = false;
             break;
-        }*/
-        $target = $target_dir . basename($filenames[$i]);
-        if(move_uploaded_file($images['name'][$i], $target)) {
+        } */
+        $target_dir . basename($filenames[$i]);
+        if (move_uploaded_file($images['name'][$i], $target_file)) {
+            echo "The file ". basename($filenames[$i]). " has been uploaded.";
             $success = true;
-            $paths[] = $target;
         } else {
             $success = false;
-            break;
+            echo "Sorry, there was an error uploading your file.";
         }
     }
 
