@@ -8,7 +8,7 @@
     }
     ?> 
     <script>
-        console.log(<?php print $_FILES['files']?>);
+        console.log(<?php print $_FILES['files'];?>);
     </script>
 
 <?
