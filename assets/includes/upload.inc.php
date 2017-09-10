@@ -25,8 +25,6 @@
         // or you can throw an exception 
         return; // terminate
     }
-
-    debug_to_console($_FILES['files']);
     
     // get the files posted
     $images = $_FILES['files'];
@@ -48,6 +46,8 @@
 
     // get file names
     $filenames = $images['name'];
+
+    debug_to_console($filenames);
     
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
