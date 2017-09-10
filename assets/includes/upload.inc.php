@@ -63,6 +63,7 @@
         $target_dir . basename($filenames[$i]);
         if (move_uploaded_file($images['name'][$i], $target_file)) {
             echo "The file ". basename($filenames[$i]). " has been uploaded.";
+            debug_to_console("fan heller");
             $success = true;
         } else {
             $success = false;
