@@ -42,6 +42,7 @@
 
     // file paths to store
     //$paths= [../../uploads];
+    $target_dir = "uploads/";
     $paths= [];
 
     // get file names
@@ -49,10 +50,16 @@
     
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
-        $ext = explode('.', basename($filenames[$i]));
-        debug_to_console($ext);
+        /*$ext = explode('.', basename($filenames[$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
-        debug_to_console($target);
+        if(move_uploaded_file($images['name'][$i], $target)) {
+            $success = true;
+            $paths[] = $target;
+        } else {
+            $success = false;
+            break;
+        }*/
+        $target = $target_dir . basename($filenames[$i]);
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
