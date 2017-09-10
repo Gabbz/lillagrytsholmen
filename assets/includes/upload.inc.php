@@ -51,7 +51,7 @@
     $target_dir = "uploads/";
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
-        /*$ext = explode('.', basename($filenames[$i]));
+        $ext = explode('.', basename($filenames[$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
@@ -59,16 +59,7 @@
         } else {
             $success = false;
             break;
-        } */
-        $target_dir . basename($filenames[$i]);
-        if (move_uploaded_file($images['name'][$i], $target_file)) {
-            echo "The file ". basename($filenames[$i]). " has been uploaded.";
-            debug_to_console("fan heller");
-            $success = true;
-        } else {
-            $success = false;
-            echo "Sorry, there was an error uploading your file.";
-        }
+        } 
     }
 
     // check and process based on successful status 
