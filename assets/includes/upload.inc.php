@@ -1,17 +1,33 @@
 <?php
     
+    //Debug function
+    function debug_to_console( $data ) {
+        $output = $data;
+        if ( is_array( $output ) )
+            $output = implode( ',', $output);
+    
+        echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+    }
+
+
+
+
+
+
+
+
+
+
+
     // 'images' refers to your file input name attribute
     if (empty($_FILES['files'])) {
         echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
         // or you can throw an exception 
         return; // terminate
     }
-    ?> 
-    <script>
-        console.log(<?php print $_FILES['files'];?>);
-    </script>
 
-<?
+    debug_to_console($_FILES['files']);
+    
     // get the files posted
     $images = $_FILES['files'];
 
