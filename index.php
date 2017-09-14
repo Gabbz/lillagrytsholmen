@@ -638,7 +638,7 @@ include 'assets/includes/settings.inc.php';
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/snackbar.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/moment.min.js"></script>
 			<script src="assets/js/plugins/sortable.js" type="text/javascript"></script>
 			<script src="assets/js/fileinput.js" type="text/javascript"></script>
 			<script src="assets/js/locales/sv.js" type="text/javascript"></script>
