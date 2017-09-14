@@ -34,13 +34,15 @@ include 'assets/includes/settings.inc.php';
 		<script type="text/javascript">
 			$(function() {
 				// Default Calendar
+				/*
 				$('.calendar').pignoseCalendar({
 					theme: 'dark',
 					week: 1,
 					multiple: true,
 					select: onClickHandler
 					//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-				});
+				});*/
+				$('.calendar').pignoseCalendar();
 			});
 		</script>
 		
@@ -322,7 +324,7 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- book -->
-							<article id="book" style="width: 75%;">
+							<article id="book">
 								<h2 class="major">Boka Stugan</h2>
 								<div class="calendar"></div>
 								<form method="post" action="#">
