@@ -320,7 +320,7 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- book -->
-							<article id="book" style="width: 80%;">
+							<article id="book">
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
 									<form method="post" action="#">
