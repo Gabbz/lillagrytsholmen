@@ -329,6 +329,7 @@ include 'assets/includes/settings.inc.php';
 											
 											$('.calendar').pignoseCalendar({
 												theme: 'dark',
+												lang: 'sv',
 												week: 1,
 												multiple: true
 												//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
