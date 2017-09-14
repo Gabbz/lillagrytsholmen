@@ -322,41 +322,42 @@ include 'assets/includes/settings.inc.php';
 						<!-- book -->
 							<article id="book">
 								<h2 class="major">Boka Stugan</h2>
-								<div class="calendar">
-									<script type="text/javascript">
-										$(function() {
-											// Default Calendar
-											
-											$('.calendar').pignoseCalendar({
-												theme: 'dark',
-												lang: 'sv',
-												week: 1,
-												multiple: true
-												//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+								<div>
+									<div class="calendar">
+										<script type="text/javascript">
+											$(function() {
+												// Default Calendar
+												
+												$('.calendar').pignoseCalendar({
+													theme: 'dark',
+													lang: 'sv',
+													week: 1,
+													multiple: true
+													//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+												});
+												/*$('.calendar').pignoseCalendar();*/
 											});
-											/*$('.calendar').pignoseCalendar();*/
-										});
-									</script>
+										</script>
+									</div>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
 								</div>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-									
 							</article>
 
 							<!-- contact -->
