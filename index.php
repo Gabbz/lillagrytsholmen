@@ -23,6 +23,8 @@ include 'assets/includes/settings.inc.php';
 		<title>Lilla Grytholmen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/pignose.calendar.min.css" />
+		<script src="assets/js/pignose.calendar.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -309,8 +311,9 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- book -->
-							<article id="book">
+							<article id="book" style="width: 75%;">
 								<h2 class="major">Boka Stugan</h2>
+								<div class="calendar"></div>
 								<form method="post" action="#">
 									<div class="field half first">
 										<label for="name">Name</label>
