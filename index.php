@@ -320,7 +320,7 @@ include 'assets/includes/settings.inc.php';
 							</article>
 
 						<!-- book -->
-							<article id="book">
+							<article id="book" style="width:100%;">
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
 									<form method="post" action="#">
@@ -336,7 +336,6 @@ include 'assets/includes/settings.inc.php';
 														multiple: true
 														//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 													});
-													/*$('.calendar').pignoseCalendar();*/
 												});
 											</script>
 										</div>
