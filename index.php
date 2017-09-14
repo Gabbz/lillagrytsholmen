@@ -23,28 +23,21 @@ include 'assets/includes/settings.inc.php';
 		<title>Lilla Grytholmen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<!-- CSS -->
 		<link rel="stylesheet" href="assets/css/pignose.calendar.min.css" />
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- JS -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/moment.min.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<script type="text/javascript">
-			$(function() {
-				// Default Calendar
-				/*
-				$('.calendar').pignoseCalendar({
-					theme: 'dark',
-					week: 1,
-					multiple: true,
-					select: onClickHandler
-					//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-				});*/
-				$('.calendar').pignoseCalendar();
-			});
-		</script>
+		
 		
 
 	</head>
@@ -326,7 +319,22 @@ include 'assets/includes/settings.inc.php';
 						<!-- book -->
 							<article id="book">
 								<h2 class="major">Boka Stugan</h2>
-								<div class="calendar"></div>
+								<div class="calendar">
+									<script type="text/javascript">
+										$(function() {
+											// Default Calendar
+											/*
+											$('.calendar').pignoseCalendar({
+												theme: 'dark',
+												week: 1,
+												multiple: true,
+												select: onClickHandler
+												//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+											});*/
+											$('.calendar').pignoseCalendar();
+										});
+									</script>
+								</div>
 								<form method="post" action="#">
 									<div class="field half first">
 										<label for="name">Name</label>
@@ -633,12 +641,11 @@ include 'assets/includes/settings.inc.php';
 			<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/snackbar.js"></script>
-			<script src="assets/js/moment.min.js"></script>
 			<script src="assets/js/plugins/sortable.js" type="text/javascript"></script>
 			<script src="assets/js/fileinput.js" type="text/javascript"></script>
 			<script src="assets/js/locales/sv.js" type="text/javascript"></script>
