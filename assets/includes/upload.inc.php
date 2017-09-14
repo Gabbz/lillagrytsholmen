@@ -1,12 +1,31 @@
 <?php
     
+    //Debug function
+    function debug_to_console( $data ) {
+        $output = $data;
+        if ( is_array( $output ) )
+            $output = implode( ',', $output);
+    
+        echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+    }
+
+
+
+
+
+
+
+
+
+
+
     // 'images' refers to your file input name attribute
     if (empty($_FILES['files'])) {
         echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
         // or you can throw an exception 
         return; // terminate
     }
-
+    
     // get the files posted
     $images = $_FILES['files'];
 
@@ -28,17 +47,19 @@
     // get file names
     $filenames = $images['name'];
     
+
+    $target_dir = "uploads/";
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
-        $target = "../../uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
+        $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
         if(move_uploaded_file($images['name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
         } else {
             $success = false;
             break;
-        }
+        } 
     }
 
     // check and process based on successful status 
