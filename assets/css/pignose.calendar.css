@@ -151,6 +151,7 @@
   font-size: 160%;
 }
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev {
+  border-bottom: none;
   float: left;
   margin-left: 1.6em;
 }
@@ -158,6 +159,7 @@
   margin-left: .2em;
 }
 .pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next {
+  border-bottom: none;
   float: right;
   margin-right: 1.6em;
 }
