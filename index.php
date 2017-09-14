@@ -323,21 +323,20 @@ include 'assets/includes/settings.inc.php';
 							<article id="book" style="width:100%;">
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
-									<form method="post" action="#">
-										<div class="calendar">
-											<script type="text/javascript">
-												$(function() {
-													$('.calendar').pignoseCalendar({
-														theme: 'dark',
-														lang: 'sv',
-														week: 1,
-														multiple: true
-														//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-													});
+									<div class="calendar">
+										<script type="text/javascript">
+											$(function() {
+												$('.calendar').pignoseCalendar({
+													theme: 'dark',
+													lang: 'sv',
+													week: 1,
+													multiple: true
+													//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 												});
-											</script>
-										</div>
-									
+											});
+										</script>
+									</div>
+									<form method="post" action="#">
 										<div class="field half first">
 											<label for="name">Name</label>
 											<input type="text" name="name" id="name" />
