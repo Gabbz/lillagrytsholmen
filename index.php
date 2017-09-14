@@ -337,11 +337,11 @@ include 'assets/includes/settings.inc.php';
 										</script>
 									</div>
 									<form method="post" action="#">
-										<div class="field half first">
+										<div class="field">
 											<label for="name">Name</label>
 											<input type="text" name="name" id="name" />
 										</div>
-										<div class="field half">
+										<div class="field">
 											<label for="email">Email</label>
 											<input type="text" name="email" id="email" />
 										</div>
