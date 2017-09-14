@@ -327,8 +327,6 @@ include 'assets/includes/settings.inc.php';
 										<div class="calendar">
 											<script type="text/javascript">
 												$(function() {
-													// Default Calendar
-													
 													$('.calendar').pignoseCalendar({
 														theme: 'dark',
 														lang: 'sv',
