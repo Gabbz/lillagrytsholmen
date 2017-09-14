@@ -323,25 +323,26 @@ include 'assets/includes/settings.inc.php';
 							<article id="book" style="width:100%;">
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
-									<div class="half first">
-										<div class="calendar">
-											<script type="text/javascript">
-												$(function() {
-													$('.calendar').pignoseCalendar({
-														theme: 'dark',
-														lang: 'sv',
-														week: 1,
-														multiple: true
-														//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+									<form method="post" action="#">
+										<div style="width: 40%;float: left;margin-top: 50px;">
+											<div class="calendar">
+												<script type="text/javascript">
+													$(function() {
+														$('.calendar').pignoseCalendar({
+															theme: 'dark',
+															lang: 'sv',
+															week: 1,
+															multiple: true
+															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+														});
 													});
-												});
-											</script>
+												</script>
+											</div>
 										</div>
-									</div>
-									<div class="half">
-										<form method="post" action="#">
+										<div style="width: 60%;float: left;">
 											<div class="field">
-												<label for="name">Name</label>
+												<
+												<label for="name"><?php print $_SESSION['fullname'];?></label>
 												<input type="text" name="name" id="name" />
 											</div>
 											<div class="field">
@@ -349,15 +350,14 @@ include 'assets/includes/settings.inc.php';
 												<input type="text" name="email" id="email" />
 											</div>
 											<div class="field">
-												<label for="message">Message</label>
+												<label for="message">Övrig infromation</label>
 												<textarea name="message" id="message" rows="4"></textarea>
 											</div>
 											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="special" /></li>
-												<li><input type="reset" value="Reset" /></li>
+												<li><input type="submit" value="Boka" class="special" /></li>
 											</ul>
-										</form>
-									</div>
+										</div>
+									</form>
 								</div>
 							</article>
 
