@@ -222,6 +222,7 @@
   width: 2.4em;
   height: 2.4em;
   border-radius: 50%;
+  border-bottom: none;
   color: #49c4d0;
   line-height: 2.4em;
   text-align: center;
