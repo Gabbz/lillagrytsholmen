@@ -32,40 +32,7 @@ include 'assets/includes/settings.inc.php';
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<script type="text/javascript">
-			//<![CDATA[
 			$(function() {
-				$('#wrapper .version strong').text('v' + $.fn.pignoseCalendar.ComponentVersion);
-
-				function onClickHandler(date, obj) {
-					/**
-					* @date is an array which be included dates(clicked date at first index)
-					* @obj is an object which stored calendar interal data.
-					* @obj.calendar is an element reference.
-					* @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
-					* @obj.storage.events is all events associated to this date
-					*/
-
-					var $calendar = obj.calendar;
-					var $box = $calendar.parent().siblings('.box').show();
-					var text = 'You choose date ';
-
-					if(date[0] !== null) {
-						text += date[0].format('YYYY-MM-DD');
-					}
-
-					if(date[0] !== null && date[1] !== null) {
-						text += ' ~ ';
-					} else if(date[0] === null && date[1] == null) {
-						text += 'nothing';
-					}
-
-					if(date[1] !== null) {
-						text += date[1].format('YYYY-MM-DD');
-					}
-
-					$box.text(text);
-				}
-
 				// Default Calendar
 				$('.calendar').pignoseCalendar({
 					theme: 'dark',
@@ -74,11 +41,7 @@ include 'assets/includes/settings.inc.php';
 					select: onClickHandler
 					//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 				});
-
-				// This use for DEMO page tab component.
-				$('.menu .item').tab();
 			});
-			//]]>
 		</script>
 		
 
