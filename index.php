@@ -339,7 +339,7 @@ include 'assets/includes/settings.inc.php';
 															* @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
 															* @obj.storage.events is all events associated to this date
 															*/
-
+															console.log("waddup");
 															var $calendar = obj.calendar;
 															var $box = $calendar.parent().siblings('.box').show();
 															var text = 'You choose date ';
@@ -364,7 +364,8 @@ include 'assets/includes/settings.inc.php';
 															theme: 'dark',
 															lang: 'sv',
 															week: 1,
-															multiple: true
+															multiple: true,
+															select: onClickHandler
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														});
 													});
