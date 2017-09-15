@@ -328,6 +328,35 @@ include 'assets/includes/settings.inc.php';
 											<div class="calendar">
 												<script type="text/javascript">
 													$(function() {
+														function onClickHandler(date, obj) {
+															/**
+															* @date is an array which be included dates(clicked date at first index)
+															* @obj is an object which stored calendar interal data.
+															* @obj.calendar is an element reference.
+															* @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
+															* @obj.storage.events is all events associated to this date
+															*/
+
+															var $calendar = obj.calendar;
+															var $box = $calendar.parent().siblings('.box').show();
+															var text = 'You choose date ';
+
+															if(date[0] !== null) {
+																text += date[0].format('YYYY-MM-DD');
+															}
+
+															if(date[0] !== null && date[1] !== null) {
+																text += ' ~ ';
+															} else if(date[0] === null && date[1] == null) {
+																text += 'nothing';
+															}
+
+															if(date[1] !== null) {
+																text += date[1].format('YYYY-MM-DD');
+															}
+
+															$box.text(text);
+														}
 														$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
@@ -338,16 +367,15 @@ include 'assets/includes/settings.inc.php';
 													});
 												</script>
 											</div>
+											<div class="box">
 										</div>
 										<div style="width: 60%;float: left;">
-											<div class="field">
+											<div  class="field">
 												
-												<label for="name"><?php print $_SESSION['fullname'];?></label>
-												<input type="text" name="name" id="name" />
 											</div>
 											<div class="field">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<label for="name">Boka för:</label>
+												<input type="text" value="<?php print $_SESSION['fullname'];?>" name="name" id="name" readonly />
 											</div>
 											<div class="field">
 												<label for="message">Övrig infromation</label>
