@@ -415,6 +415,7 @@
 		border: solid 1px #ffffff;
 		color: inherit;
 		display: block;
+		resize: none;
 		outline: 0;
 		padding: 0 1rem;
 		text-decoration: none;
