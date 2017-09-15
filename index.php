@@ -324,7 +324,7 @@ include 'assets/includes/settings.inc.php';
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
 									<form method="post" action="#">
-										<div style="width: 40%;float: left;margin-top: 50px;">
+										<div style="width: 40%;float: left;margin-top: 27px;">
 											<div class="calendar">
 												<script type="text/javascript">
 													$(function() {
@@ -345,9 +345,9 @@ include 'assets/includes/settings.inc.php';
 															}
 
 															if(date[0] !== null && date[1] !== null) {
-																text += ' ~ ';
+																text += ' - ';
 															} else if(date[0] === null && date[1] == null) {
-																text += 'nothing';
+																text = '';
 															}
 
 															if(date[1] !== null) {
