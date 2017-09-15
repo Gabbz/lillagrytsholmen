@@ -329,8 +329,6 @@ include 'assets/includes/settings.inc.php';
 												<script type="text/javascript">
 													$(function() {
 
-														$('.version strong').text('v' + $.fn.pignoseCalendar.ComponentVersion);
-
 														function onClickHandler(date, obj) {
 															/**
 															* @date is an array which be included dates(clicked date at first index)
@@ -339,13 +337,11 @@ include 'assets/includes/settings.inc.php';
 															* @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
 															* @obj.storage.events is all events associated to this date
 															*/
-															console.log("waddup");
-															var $calendar = obj.calendar;
-															var $box = $calendar.parent().siblings('.box').show();
-															var text = 'You choose date ';
+															
+															var text = '';
 
 															if(date[0] !== null) {
-																text += date[0].format('YYYY-MM-DD');
+																text += date[0].format('YYYY-MM-DD 12:00');
 															}
 
 															if(date[0] !== null && date[1] !== null) {
@@ -355,10 +351,10 @@ include 'assets/includes/settings.inc.php';
 															}
 
 															if(date[1] !== null) {
-																text += date[1].format('YYYY-MM-DD');
+																text += date[1].format('YYYY-MM-DD 12:00');
 															}
 
-															$box.text(text);
+															document.getElementById("dates").value = text; 
 														}
 														$('.calendar').pignoseCalendar({
 															theme: 'dark',
@@ -374,7 +370,8 @@ include 'assets/includes/settings.inc.php';
 										</div>
 										<div style="width: 60%;float: left;">
 											<div  class="field">
-											<div class="box"></div>
+												<label for ="dates">Valda datum:</label>
+												<input type="text" placeholder="Välj datum i kalendern" id="dates" name="dates" readonly />
 											</div>
 											<div class="field">
 												<label for="name">Boka för:</label>
