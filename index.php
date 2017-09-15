@@ -329,7 +329,7 @@ include 'assets/includes/settings.inc.php';
 												<script type="text/javascript">
 													$(function() {
 
-														$('#book .version strong').text('v' + $.fn.pignoseCalendar.ComponentVersion);
+														$('.version strong').text('v' + $.fn.pignoseCalendar.ComponentVersion);
 
 														function onClickHandler(date, obj) {
 															/**
