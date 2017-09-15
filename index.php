@@ -341,7 +341,7 @@ include 'assets/includes/settings.inc.php';
 										</div>
 										<div style="width: 60%;float: left;">
 											<div class="field">
-												<
+												
 												<label for="name"><?php print $_SESSION['fullname'];?></label>
 												<input type="text" name="name" id="name" />
 											</div>
