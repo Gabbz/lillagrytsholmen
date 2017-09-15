@@ -328,6 +328,9 @@ include 'assets/includes/settings.inc.php';
 											<div class="calendar">
 												<script type="text/javascript">
 													$(function() {
+
+														$('#book .version strong').text('v' + $.fn.pignoseCalendar.ComponentVersion);
+
 														function onClickHandler(date, obj) {
 															/**
 															* @date is an array which be included dates(clicked date at first index)
@@ -367,11 +370,10 @@ include 'assets/includes/settings.inc.php';
 													});
 												</script>
 											</div>
-											<div class="box">
 										</div>
 										<div style="width: 60%;float: left;">
 											<div  class="field">
-												
+											<div class="box"></div>
 											</div>
 											<div class="field">
 												<label for="name">Boka för:</label>
