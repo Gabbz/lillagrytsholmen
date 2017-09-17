@@ -6,5 +6,5 @@
     $query = "SELECT * FROM booking";
     $result = mysqli_query($con,$sql);
 
-    
+    echo $row['renter'];
 ?>
