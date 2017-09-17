@@ -6,8 +6,12 @@
     $query = "SELECT * FROM booking";
     $result = mysqli_query($mysqli,$query);
 
+    $jsonArr = [];
+
     while($row = mysqli_fetch_array($result)) {
-        echo $row['renter'];
-        echo $row['to_date'];
+        $jsonArr[0] =  $row['renter'];
+        $jsonArr[1] =  $row['to_date'];
     }
+
+    echo json_encode($jsonArr);
 ?>
