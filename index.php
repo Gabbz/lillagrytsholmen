@@ -358,7 +358,7 @@ include 'assets/includes/settings.inc.php';
 														}
 
 														$.get( "assets/includes/book.inc.php", function( data ) {
-															response = data;
+															response = JSON.parse(data);
 															console.log(response);
 														});
 														$('.calendar').pignoseCalendar({
