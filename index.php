@@ -358,7 +358,7 @@ include 'assets/includes/settings.inc.php';
 														}
 
 														$.get( "assets/includes/book.inc.php", function( data ) {
-															alert( "Data Loaded: " + data );
+															console.log( "Data Loaded: " + data );
 														});
 														$('.calendar').pignoseCalendar({
 															theme: 'dark',
