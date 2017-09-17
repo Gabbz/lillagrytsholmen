@@ -341,7 +341,7 @@ include 'assets/includes/settings.inc.php';
 															var text = '';
 
 															if(date[0] !== null) {
-																text += date[0].format('YYYY-MM-DD 12:00');
+																text += date[0].format('YYYY-MM-DD 12:01');
 															}
 
 															if(date[0] !== null && date[1] !== null) {
@@ -356,6 +356,10 @@ include 'assets/includes/settings.inc.php';
 
 															document.getElementById("dates").value = text; 
 														}
+
+														$.get( "assets/includes/book.inc.php", function( data ) {
+															alert( "Data Loaded: " + data );
+														});
 														$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
