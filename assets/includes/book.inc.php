@@ -4,7 +4,7 @@
 
     mysqli_select_db($mysqli, "lillagrytsholmen.se");
     $query = "SELECT * FROM booking";
-    $result = mysqli_query($con,$sql);
+    $result = mysqli_query($mysqli,$query);
 
     while($row = mysqli_fetch_array($result)) {
         echo $row['renter'];
