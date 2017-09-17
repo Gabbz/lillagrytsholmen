@@ -20,5 +20,5 @@
 
     
 
-    echo json_encode($jsonArr);
+    echo json_encode($resultArr);
 ?>
