@@ -8,5 +8,6 @@
 
     while($row = mysqli_fetch_array($result)) {
         echo $row['renter'];
+        echo $row['to_date'];
     }
 ?>
