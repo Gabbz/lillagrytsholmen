@@ -12,12 +12,12 @@
 
     for ($i = 0;$row = mysqli_fetch_array($result);$i++) {
         $booking->renter =  $row['renter'];
-        $booking->from_date_year =  substr($row['from_date'], 0, 3);
-        $booking->from_date_month =  substr($row['from_date'], 4, 6);
-        $booking->from_date_day =  substr($row['from_date'], 7, 9);
-        $booking->to_date_year = substr($row['to_date'], 0, 10);
-        $booking->to_date_month = substr($row['to_date'], 0, 10);
-        $booking->to_date_day = substr($row['to_date'], 0, 10);
+        $booking->from_date_year =  substr($row['from_date'], 0, 4);
+        $booking->from_date_month =  substr($row['from_date'], 5, 2);
+        $booking->from_date_day =  substr($row['from_date'], 8, 2);
+        $booking->to_date_year = substr($row['to_date'], 0, 4);
+        $booking->to_date_month = substr($row['to_date'], 5, 2);
+        $booking->to_date_day = substr($row['to_date'], 8, 2);
 
         $resultArr[$i] = $booking;
     }
