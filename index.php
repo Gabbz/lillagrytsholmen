@@ -396,6 +396,13 @@ include 'assets/includes/settings.inc.php';
 															week: 1,
 															multiple: true,
 															select: onClickHandler,
+															scheduleOptions: {
+																colors: {
+																	test: '#2fabb7',
+																	seminar: '#5c6270',
+																	meetup: '#ef8080'
+																}
+															},
 															schedules: [{
 																name: 'test',
 																date: '2017-09-08'
