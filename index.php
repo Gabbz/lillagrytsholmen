@@ -396,7 +396,10 @@ include 'assets/includes/settings.inc.php';
 															week: 1,
 															multiple: true,
 															select: onClickHandler,
-															schedules: fillArray[0]
+															schedules: [{
+																name: 'test',
+																date: '2017-09-08'
+															}]
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														})}, 500);
 													});
