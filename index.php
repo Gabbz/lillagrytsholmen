@@ -390,8 +390,6 @@ include 'assets/includes/settings.inc.php';
 
 														});
 
-														setTimeout(function(){alert("hi")}, 1000);
-
 														setTimeout(function(){$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
