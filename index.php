@@ -359,7 +359,14 @@ include 'assets/includes/settings.inc.php';
 
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
+															fillArray = [];
 															console.log(response);
+															for (i=0; response.length < i; i++) {
+																if (response[i].from_date_year != response[i].from_date_year) {
+																	
+																}
+															}
+
 														});
 														$('.calendar').pignoseCalendar({
 															theme: 'dark',
