@@ -389,7 +389,10 @@ include 'assets/includes/settings.inc.php';
 															console.log(fillArray);
 
 														});
-														$('.calendar').pignoseCalendar({
+
+														setTimeout(function(){alert("hi")}, 1000);
+
+														setTimeout(function(){$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
 															week: 1,
@@ -397,7 +400,7 @@ include 'assets/includes/settings.inc.php';
 															select: onClickHandler,
 															schedules: fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-														});
+														})}, 1000);
 													});
 												</script>
 											</div>
