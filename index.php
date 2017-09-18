@@ -396,9 +396,9 @@ include 'assets/includes/settings.inc.php';
 															week: 1,
 															multiple: true,
 															select: onClickHandler,
-															schedules: fillArray
+															schedules: fillArray[0]
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-														})}, 1000);
+														})}, 500);
 													});
 												</script>
 											</div>
