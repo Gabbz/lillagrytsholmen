@@ -356,10 +356,12 @@ include 'assets/includes/settings.inc.php';
 
 															document.getElementById("dates").value = text; 
 														}
+														
+														var fillArray = [];
 
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
-															var fillArray = [];
+															
 															console.log(response);
 															for (i=0; response.length < i; i++) {
 															/*	var tempFiller = "";
@@ -379,7 +381,7 @@ include 'assets/includes/settings.inc.php';
 																	date: response[i].from_date_year + response[i].from_date_month + response[i].from_date_day
 																});
 															}
-															
+															console.log(fillArray);
 
 														});
 														$('.calendar').pignoseCalendar({
