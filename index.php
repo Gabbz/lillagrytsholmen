@@ -378,11 +378,11 @@ include 'assets/includes/settings.inc.php';
 																}*/
 																fillArray.push({
 																	name: response[i].renter,
-																	date: response[i].from_date_year + response[i].from_date_month + response[i].from_date_day
+																	date: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day
 																});
 																fillArray.push({
 																	name: response[i].renter,
-																	date: response[i].to_date_year + response[i].to_date_month + response[i].to_date_day
+																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																});
 																
 															}
