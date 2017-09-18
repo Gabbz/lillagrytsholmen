@@ -398,6 +398,7 @@ include 'assets/includes/settings.inc.php';
 															select: onClickHandler,
 															scheduleOptions: {
 																colors: {
+																	//Dynamisk färgsättning hämtat från db
 																	test: '#2fabb7',
 																	Jonas_Borg: '#5c6270',
 																	meetup: '#ef8080'
