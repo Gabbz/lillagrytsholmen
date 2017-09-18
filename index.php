@@ -403,7 +403,7 @@ include 'assets/includes/settings.inc.php';
 																	meetup: '#ef8080'
 																}
 															},
-															schedules: fillArray
+															schedules: fillArray[0]
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														})}, 500);
 													});
