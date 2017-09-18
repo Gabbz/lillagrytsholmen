@@ -359,13 +359,27 @@ include 'assets/includes/settings.inc.php';
 
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
-															fillArray = [];
+															var fillArray = [];
 															console.log(response);
 															for (i=0; response.length < i; i++) {
-																if (response[i].from_date_year != response[i].from_date_year) {
-																	
+															/*	var tempFiller = "";
+																
+																if (response[i].from_date_year != response[i].to_date_year) {
+																	tempFiller = response[i].from_date_year +1;
 																}
+																if (response[i].from_date_year != response[i].from_date_year)
+																while (response[i].from_date_month != response[i].to_date_year) {
+																	if (response[i].from_date_year != response[i].from_date_year) {
+																	}
+																	if (response[i].from_date_year != response[i].from_date_year) {
+																	}
+																}*/
+																fillArray.push({
+																	name: response[i].renter,
+																	date: response[i].from_date_year + response[i].from_date_month + response[i].from_date_day
+																});
 															}
+															
 
 														});
 														$('.calendar').pignoseCalendar({
@@ -373,7 +387,8 @@ include 'assets/includes/settings.inc.php';
 															lang: 'sv',
 															week: 1,
 															multiple: true,
-															select: onClickHandler
+															select: onClickHandler,
+															schedules: fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														});
 													});
