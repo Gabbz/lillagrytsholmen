@@ -377,11 +377,11 @@ include 'assets/includes/settings.inc.php';
 																	}
 																}*/
 																fillArray.push({
-																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ') + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
+																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
 																	date: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day
 																});
 																fillArray.push({
-																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ') + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
+																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
 																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																});
 																
