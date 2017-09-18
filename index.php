@@ -377,11 +377,11 @@ include 'assets/includes/settings.inc.php';
 																	}
 																}*/
 																fillArray.push({
-																	name: jonas_borg,
+																	name: "jonas_borg",
 																	date: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day
 																});
 																fillArray.push({
-																	name: jonas_borg,
+																	name: "jonas_borg",
 																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																});
 																
@@ -403,7 +403,7 @@ include 'assets/includes/settings.inc.php';
 																	meetup: '#ef8080'
 																}
 															},
-															schedules: fillArray[0]
+															schedules: fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														})}, 500);
 													});
