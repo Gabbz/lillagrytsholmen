@@ -363,7 +363,7 @@ include 'assets/includes/settings.inc.php';
 															response = JSON.parse(data);
 															
 															console.log(response);
-															for (i=0; response.length < i; i++) {
+															for (i=0; response.length > i; i++) {
 															/*	var tempFiller = "";
 																
 																if (response[i].from_date_year != response[i].to_date_year) {
