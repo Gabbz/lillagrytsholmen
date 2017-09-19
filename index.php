@@ -390,7 +390,7 @@ include 'assets/includes/settings.inc.php';
 
 														});
 
-														function(){$('.calendar').pignoseCalendar({
+														$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
 															week: 1,
@@ -406,7 +406,7 @@ include 'assets/includes/settings.inc.php';
 															},
 															schedules: fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-														})};
+														});
 													});
 												</script>
 											</div>
