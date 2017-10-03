@@ -39,6 +39,24 @@ for (i=0; fillArray.length > i; i++) {
   }
 }
 
+var date = {
+    start: /* @type string */ "2020-02-21",
+    end: /* @type string */ "2020-03-03"
+}
+
+function getDates(startDate, stopDate) {
+    var dateArray = [];
+    var currentDate = moment(startDate);
+    var stopDate = moment(stopDate);
+    while (currentDate <= stopDate) {
+        dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
+        currentDate = moment(currentDate).add(1, 'days');
+    }
+    return dateArray;
+}
+
+console.log(getDates(date.start, date.end));
+
 
 
 
