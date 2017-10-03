@@ -6,7 +6,6 @@
         $admin_username = htmlspecialchars(trim($_POST['admin_username']));
         $admin_password = htmlspecialchars(trim($_POST['admin_password']));
 
-        // Query som hämtar userID och lösenord från tabellen users där username är det som användaren skrivit in
         $query = "SELECT username, password, privilege FROM admin WHERE username = (?)";
 
         if ($stmt = $mysqli->prepare($query)) {
