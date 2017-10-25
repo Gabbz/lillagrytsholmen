@@ -71,7 +71,7 @@ console.log(getDates(date.start, date.end));
 -->
 <html>
 	<head>
-		<title>Lilla Grytholmen</title>
+		<title>Hej David</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
