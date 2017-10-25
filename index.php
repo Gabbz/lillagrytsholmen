@@ -436,7 +436,7 @@ console.log(getDates(date.start, date.end));
 
 																	console.log(getDates(date.start, date.end));
 																*/
-															/*	var tempFiller = "";
+																var tempFiller = "";
 																
 																if (response[i].from_date_year != response[i].to_date_year) {
 																	tempFiller = response[i].from_date_year +1;
@@ -447,7 +447,7 @@ console.log(getDates(date.start, date.end));
 																	}
 																	if (response[i].from_date_year != response[i].from_date_year) {
 																	}
-																}*/
+																}
 																fillArray.push({
 																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
 																	date: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day
