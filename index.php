@@ -370,6 +370,7 @@ console.log(getDates(date.start, date.end));
 							<article id="gallery">
 							</article>
 
+
 						<!-- book -->
 							<article id="book" style="width:100%;">
 								<h2 class="major">Boka Stugan</h2>
