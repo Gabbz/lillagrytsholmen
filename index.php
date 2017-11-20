@@ -417,26 +417,7 @@ console.log(getDates(date.start, date.end));
 															console.log(response);
 															for (i=0; response.length > i; i++) {
 
-																/*
-																	var date = {
-																		start:  @type string  "2020-02-21",
-																		end:  @type string  "2020-03-03"
-																	}
-
-																	function getDates(startDate, stopDate) {
-																		var dateArray = [];
-																		var currentDate = moment(startDate);
-																		var stopDate = moment(stopDate);
-																		while (currentDate <= stopDate) {
-																			dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
-																			currentDate = moment(currentDate).add(1, 'days');
-																		}
-																		return dateArray;
-																	}
-
-																	console.log(getDates(date.start, date.end));
-																*/
-																var tempFiller = "";
+																/*var tempFiller = "";
 																
 																if (response[i].from_date_year != response[i].to_date_year) {
 																	tempFiller = response[i].from_date_year +1;
@@ -455,7 +436,7 @@ console.log(getDates(date.start, date.end));
 																fillArray.push({
 																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
 																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
-																});
+																}); */
 																var date = {
 																		start: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day,
 																		end: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
@@ -471,10 +452,11 @@ console.log(getDates(date.start, date.end));
 																		}
 																		return dateArray;
 																	}
-
-																	console.log(getDates(date.start, date.end));
+																	fillArray.push(getDates(date.start, date.end))
+																	
 																
 															}
+															 = 
 															console.log(fillArray);
 
 														});
