@@ -454,9 +454,8 @@ console.log(getDates(date.start, date.end));
 																	}
 																	fillArray.push(getDates(date.start, date.end))
 																	
-																
 															}
-															 = 
+															
 															console.log(fillArray);
 
 														});
