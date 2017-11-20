@@ -457,8 +457,8 @@ console.log(getDates(date.start, date.end));
 																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																});
 																var date = {
-																		start:  @type string  response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day,
-																		end:  @type string  response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
+																		start: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day,
+																		end: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																	}
 
 																	function getDates(startDate, stopDate) {
