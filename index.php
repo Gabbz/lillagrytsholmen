@@ -416,7 +416,7 @@ console.log(getDates(date.start, date.end));
 															
 															console.log(response);
 															for (i=0; response.length > i; i++) {
-
+																console.log(response);
 																/*var tempFiller = "";
 																
 																if (response[i].from_date_year != response[i].to_date_year) {
@@ -442,20 +442,20 @@ console.log(getDates(date.start, date.end));
 																		end: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
 																	}
 
-																	function getDates(startDate, stopDate) {
-																		var dateArray = [];
-																		var currentDate = moment(startDate);
-																		var stopDate = moment(stopDate);
-																		while (currentDate <= stopDate) {
-																			dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
-																			currentDate = moment(currentDate).add(1, 'days');
-																		}
-																		return dateArray;
+																function getDates(startDate, stopDate) {
+																	var dateArray = [];
+																	var currentDate = moment(startDate);
+																	var stopDate = moment(stopDate);
+																	while (currentDate <= stopDate) {
+																		dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
+																		currentDate = moment(currentDate).add(1, 'days');
 																	}
-																	fillArray.push(getDates(date.start, date.end))
+																	return dateArray;
+																}
+																fillArray.push(getDates(date.start, date.end))
 																	
 															}
-															
+														
 															console.log(fillArray);
 
 														});
