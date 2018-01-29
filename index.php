@@ -13,62 +13,6 @@ include 'assets/includes/settings.inc.php';
 
 ?>
 
-<!--
-
-	var fillArray = [{
-	renter: "Jonas Borg",
-  from_date_day: "29",
-  from_date_month: "12",
-  from_date_year: "2017",
-  to_date_day: "03",
-  to_date_month: "01",
-  to_date_year: "2018"
-}];
-
-pusherArray = [];
-
-for (i=0; fillArray.length > i; i++) {
-  var tempFiller = {};
-
-  if (fillArray.from_date_year != fillArray.to_date_year) {
-    while ((fillArray.from_date_month <= 12) && (fillArray.from_date_day <= 31)) {
-      while (fillArray.from_date_month <= fillArray.to_date_month) {
-				
-      }
-    }
-  }
-}
-
-var date = {
-    start: /* @type string */ "2020-02-21",
-    end: /* @type string */ "2020-03-03"
-}
-
-function getDates(startDate, stopDate) {
-    var dateArray = [];
-    var currentDate = moment(startDate);
-    var stopDate = moment(stopDate);
-    while (currentDate <= stopDate) {
-        dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
-        currentDate = moment(currentDate).add(1, 'days');
-    }
-    return dateArray;
-}
-
-console.log(getDates(date.start, date.end));
-
-
-
-
-
-
-
-
-
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Lilla Grytholmen</title>
