@@ -399,7 +399,7 @@ include 'assets/includes/settings.inc.php';
 																fillArray.push(getDates(date.start, date.end))
 																	
 															}
-														
+															console.log("fill Array");
 															console.log(fillArray);
 
 														});
