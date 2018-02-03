@@ -394,7 +394,7 @@ include 'assets/includes/settings.inc.php';
 															
 															for(i = 0; i < fillArray.length; i++) {
 																for(y = 0; y < fillArray[i].length; y++) {
-																	scheduleArray[y].push({
+																	scheduleArray.push({
 																		name: fillArray[i][1],
 																		date: fillArray[i][y]
 																	})
