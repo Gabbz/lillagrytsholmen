@@ -395,9 +395,9 @@ include 'assets/includes/settings.inc.php';
 															for(i = 0; i < fillArray.length; i++) {
 																console.log("fill array i length");
 																console.log(fillArray[i].length);
-																for(y = 0; y < fillArray[i].length; y++) {
+																for(y = 0; y < fillArray[i].length-1; y++) {
 																	scheduleArray.push({
-																		name: fillArray[i][fillArray[i].length],
+																		name: fillArray[i][fillArray[i].length -1],
 																		date: fillArray[i][y]
 																	})
 
