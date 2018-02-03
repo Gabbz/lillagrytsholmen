@@ -358,29 +358,9 @@ include 'assets/includes/settings.inc.php';
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
 															
-															console.log(response);
 															for (i=0; response.length > i; i++) {
 																console.log(response);
-																/*var tempFiller = "";
 																
-																if (response[i].from_date_year != response[i].to_date_year) {
-																	tempFiller = response[i].from_date_year +1;
-																}
-																if (response[i].from_date_year != response[i].from_date_year)
-																while (response[i].from_date_month != response[i].to_date_year) {
-																	if (response[i].from_date_year != response[i].from_date_year) {
-																	}
-																	if (response[i].from_date_year != response[i].from_date_year) {
-																	}
-																}
-																fillArray.push({
-																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
-																	date: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day
-																});
-																fillArray.push({
-																	name: response[i].renter.substr(0, response[i].renter.indexOf(' ')) + '_' + response[i].renter.substr(response[i].renter.indexOf(' ')+1),
-																	date: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
-																}); */
 																var date = {
 																		start: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day,
 																		end: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
@@ -424,6 +404,9 @@ include 'assets/includes/settings.inc.php';
 																	}
 																},
 																schedules: [{
+																	/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
+																	*	name: 'NAME',	
+																	*	date: 'YYYY-MM-DD'
 																	name: 'Jonas_Borg',
 																	date: '2018-02-08'
 																}]
