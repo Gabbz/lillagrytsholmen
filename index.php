@@ -403,6 +403,7 @@ include 'assets/includes/settings.inc.php';
 															console.log(fillArray);
 
 														});
+														console.log("fill array pls");
 														console.log(fillArray);
 														setTimeout(function(){$('.calendar').pignoseCalendar({
 															theme: 'dark',
