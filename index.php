@@ -423,7 +423,11 @@ include 'assets/includes/settings.inc.php';
 																	meetup: '#ef8080'
 																}
 															},
-															schedules: fillArray
+															schedules: [{
+																name: 'offer',
+																date: '2018-02-08'
+															}]
+															//fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 															})	
 														}, 250);
