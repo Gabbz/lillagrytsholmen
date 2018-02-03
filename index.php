@@ -358,8 +358,6 @@ include 'assets/includes/settings.inc.php';
 														
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
-															console.log("response:");
-															console.log(response);
 															
 															/* formatting response */
 															for (i=0; i < response.length; i++){
@@ -390,11 +388,7 @@ include 'assets/includes/settings.inc.php';
 																//fillArray.push(getDates(date.start, date.end))
 																	
 															}
-															console.log("fill Array");
-															console.log(fillArray);
 															for(i = 0; i < fillArray.length; i++) {
-																console.log("fill array i length");
-																console.log(fillArray[i].length);
 																for(y = 0; y < fillArray[i].length-1; y++) {
 																	scheduleArray.push({
 																		name: fillArray[i][fillArray[i].length -1],
@@ -409,8 +403,6 @@ include 'assets/includes/settings.inc.php';
 														});
 														
 														setTimeout(function(){
-															console.log("fill array OUTER");
-															console.log(fillArray);
 															$('.calendar').pignoseCalendar({
 																theme: 'dark',
 																lang: 'sv',
@@ -422,7 +414,7 @@ include 'assets/includes/settings.inc.php';
 																		//Dynamisk färgsättning hämtat från db
 																		test: '#2fabb7',
 																		Jonas_Borg: '#5c6270',
-																		meetup: '#ef8080'
+																		Johanna_Bernhardsson: '#ef8080'
 																	}
 																},
 																/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
