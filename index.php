@@ -419,12 +419,13 @@ include 'assets/includes/settings.inc.php';
 																multiple: true,
 																select: onClickHandler,
 																scheduleOptions: {
-																	colors: {
+																	colors: colorObject
+																	/*{
 																		//Dynamisk färgsättning hämtat från db
 																		test: '#2fabb7',
 																		Jonas_Borg: getRandomColor(),
 																		Johanna_Bernhardsson: getRandomColor()
-																	}
+																	}*/
 																},
 																/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
 																*	name: 'NAME',	
