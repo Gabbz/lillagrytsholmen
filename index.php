@@ -425,14 +425,15 @@ include 'assets/includes/settings.inc.php';
 																		meetup: '#ef8080'
 																	}
 																},
-																schedules: [{
-																	/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
-																	*	name: 'NAME',	
-																	*	date: 'YYYY-MM-DD'
-																	*/
+																/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
+																*	name: 'NAME',	
+																*	date: 'YYYY-MM-DD'
+																*/
+																schedules: scheduleArray
+																/*[{
 																	name: 'Jonas_Borg',
 																	date: '2018-02-08'
-																}]
+																}]*/
 																//fillArray
 																//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 															})	
