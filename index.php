@@ -355,6 +355,16 @@ include 'assets/includes/settings.inc.php';
 														
 														var fillArray = [];
 														var scheduleArray = [];
+														var colorObject = {};
+
+														function getRandomColor() {
+															var letters = '0123456789ABCDEF';
+															var color = '#';
+															for (var i = 0; i < 6; i++) {
+																color += letters[Math.floor(Math.random() * 16)];
+															}
+															return color;
+														}
 														
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
@@ -363,15 +373,12 @@ include 'assets/includes/settings.inc.php';
 															for (i=0; i < response.length; i++){
 																response[i][3] = response[i][3].substring(0,10);
 																response[i][4] = response[i][4].substring(0,10);
+																colorObject[response[i][1]] = getRandomColor();
 															}
 
+															console.log(colorObject);
+
 															for (i=0; response.length > i; i++) {
-																/* MAY NOT BE NEEDED
-																var date = {
-																	start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,7) + "-" + response[i][3].substring(8,10),
-																	end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,7) + "-" + response[i][4].substring(8,10)
-																}
-																*/
 																function getDates(startDate, stopDate) {
 																	var dateArray = [];
 																	var currentDate = moment(startDate);
@@ -384,10 +391,9 @@ include 'assets/includes/settings.inc.php';
 																	return dateArray;
 																}
 																fillArray.push(getDates(response[i][3], response[i][4]))
-																//	MAY NOT BE NEEDED
-																//fillArray.push(getDates(date.start, date.end))
-																	
 															}
+
+															//	FORMATTING DATES TO FIT CALENDAR
 															for(i = 0; i < fillArray.length; i++) {
 																for(y = 0; y < fillArray[i].length-1; y++) {
 																	scheduleArray.push({
@@ -397,18 +403,14 @@ include 'assets/includes/settings.inc.php';
 
 																}																	
 															}
+
+															//	FORMATTING ARRAY FOR COLORS TO CALENDAR
+
 															console.log("Schedule Array");
 															console.log(scheduleArray);
 
 														});
-														function getRandomColor() {
-															var letters = '0123456789ABCDEF';
-															var color = '#';
-															for (var i = 0; i < 6; i++) {
-																color += letters[Math.floor(Math.random() * 16)];
-															}
-															return color;
-														}
+														
 														setTimeout(function(){
 															$('.calendar').pignoseCalendar({
 																theme: 'dark',
