@@ -20,6 +20,7 @@
         $booking->to_date_day = substr($row['to_date'], 8, 2);
         $resultArr[] = $booking;
     }
+    echo $resultArr;
 
 /*    
     $booking = new stdClass(); 
