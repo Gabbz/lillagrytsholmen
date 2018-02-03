@@ -362,8 +362,8 @@ include 'assets/includes/settings.inc.php';
 															
 															/* formatting response */
 															for (i=0; i < response.length; i++){
-																response[i].3 = response[i].3.substring(0,10);
-																response[i].4 = response[i].4.substring(0,10);
+																response[i][3] = response[i][3].substring(0,10);
+																response[i][4] = response[i][4].substring(0,10);
 															}
 
 															for (i=0; response.length > i; i++) {
@@ -371,8 +371,8 @@ include 'assets/includes/settings.inc.php';
 																
 															
 																var date = {
-																		start: response[i].3.substring(0,4) + "-" + response[i].3.substring(5,2) + "-" + response[i].3.substring(8,2),
-																		end: response[i].4.substring(0,4) + "-" + response[i].4.substring(5,2) + "-" + response[i].4.substring(8,2)
+																		start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,2) + "-" + response[i][3].substring(8,2),
+																		end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,2) + "-" + response[i][4].substring(8,2)
 																	}
 
 																function getDates(startDate, stopDate) {
