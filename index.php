@@ -382,9 +382,10 @@ include 'assets/includes/settings.inc.php';
 																		dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
 																		currentDate = moment(currentDate).add(1, 'days');
 																	}
+																	dateArray.push(response[i][1])
 																	return dateArray;
 																}
-																fillArray.push(getDates(response[i][3], response[i][4]), response[i][1])
+																fillArray.push(getDates(response[i][3], response[i][4]))
 																//	MAY NOT BE NEEDED
 																//fillArray.push(getDates(date.start, date.end))
 																	
