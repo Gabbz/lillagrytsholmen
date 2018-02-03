@@ -424,7 +424,7 @@ include 'assets/includes/settings.inc.php';
 																	}
 																},
 																schedules: [{
-																	name: 'offer',
+																	name: 'Jonas_Borg',
 																	date: '2018-02-08'
 																]}
 																//fillArray
