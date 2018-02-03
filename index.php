@@ -367,15 +367,12 @@ include 'assets/includes/settings.inc.php';
 															}
 
 															for (i=0; response.length > i; i++) {
-																console.log(response);
-																
-															
+															/*
 																var date = {
 																	start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,7) + "-" + response[i][3].substring(8,10),
 																	end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,7) + "-" + response[i][4].substring(8,10)
 																}
-																console.log("Date:");
-																console.log(date);
+																*/
 																function getDates(startDate, stopDate) {
 																	var dateArray = [];
 																	var currentDate = moment(startDate);
@@ -386,7 +383,8 @@ include 'assets/includes/settings.inc.php';
 																	}
 																	return dateArray;
 																}
-																fillArray.push(getDates(date.start, date.end))
+																fillArray.push(getDates(response[i][3], response[i][4]))
+																//fillArray.push(getDates(date.start, date.end))
 																	
 															}
 															console.log("fill Array");
