@@ -410,25 +410,25 @@ include 'assets/includes/settings.inc.php';
 															console.log("fill array pls");
 															console.log(fillArray);
 															$('.calendar').pignoseCalendar({
-															theme: 'dark',
-															lang: 'sv',
-															week: 1,
-															multiple: true,
-															select: onClickHandler,
-															scheduleOptions: {
-																colors: {
-																	//Dynamisk färgsättning hämtat från db
-																	test: '#2fabb7',
-																	Jonas_Borg: '#5c6270',
-																	meetup: '#ef8080'
-																}
-															},
-															schedules: [{
-																name: 'offer',
-																date: '2018-02-08'
-															}]
-															//fillArray
-															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+																theme: 'dark',
+																lang: 'sv',
+																week: 1,
+																multiple: true,
+																select: onClickHandler,
+																scheduleOptions: {
+																	colors: {
+																		//Dynamisk färgsättning hämtat från db
+																		test: '#2fabb7',
+																		Jonas_Borg: '#5c6270',
+																		meetup: '#ef8080'
+																	}
+																},
+																schedules: [{
+																	name: 'offer',
+																	date: '2018-02-08'
+																]}
+																//fillArray
+																//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 															})	
 														}, 250);
 													});
