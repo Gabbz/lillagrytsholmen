@@ -8,7 +8,7 @@
 
     $resultArr = [];
 
-/*
+
 
     var $i =  0;
     $booking = new stdClass(); 
@@ -23,8 +23,8 @@
         $resultArr[$i] = $booking;
         $i++;
     }
-*/
-    
+
+/*    
     $booking = new stdClass(); 
 
     for ($i = 0;$row = mysqli_fetch_array($result); $i++) {
@@ -37,7 +37,7 @@
         $booking->to_date_day = substr($row['to_date'], 8, 2);
         $resultArr[$i] = $booking;
     }
-
+*/
     
 
     echo json_encode($resultArr);

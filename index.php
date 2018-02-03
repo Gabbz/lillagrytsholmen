@@ -407,6 +407,7 @@ include 'assets/includes/settings.inc.php';
 																	/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
 																	*	name: 'NAME',	
 																	*	date: 'YYYY-MM-DD'
+																	*/
 																	name: 'Jonas_Borg',
 																	date: '2018-02-08'
 																}]
