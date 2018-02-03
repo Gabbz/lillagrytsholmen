@@ -354,6 +354,7 @@ include 'assets/includes/settings.inc.php';
 														}
 														
 														var fillArray = [];
+														var scheduleArray = [];
 														
 														$.get( "assets/includes/book.inc.php", function( data ) {
 															response = JSON.parse(data);
@@ -367,7 +368,7 @@ include 'assets/includes/settings.inc.php';
 															}
 
 															for (i=0; response.length > i; i++) {
-															/*
+																/* MAY NOT BE NEEDED
 																var date = {
 																	start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,7) + "-" + response[i][3].substring(8,10),
 																	end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,7) + "-" + response[i][4].substring(8,10)
@@ -383,19 +384,26 @@ include 'assets/includes/settings.inc.php';
 																	}
 																	return dateArray;
 																}
-																fillArray.push(getDates(response[i][3], response[i][4]))
+																fillArray.push(getDates(response[i][3], response[i][4]), response[i][1])
+																//	MAY NOT BE NEEDED
 																//fillArray.push(getDates(date.start, date.end))
 																	
 															}
 															console.log("fill Array");
 															console.log(fillArray);
+															/*
+															for(i = 0; i < response.length; i++) {
+																for(y = 0; y < fillArray.length; y++) {
+																	if (fillArray[0] == response)
+
+																}																	
+															} */
+
 
 														});
-														console.log("fill array pls");
-														console.log(fillArray);
 														
 														setTimeout(function(){
-															console.log("fill array pls");
+															console.log("fill array OUTER");
 															console.log(fillArray);
 															$('.calendar').pignoseCalendar({
 																theme: 'dark',
