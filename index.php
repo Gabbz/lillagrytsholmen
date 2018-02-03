@@ -356,16 +356,23 @@ include 'assets/includes/settings.inc.php';
 														var fillArray = [];
 														
 														$.get( "assets/includes/book.inc.php", function( data ) {
-															console.log(data);
 															response = JSON.parse(data);
+															console.log("response:");
 															console.log(response);
 															
+															/* formatting response */
+															for (i=0; i < response.length; i++){
+																response[i].3 = response[i].3.substring(0,9);
+																response[i].4 = response[i].4.substring(0,9);
+															}
+
 															for (i=0; response.length > i; i++) {
 																console.log(response);
 																
+															
 																var date = {
-																		start: response[i].from_date_year + "-" + response[i].from_date_month + "-" + response[i].from_date_day,
-																		end: response[i].to_date_year + "-" + response[i].to_date_month + "-" + response[i].to_date_day
+																		start: response[i].3.substring(0,4) + "-" + response[i].3.substring(5,2) + "-" + response[i].3.substring(8,2),
+																		end: response[i].4.substring(0,4) + "-" + response[i].4.substring(5,2) + "-" + response[i].4.substring(8,2)
 																	}
 
 																function getDates(startDate, stopDate) {
