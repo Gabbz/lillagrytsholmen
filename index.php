@@ -371,10 +371,11 @@ include 'assets/includes/settings.inc.php';
 																
 															
 																var date = {
-																		start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,2) + "-" + response[i][3].substring(8,2),
-																		end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,2) + "-" + response[i][4].substring(8,2)
-																	}
-
+																	start: response[i][3].substring(0,4) + "-" + response[i][3].substring(5,2) + "-" + response[i][3].substring(8,2),
+																	end: response[i][4].substring(0,4) + "-" + response[i][4].substring(5,2) + "-" + response[i][4].substring(8,2)
+																}
+																console.log("Date:");
+																console.log(date);
 																function getDates(startDate, stopDate) {
 																	var dateArray = [];
 																	var currentDate = moment(startDate);
