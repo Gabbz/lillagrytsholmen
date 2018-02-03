@@ -401,7 +401,14 @@ include 'assets/includes/settings.inc.php';
 															console.log(scheduleArray);
 
 														});
-														
+														function getRandomColor() {
+															var letters = '0123456789ABCDEF';
+															var color = '#';
+															for (var i = 0; i < 6; i++) {
+																color += letters[Math.floor(Math.random() * 16)];
+															}
+															return color;
+														}
 														setTimeout(function(){
 															$('.calendar').pignoseCalendar({
 																theme: 'dark',
@@ -413,8 +420,8 @@ include 'assets/includes/settings.inc.php';
 																	colors: {
 																		//Dynamisk färgsättning hämtat från db
 																		test: '#2fabb7',
-																		Jonas_Borg: '#5c6270',
-																		Johanna_Bernhardsson: '#ef8080'
+																		Jonas_Borg: getRandomColor(),
+																		Johanna_Bernhardsson: getRandomColor()
 																	}
 																},
 																/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
