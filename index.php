@@ -354,9 +354,11 @@ include 'assets/includes/settings.inc.php';
 														}
 														
 														var fillArray = [];
-														console.log(data);
+														
 														$.get( "assets/includes/book.inc.php", function( data ) {
+															console.log(data);
 															response = JSON.parse(data);
+															console.log(response);
 															
 															for (i=0; response.length > i; i++) {
 																console.log(response);
