@@ -426,7 +426,7 @@ include 'assets/includes/settings.inc.php';
 																schedules: [{
 																	name: 'Jonas_Borg',
 																	date: '2018-02-08'
-																]}
+																}]
 																//fillArray
 																//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 															})	
