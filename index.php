@@ -405,8 +405,11 @@ include 'assets/includes/settings.inc.php';
 														});
 														console.log("fill array pls");
 														console.log(fillArray);
-														/*
-														setTimeout(function(){$('.calendar').pignoseCalendar({
+														
+														setTimeout(function(){
+															console.log("fill array pls");
+															console.log(fillArray);
+															$('.calendar').pignoseCalendar({
 															theme: 'dark',
 															lang: 'sv',
 															week: 1,
@@ -422,7 +425,8 @@ include 'assets/includes/settings.inc.php';
 															},
 															schedules: fillArray
 															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-														})}, 250);*/
+															})	
+														}, 250);
 													});
 												</script>
 											</div>
