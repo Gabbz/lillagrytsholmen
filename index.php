@@ -432,11 +432,11 @@ include 'assets/includes/settings.inc.php';
 											</div>
 											<div class="field">
 												<label for="name">Boka för:</label>
-												<input type="text" value="<?php print $_SESSION['fullname'];?>" name="name" id="name" readonly />
+												<input type="text" value="<?php print $_SESSION['fullname'];?>" name="book_name" id="book_name" readonly />
 											</div>
 											<div class="field">
 												<label for="message">Övrig infromation</label>
-												<textarea name="message" id="message" rows="4"></textarea>
+												<textarea name="book_message" id="book_message" rows="4"></textarea>
 											</div>
 											<ul class="actions">
 												<li><input type="submit" value="Boka" class="special" /></li>
