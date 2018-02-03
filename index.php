@@ -391,14 +391,18 @@ include 'assets/includes/settings.inc.php';
 															}
 															console.log("fill Array");
 															console.log(fillArray);
-															/*
-															for(i = 0; i < response.length; i++) {
-																for(y = 0; y < fillArray.length; y++) {
-																	if (fillArray[0] == response)
+															
+															for(i = 0; i < fillArray.length; i++) {
+																for(y = 0; y < fillArray[i].length; y++) {
+																	scheduleArray[y].push({
+																		name: fillArray[i][1],
+																		date: fillArray[i][y]
+																	})
 
 																}																	
-															} */
-
+															}
+															console.log("Schedule Array");
+															console.log(scheduleArray);
 
 														});
 														
