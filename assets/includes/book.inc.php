@@ -12,7 +12,7 @@
 
     var $i =  0;
     $booking = new stdClass(); 
-    while($data = mysql_fetch_array($result)) {
+    while($row = mysql_fetch_array($result)) {
         $booking->renter =  $row['renter'];
         $booking->from_date_year =  substr($row['from_date'], 0, 4);
         $booking->from_date_month =  substr($row['from_date'], 5, 2);
