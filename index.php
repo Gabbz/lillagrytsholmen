@@ -362,8 +362,8 @@ include 'assets/includes/settings.inc.php';
 															
 															/* formatting response */
 															for (i=0; i < response.length; i++){
-																response[i].3 = response[i].3.substring(0,9);
-																response[i].4 = response[i].4.substring(0,9);
+																response[i].3 = response[i].3.substring(0,10);
+																response[i].4 = response[i].4.substring(0,10);
 															}
 
 															for (i=0; response.length > i; i++) {
