@@ -326,13 +326,6 @@ include 'assets/includes/settings.inc.php';
 													$(function() {
 
 														function onClickHandler(date, obj) {
-															/**
-															* @date is an array which be included dates(clicked date at first index)
-															* @obj is an object which stored calendar interal data.
-															* @obj.calendar is an element reference.
-															* @obj.storage.activeDates is all toggled data, If you use toggle type calendar.
-															* @obj.storage.events is all events associated to this date
-															*/
 															
 															var text = '';
 
@@ -741,7 +734,7 @@ include 'assets/includes/settings.inc.php';
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Jonas Borg - 2017 - Frågor? <a href="#contact">Kontakta mig!</a> <?php if (isset($_SESSION['username'])) echo "Inloggad: " . "<a href='#settings'>" . $_SESSION['username'] . "</a>"; ?></p>
+						<p class="copyright">&copy; Jonas Borg - 2018 - Frågor? <a href="#contact">Kontakta mig!</a> <?php if (isset($_SESSION['username'])) echo "Inloggad: " . "<a href='#settings'>" . $_SESSION['username'] . "</a>"; ?></p>
 					</footer>
 
 			</div>
