@@ -451,7 +451,7 @@ include 'assets/includes/settings.inc.php';
 												<textarea name="book_message" id="book_message" rows="4"></textarea>
 											</div>
 											<ul class="actions">
-												<li><input type="submit" id="book_submit" value="Boka" class="special" /></li>
+												<li><input type="submit" id="book_submit" name="book_submit" value="Boka" class="special" /></li>
 											</ul>
 										</div>
 									</form>
