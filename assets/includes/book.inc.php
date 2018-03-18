@@ -21,11 +21,10 @@
 
     
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
-        ?>
-        <script type="text/javascript">
+        echo "
+        <script type='text/javascript'>
             alert('funkar');
-        </script>
-        <?php 
+        </script>";
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
         $from_date = substr($book_dates, 0, -19);
         $to_date = substr($book_dates, 19);
