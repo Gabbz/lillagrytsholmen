@@ -17,13 +17,16 @@
     echo json_encode($resultArr);
 
 
-
+    echo "
+    <script type='text/javascript'>
+        console.log('utanför');
+    </script>";
 
     
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
         echo "
         <script type='text/javascript'>
-            alert('funkar');
+            console.log('innanför');
         </script>";
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
         $from_date = substr($book_dates, 0, -19);
