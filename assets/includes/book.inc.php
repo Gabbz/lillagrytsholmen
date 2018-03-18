@@ -21,13 +21,18 @@
 
     
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
+        ?>
+        <script type="text/javascript">
+            alert('funkar');
+        </script>
+        <?php 
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
         $from_date = substr($book_dates, 0, -19);
         $to_date = substr($book_dates, 19);
         $book_name = htmlspecialchars(trim($_POST['book_name']));
         $book_name = str_replace(" ","_",$book_name);
         $book_message = htmlspecialchars(trim($_POST['book_message']));
-        echo 'Dates ' . $book_dates . ' To dates ' . $to_date . ' From date ' .  $from_date . ' Book name ' . $book_name . ' Message ' . $book_message;
+        
        
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUE(?,?,?,?)";
