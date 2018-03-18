@@ -114,13 +114,13 @@ include 'assets/includes/settings.inc.php';
 
 						<!-- login -->
 							<article id="login">
-								<h2 class="major">login</h2>
+								<h2 class="major">Logga in</h2>
 								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) {echo "action='assets/includes/logout.inc.php'";}else {echo "action='#'";} ?> >
-									<label>Username</label>
+									<label>Användarnamn</label>
 									<input type="text" name="username_login" id="username_login" 
 										value="<?php print $username;?>" placeholder="Enter your username" />
 									
-									<label for="password_login">Password</label>
+									<label for="password_login">Lösenord</label>
 									<input type="password" name="password_login" id="password_login" 
 										value="<?php print $password;?>" placeholder="Enter your password" />
 									
