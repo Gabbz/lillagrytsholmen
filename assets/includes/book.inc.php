@@ -33,7 +33,7 @@
         $book_name = str_replace(" ","_",$book_name);
         $book_message = htmlspecialchars(trim($_POST['book_message']));
         
-       
+       /*
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUE(?,?,?,?)";
         if ($stmt = $mysqli->prepare($query)) {
@@ -45,7 +45,7 @@
             }
             $stmt->close();
             
-        }
+        }*/
     
     } elseif (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0 && $_SESSION['username']) {
         $feedback = "Du måste logga in för att göra en bokning.";
