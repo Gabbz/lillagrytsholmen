@@ -319,128 +319,128 @@ include 'assets/includes/settings.inc.php';
 							<article id="book" style="width:100%;">
 								<h2 class="major">Boka Stugan</h2>
 								<div style="width:1380px;">
-									<form method="post" action="#">
-										<div style="width: 40%;float: left;margin-top: 27px;">
-											<div class="calendar">
-												<script type="text/javascript">
-													$(function() {
+									<div style="width: 40%;float: left;margin-top: 27px;">
+										<div class="calendar">
+											<script type="text/javascript">
+												$(function() {
 
-														function onClickHandler(date, obj) {
-															
-															var text = '';
-
-															if(date[0] !== null) {
-																text += date[0].format('YYYY-MM-DD 12:01');
-															}
-
-															if(date[0] !== null && date[1] !== null) {
-																text += ' - ';
-															} else if(date[0] === null && date[1] == null) {
-																text = '';
-															}
-
-															if(date[1] !== null) {
-																text += date[1].format('YYYY-MM-DD 12:00');
-															}
-
-															document.getElementById("dates").value = text; 
-														}
+													function onClickHandler(date, obj) {
 														
-														var fillArray = [];
-														var scheduleArray = [];
-														var colorObject = {};
+														var text = '';
 
-														function getRandomColor() {
-															var letters = '0123456789ABCDEF';
-															var color = '#';
-															for (var i = 0; i < 6; i++) {
-																color += letters[Math.floor(Math.random() * 16)];
-															}
-															return color;
+														if(date[0] !== null) {
+															text += date[0].format('YYYY-MM-DD 12:01');
 														}
+
+														if(date[0] !== null && date[1] !== null) {
+															text += ' - ';
+														} else if(date[0] === null && date[1] == null) {
+															text = '';
+														}
+
+														if(date[1] !== null) {
+															text += date[1].format('YYYY-MM-DD 12:00');
+														}
+
+														document.getElementById("dates").value = text; 
+													}
+													
+													var fillArray = [];
+													var scheduleArray = [];
+													var colorObject = {};
+
+													function getRandomColor() {
+														var letters = '0123456789ABCDEF';
+														var color = '#';
+														for (var i = 0; i < 6; i++) {
+															color += letters[Math.floor(Math.random() * 16)];
+														}
+														return color;
+													}
+													
+													$.get( "assets/includes/book.inc.php", function( data ) {
+														response = JSON.parse(data);
 														
-														$.get( "assets/includes/book.inc.php", function( data ) {
-															response = JSON.parse(data);
-															
-															/* formatting response */
-															for (i=0; i < response.length; i++){
-																response[i][3] = response[i][3].substring(0,10);
-																response[i][4] = response[i][4].substring(0,10);
-																colorObject[response[i][1]] = getRandomColor();
-															}
+														/* formatting response */
+														for (i=0; i < response.length; i++){
+															response[i][3] = response[i][3].substring(0,10);
+															response[i][4] = response[i][4].substring(0,10);
+															colorObject[response[i][1]] = getRandomColor();
+														}
 
-															console.log(colorObject);
+														console.log(colorObject);
 
-															for (i=0; response.length > i; i++) {
-																function getDates(startDate, stopDate) {
-																	var dateArray = [];
-																	var currentDate = moment(startDate);
-																	var stopDate = moment(stopDate);
-																	while (currentDate <= stopDate) {
-																		dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
-																		currentDate = moment(currentDate).add(1, 'days');
-																	}
-																	dateArray.push(response[i][1])
-																	return dateArray;
+														for (i=0; response.length > i; i++) {
+															function getDates(startDate, stopDate) {
+																var dateArray = [];
+																var currentDate = moment(startDate);
+																var stopDate = moment(stopDate);
+																while (currentDate <= stopDate) {
+																	dateArray.push( moment(currentDate).format('YYYY-MM-DD') )
+																	currentDate = moment(currentDate).add(1, 'days');
 																}
-																fillArray.push(getDates(response[i][3], response[i][4]))
+																dateArray.push(response[i][1])
+																return dateArray;
 															}
+															fillArray.push(getDates(response[i][3], response[i][4]))
+														}
 
-															//	FORMATTING DATES TO FIT CALENDAR
-															for(i = 0; i < fillArray.length; i++) {
-																for(y = 0; y < fillArray[i].length-1; y++) {
-																	scheduleArray.push({
-																		name: fillArray[i][fillArray[i].length -1],
-																		date: fillArray[i][y]
-																	})
+														//	FORMATTING DATES TO FIT CALENDAR
+														for(i = 0; i < fillArray.length; i++) {
+															for(y = 0; y < fillArray[i].length-1; y++) {
+																scheduleArray.push({
+																	name: fillArray[i][fillArray[i].length -1],
+																	date: fillArray[i][y]
+																})
 
-																}																	
-															}
+															}																	
+														}
 
-															//	FORMATTING ARRAY FOR COLORS TO CALENDAR
+														//	FORMATTING ARRAY FOR COLORS TO CALENDAR
 
-															console.log("Schedule Array");
-															console.log(scheduleArray);
+														console.log("Schedule Array");
+														console.log(scheduleArray);
 
-														});
-														
-														setTimeout(function(){
-															$('.calendar').pignoseCalendar({
-																theme: 'dark',
-																lang: 'sv',
-																week: 1,
-																multiple: true,
-																select: onClickHandler,
-																scheduleOptions: {
-																	colors: colorObject
-																	/*{
-																		//Dynamisk färgsättning hämtat från db
-																		test: '#2fabb7',
-																		Jonas_Borg: getRandomColor(),
-																		Johanna_Bernhardsson: getRandomColor()
-																	}*/
-																},
-																/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
-																*	name: 'NAME',	
-																*	date: 'YYYY-MM-DD'
-																*/
-																schedules: scheduleArray
-																/*[{
-																	name: 'Jonas_Borg',
-																	date: '2018-02-08'
-																}]*/
-																//fillArray
-																//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
-															})	
-														}, 250);
 													});
-												</script>
-											</div>
+													
+													setTimeout(function(){
+														$('.calendar').pignoseCalendar({
+															theme: 'dark',
+															lang: 'sv',
+															week: 1,
+															multiple: true,
+															select: onClickHandler,
+															scheduleOptions: {
+																colors: colorObject
+																/*{
+																	//Dynamisk färgsättning hämtat från db
+																	test: '#2fabb7',
+																	Jonas_Borg: getRandomColor(),
+																	Johanna_Bernhardsson: getRandomColor()
+																}*/
+															},
+															/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
+															*	name: 'NAME',	
+															*	date: 'YYYY-MM-DD'
+															*/
+															schedules: scheduleArray
+															/*[{
+																name: 'Jonas_Borg',
+																date: '2018-02-08'
+															}]*/
+															//fillArray
+															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
+														})	
+													}, 250);
+												});
+											</script>
 										</div>
+									</div>
+									<form method="post" action="#">
 										<div style="width: 60%;float: left;">
 											<div  class="field">
 												<label for ="dates">Valda datum:</label>
-												<input type="text" placeholder="Välj datum i kalendern" id="dates" name="dates" readonly />
+												<input type="text" placeholder="Välj datum i kalendern" id="dates" name="book_dates" readonly />
 											</div>
 											<div class="field">
 												<label for="name">Boka för:</label>
@@ -451,7 +451,7 @@ include 'assets/includes/settings.inc.php';
 												<textarea name="book_message" id="book_message" rows="4"></textarea>
 											</div>
 											<ul class="actions">
-												<li><input type="submit" value="Boka" class="special" /></li>
+												<li><input type="submit" id="book_submit" value="Boka" class="special" /></li>
 											</ul>
 										</div>
 									</form>
