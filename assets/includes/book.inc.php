@@ -16,7 +16,4 @@
 
     echo json_encode($resultArr);
 
-    
-    
-
 ?>
