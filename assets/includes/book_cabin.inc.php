@@ -12,7 +12,8 @@
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUE(,?,,?,?,?)";
         debug_to_console( "funkar2");
-        debug_to_console($stmt = $mysqli->prepare($query));
+        $stmt = $mysqli->prepare($query)
+        debug_to_console($stmt);
         if ($stmt = $mysqli->prepare($query)) {
             debug_to_console( "funkar3");
             $stmt->bind_param("ssss", $book_name_replace, $from_date, $to_date, $book_message);
