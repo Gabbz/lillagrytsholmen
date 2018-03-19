@@ -11,6 +11,7 @@ include 'assets/includes/admin.inc.php';
 include 'assets/includes/login.inc.php';
 include 'assets/includes/register.php';
 include 'assets/includes/settings.inc.php';
+include 'assets/includes/book_cabin.inc.php';
 
 
 debug_to_console( "Test" );
