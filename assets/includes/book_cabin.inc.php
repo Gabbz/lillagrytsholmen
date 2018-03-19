@@ -14,7 +14,7 @@
         debug_to_console( "funkar2");
         if ($stmt = $mysqli->prepare($query)) {
             debug_to_console( "funkar3");
-            $stmt->bind_param("isssss", NULL, $book_name_replace, $from_date, $to_date, $book_message);
+            $stmt->bind_param("issss", NULL, $book_name_replace, $from_date, $to_date, $book_message);
             if ($stmt->execute()) {
                 debug_to_console( "funkar4");
                 $feedback = "Bokningen för "  . $book_name . " lyckades!";
