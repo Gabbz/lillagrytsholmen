@@ -10,7 +10,7 @@
         debug_to_console( "book_name: " . $book_name_replace . " book_message: " . $book_message . " from_date: " . $from_date . " to_date: " . $to_date);
        
         // Query som skapar en bokning
-        $query = "INSERT INTO booking VALUE(?,?,?,?)";
+        $query = "INSERT INTO booking VALUE(,?,,?,?,?)";
         debug_to_console( "funkar2");
         if ($stmt = $mysqli->prepare($query)) {
             debug_to_console( "funkar3");
