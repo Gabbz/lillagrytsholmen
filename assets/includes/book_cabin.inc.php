@@ -11,9 +11,12 @@
        
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUE(?,?,?,?)";
+        debug_to_console( "funkar2");
         if ($stmt = $mysqli->prepare($query)) {
+            debug_to_console( "funkar3");
             $stmt->bind_param("ssss", $book_name, $from_date, $to_date, $book_message);
             if ($stmt->execute()) {
+                debug_to_console( "funkar4");
                 $feedback = "Bokningen för "  . $book_name . " lyckades!";
             } else {
                 $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
@@ -26,5 +29,4 @@
         $feedback = "Du måste logga in för att göra en bokning.";
     }
 
-    debug_to_console( "Test" );
 ?>
