@@ -16,8 +16,6 @@
 
     echo json_encode($resultArr);
 
-    debug_to_console( "Test" );
-
     
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
