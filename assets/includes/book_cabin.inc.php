@@ -1,8 +1,8 @@
 <?php
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
-        $from_date = substr($book_dates, 0, -19);
-        $to_date = substr($book_dates, 19);
+        $from_date = substr($book_dates, 0, -19) . "00";
+        $to_date = substr($book_dates, 19) . "00";
         $book_name = htmlspecialchars(trim($_POST['book_name']));
         $book_name_replace = str_replace(" ","_",$book_name);
         $book_message = htmlspecialchars(trim($_POST['book_message']));
