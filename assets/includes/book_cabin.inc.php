@@ -24,4 +24,6 @@
     } elseif (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0 && $_SESSION['username']) {
         $feedback = "Du måste logga in för att göra en bokning.";
     }
+
+    debug_to_console( "Test" );
 ?>

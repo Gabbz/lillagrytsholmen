@@ -16,6 +16,4 @@
 
     echo json_encode($resultArr);
 
-    debug_to_console( "Test" );
-
 ?>
