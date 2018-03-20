@@ -1,7 +1,7 @@
 <?php
 
     //Anslutning till databasen
-    $db_host     = 'localhost:3306';
+    $db_host     = 'localhost';
     $db_user     = 'reggiepalmer'; //db-user
     $db_password = 'Xrke$S*j9EJw#M4QKp4$RU*K'; //db-password
     $database = 'lillagrytsholmen.se'; //db
