@@ -34,25 +34,27 @@
             }
         }
 
+        if(!$checker) {
         
-        debug_to_console($resultArr[0][3]);
+            debug_to_console($resultArr[0][3]);
 
-        // Query som skapar en bokning
-        $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
-        //$stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?,?,?)");
+            // Query som skapar en bokning
+            $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
+            //$stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?,?,?)");
 
 
-        if ($stmt = $mysqli->prepare($query)) {
-            $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
-            if ($stmt->execute()) {
-                $feedback = "Bokningen för "  . $book_name . " lyckades!";
-            } else {
-                $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
+            if ($stmt = $mysqli->prepare($query)) {
+                $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
+                if ($stmt->execute()) {
+                    $feedback = "Bokningen för "  . $book_name . " lyckades!";
+                } else {
+                    $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
+                }
+                $stmt->close();
             }
             $stmt->close();
         }
-        $stmt->close();
-    
+
     } elseif (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0 && $_SESSION['username']) {
         $feedback = "Du måste logga in för att göra en bokning.";
     }
