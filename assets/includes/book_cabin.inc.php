@@ -28,8 +28,8 @@
         foreach ($resultArr as &$value) {
             $checker = check_in_range($value[3], $value[4], $from_date);
             $checker = check_in_range($value[3], $value[4], $to_date);
-            debug_to_console($value[3], $value[4], $from_date);
-            debug_to_console($value[3], $value[4], $to_date);
+            debug_to_console($value[3] . " " . $value[4] . " " . $from_date);
+            debug_to_console($value[3] . " " . $value[4] . " " . $to_date);
             debug_to_console($checker);
             if($checker == 1) {
                 debug_to_console("inne i if");
