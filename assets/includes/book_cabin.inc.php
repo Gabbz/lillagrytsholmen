@@ -22,7 +22,7 @@
             $resultArr[] = $row;
         }
 
-        
+        debug_to_console($resultArr[0]);
 
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
