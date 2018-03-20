@@ -1,6 +1,6 @@
 <?php
 
-    include("db_connect.inc.php");
+    //include("db_connect.inc.php");
 
     if (isset($_POST['admin_submit'])) {
         $admin_username = htmlspecialchars(trim($_POST['admin_username']));

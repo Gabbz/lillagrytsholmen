@@ -6,6 +6,7 @@ session_start();
 
 <?php
 
+include("db_connect.inc.php");
 include 'assets/debug/toConsole.php';
 include 'assets/includes/admin.inc.php';
 include 'assets/includes/login.inc.php';
