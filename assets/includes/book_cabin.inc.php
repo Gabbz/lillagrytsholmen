@@ -3,6 +3,8 @@
     include('db_connect.inc.php');
 
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
+
+        include('check_date.inc.php');
         
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
         $from_date = date(substr($book_dates, 0, -19) . ":00");
@@ -22,7 +24,8 @@
             $resultArr[] = $row;
         }
 
-        debug_to_console($resultArr[0]);
+        
+        debug_to_console($resultArr[0][3]);
 
         // Query som skapar en bokning
         $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";

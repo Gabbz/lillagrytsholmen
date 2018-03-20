@@ -414,24 +414,8 @@ include 'assets/includes/book_cabin.inc.php';
 															select: onClickHandler,
 															scheduleOptions: {
 																colors: colorObject
-																/*{
-																	//Dynamisk färgsättning hämtat från db
-																	test: '#2fabb7',
-																	Jonas_Borg: getRandomColor(),
-																	Johanna_Bernhardsson: getRandomColor()
-																}*/
 															},
-															/* name must exist under scheduleOptions, colors. each occurance must be an object in the array.
-															*	name: 'NAME',	
-															*	date: 'YYYY-MM-DD'
-															*/
 															schedules: scheduleArray
-															/*[{
-																name: 'Jonas_Borg',
-																date: '2018-02-08'
-															}]*/
-															//fillArray
-															//Lägg till scheduler som dynamiskt hämtar vilka datum som är redan upptagna
 														})	
 													}, 250);
 												});
