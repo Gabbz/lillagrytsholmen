@@ -26,8 +26,8 @@
 
         $checker = 0;
         foreach ($resultArr as &$value) {
-            $checker = check_in_range($value[3], $value[3], $from_date);
-            $checker = check_in_range($value[4], $value[4], $to_date);
+            $checker = check_in_range($value[3], $value[4], $from_date);
+            $checker = check_in_range($value[3], $value[4], $to_date);
             debug_to_console($checker);
             if($checker == 1) {
                 $feedback = "Det här datumet är tyvärr upptaget. Försök med ett annat datum!";
@@ -38,6 +38,7 @@
         if($checker != 1) {
         
             debug_to_console($resultArr[0][3]);
+            debug_to_console($resultArr[0][4]);
 
             // Query som skapar en bokning
             $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
