@@ -10,9 +10,9 @@
 
     $booking = new stdClass(); 
     while($row = mysqli_fetch_array($result)) {
-        debug_to_console("kommer hit " . $row);
         $resultArr[] = $row;
     }
+
 
     echo json_encode($resultArr);
     
