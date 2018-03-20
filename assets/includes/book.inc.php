@@ -1,7 +1,7 @@
 <?php 
     
     include("db_connect.inc.php");
-    /*
+    
     mysqli_select_db($mysqli, "lillagrytsholmen.se");
     debug_to_console("kommer hit 1");
     $query = "SELECT * FROM booking";
@@ -17,8 +17,7 @@
         debug_to_console("kommer hit " . $row);
         $resultArr[] = $row;
     }
-*/
-    $resultArr = array();
+
 
     echo json_encode($resultArr);
     
