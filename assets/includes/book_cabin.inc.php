@@ -9,54 +9,43 @@
         $book_name = htmlspecialchars(trim($_POST['book_name']));
         $book_name_replace = str_replace(" ","_",$book_name);
         $book_message = htmlspecialchars(trim($_POST['book_message']));
-        //debug_to_console( "funkar");
-        //debug_to_console( "book_name: " . $book_name_replace . " from_date:" . $from_date . "to_date:" . $to_date. "book_message: " . $book_message);
        
         // Query som skapar en bokning
-        //$query = "INSERT INTO booking VALUE(?,?,?,?)";
-        /*$stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?,?,?)");
-        if ( false===$stmt ) {
-            // and since all the following operations need a valid/ready statement object
-            // it doesn't make sense to go on
-            // you might want to use a more sophisticated mechanism than die()
-            // but's it's only an example
-            die('prepare() failed: ' . htmlspecialchars($mysqli->error));
-        }
-        if ($stmt) {
-            debug_to_console( "funkar3");
-            $stmt->bind_param("ssiiis", NULL, $book_name_replace, $from_date, $to_date, $book_message);
+        $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
+        //$stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?,?,?)");
+
+
+        if ($stmt = $mysqli->prepare($query)) {
+            $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
             if ($stmt->execute()) {
-                debug_to_console( "funkar4");
                 $feedback = "Bokningen för "  . $book_name . " lyckades!";
             } else {
                 $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
             }
             $stmt->close();
             
-        }*/
+        }
 
-        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (NULL, ?,CURRENT_TIMESTAMP,?,?,?)");
+        //$stmt = $mysqli->prepare("INSERT INTO booking VALUES (NULL, ?,CURRENT_TIMESTAMP,?,?,?)");
         // prepare() can fail because of syntax errors, missing privileges, ....
-        if ( false===$stmt ) {
+        //if ( false===$stmt ) {
         // and since all the following operations need a valid/ready statement object
         // it doesn't make sense to go on
         // you might want to use a more sophisticated mechanism than die()
         // but's it's only an example
-        die('prepare() failed: ' . htmlspecialchars($mysqli->error));
-        }
-        $rc = $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
+        //die('prepare() failed: ' . htmlspecialchars($mysqli->error));
+        //}        $rc = $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
         // bind_param() can fail because the number of parameter doesn't match the placeholders in the statement
         // or there's a type conflict(?), or ....
-        if ( false===$rc ) {
+        //if ( false===$rc ) {
         // again execute() is useless if you can't bind the parameters. Bail out somehow.
-        die('bind_param() failed: ' . htmlspecialchars($stmt->error));
-        }
-        $rc = $stmt->execute();
+        //die('bind_param() failed: ' . htmlspecialchars($stmt->error));
+        //} $rc = $stmt->execute();
         // execute() can fail for various reasons. And may it be as stupid as someone tripping over the network cable
         // 2006 "server gone away" is always an option
-        if ( false===$rc ) {
+        /*if ( false===$rc ) {
         die('execute() failed: ' . htmlspecialchars($stmt->error));
-        }
+        }*/
 
         $stmt->close();
     
