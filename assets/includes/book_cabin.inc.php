@@ -44,7 +44,7 @@
         // but's it's only an example
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
         }
-        $rc = $stmt->bind_param('ssiiis', NULL, $book_name_replace, CURRENT_TIMESTAMP, $from_date, $to_date, $book_message);
+        $rc = $stmt->bind_param('ssiis', NULL, $book_name_replace, $from_date, $to_date, $book_message);
         // bind_param() can fail because the number of parameter doesn't match the placeholders in the statement
         // or there's a type conflict(?), or ....
         if ( false===$rc ) {
