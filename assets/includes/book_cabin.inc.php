@@ -45,7 +45,7 @@
         // but's it's only an example
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
         }
-
+        debug_to_console( "funkar3");
         $rc = $stmt->bind_param('ssiiis', NULL, $book_name_replace, CURRENT_TIMESTAMP, $from_date, $to_date, $book_message);
         // bind_param() can fail because the number of parameter doesn't match the placeholders in the statement
         // or there's a type conflict(?), or ....
@@ -53,7 +53,7 @@
         // again execute() is useless if you can't bind the parameters. Bail out somehow.
         die('bind_param() failed: ' . htmlspecialchars($stmt->error));
         }
-
+        debug_to_console( "funkar4");
         $rc = $stmt->execute();
         // execute() can fail for various reasons. And may it be as stupid as someone tripping over the network cable
         // 2006 "server gone away" is always an option
