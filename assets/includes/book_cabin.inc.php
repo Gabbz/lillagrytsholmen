@@ -27,7 +27,7 @@
         $checker = false;
         foreach ($resultArr as &$value) {
             $checker = check_in_range($value[3], $value[3], $from_date);
-            $checker = check_in_range($value[3], $value[3], $to_date);
+            $checker = check_in_range($value[4], $value[4], $to_date);
             if($checker) {
                 $feedback = "Det här datumet är tyvärr upptaget. Försök med ett annat datum!";
                 break;
