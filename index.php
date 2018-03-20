@@ -108,7 +108,7 @@ debug_to_console( "Test" );
 									<ul class="actions">
 										<?php 
 											if (isset($_SESSION['username'])) {
-												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+												echo "<li><input type='submit' id='admin_logout' name='admin_logout' value='Logout' /></li>";	
 											} else {
 												echo "<li><input type='submit' id='admin_submit' name='admin_submit' value='Login' /></li>";
 											} 
