@@ -1,5 +1,5 @@
 <?php 
-
+    debug_to_console("kommer hit");
     include("db_connect.inc.php");
 
     mysqli_select_db($mysqli, "lillagrytsholmen.se");

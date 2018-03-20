@@ -363,7 +363,7 @@ debug_to_console( "Test" );
 														return color;
 													}
 													
-													$.get( "assets/includes/book.inc.php", function( data ) {
+													$.get("assets/includes/book.inc.php", function( data ) {
 														response = JSON.parse(data);
 														
 														/* formatting response */
