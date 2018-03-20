@@ -15,7 +15,7 @@
         // Query som skapar en bokning
         //$query = "INSERT INTO booking VALUE(?,?,?,?)";
         debug_to_console( "funkar2");
-        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?)");
+        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?,?,?)");
         if ( false===$stmt ) {
             // and since all the following operations need a valid/ready statement object
             // it doesn't make sense to go on
