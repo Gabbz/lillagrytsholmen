@@ -10,11 +10,19 @@
         $book_name_replace = str_replace(" ","_",$book_name);
         $book_message = htmlspecialchars(trim($_POST['book_message']));
         debug_to_console( "funkar");
-        debug_to_console( "book_name: " . $book_name_replace  . " from_date:" . $from_date . "to_date:" . $to_date. "book_message: " . $book_message);
+        debug_to_console( "book_name: " . $book_name_replace . " from_date:" . $from_date . "to_date:" . $to_date. "book_message: " . $book_message);
        
         // Query som skapar en bokning
-        $query = "INSERT INTO booking VALUE(?,?,?,?)";
+        //$query = "INSERT INTO booking VALUE(?,?,?,?)";
         debug_to_console( "funkar2");
+        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,?,?)");
+        if ( false===$stmt ) {
+            // and since all the following operations need a valid/ready statement object
+            // it doesn't make sense to go on
+            // you might want to use a more sophisticated mechanism than die()
+            // but's it's only an example
+            die('prepare() failed: ' . htmlspecialchars($mysqli->error));
+        }
         if ($stmt = $mysqli->prepare($query)) {
             debug_to_console( "funkar3");
             $stmt->bind_param("siis", $book_name_replace, $from_date, $to_date, $book_message);
