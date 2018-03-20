@@ -35,7 +35,7 @@
             
         }*/
 
-        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (?,?,CURRENT_TIMESTAMP,?,?,?)");
+        $stmt = $mysqli->prepare("INSERT INTO booking VALUES (NULL, ?,CURRENT_TIMESTAMP,?,?,?)");
         // prepare() can fail because of syntax errors, missing privileges, ....
         if ( false===$stmt ) {
         // and since all the following operations need a valid/ready statement object
@@ -44,7 +44,7 @@
         // but's it's only an example
         die('prepare() failed: ' . htmlspecialchars($mysqli->error));
         }
-        $rc = $stmt->bind_param('sssss', NULL, $book_name_replace, $from_date, $to_date, $book_message);
+        $rc = $stmt->bind_param('sssss', $book_name_replace, $from_date, $to_date, $book_message);
         // bind_param() can fail because the number of parameter doesn't match the placeholders in the statement
         // or there's a type conflict(?), or ....
         if ( false===$rc ) {
