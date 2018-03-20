@@ -1,5 +1,5 @@
 <?php
-    include('db_connect.inc.php');
+    
 
     if (isset($_POST['settings_submit']) && $_SESSION['privilege'] == 0) {
         $password_encrypt = "";

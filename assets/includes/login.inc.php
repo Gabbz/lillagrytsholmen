@@ -1,6 +1,6 @@
 <?php
 
-    include("db_connect.inc.php");
+    
 
     if (isset($_POST['login_submit'])) {
         $username = htmlspecialchars(trim($_POST['username_login']));
