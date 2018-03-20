@@ -23,7 +23,7 @@
             // but's it's only an example
             die('prepare() failed: ' . htmlspecialchars($mysqli->error));
         }
-        if ($stmt = $mysqli->prepare($query)) {
+        if ($stmt) {
             debug_to_console( "funkar3");
             $stmt->bind_param("siis", $book_name_replace, $from_date, $to_date, $book_message);
             if ($stmt->execute()) {
