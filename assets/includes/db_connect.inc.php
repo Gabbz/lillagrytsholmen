@@ -8,12 +8,12 @@
 
     $mysqli = new mysqli("$db_host", "$db_user", "$db_password", "$database");
 
-    /*avkommentera fÃ¶r felsÃ¶kning 
+    /*avkommentera för felsökning*/
     if ($mysqli->connect_errno) {
-        print'Database connection failed: ' . $mysqli->connect_error;  
+        debug_to_console('Database connection failed: ' . $mysqli->connect_error);  
     } else {
-        print 'Database connection is OK: ' . $mysqli->host_info;
+        debug_to_console('Database connection is OK: ' . $mysqli->host_info);
     } 
-*/
+
     
 ?>
