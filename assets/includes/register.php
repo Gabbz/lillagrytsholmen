@@ -1,5 +1,5 @@
 <?php
-    
+    include('db_connect.inc.php');
 
     if (isset($_POST['register_submit']) && $_SESSION['privilege'] == 1) {
         $register_username = htmlspecialchars(trim($_POST['register_username']));
