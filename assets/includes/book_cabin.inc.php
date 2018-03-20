@@ -1,6 +1,6 @@
 <?php
 
-    //include('db_connect.inc.php');
+    include('db_connect.inc.php');
 
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
