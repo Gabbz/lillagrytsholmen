@@ -24,6 +24,16 @@
             $resultArr[] = $row;
         }
 
+        $checker = false;
+        foreach ($resultArr as &$value) {
+            $checker = check_in_range($value[3], $value[3], $from_date);
+            $checker = check_in_range($value[3], $value[3], $to_date);
+            if($checker) {
+                $feedback = "Det här datumet är tyvärr upptaget. Försök med ett annat datum!"
+                break;
+            }
+        }
+
         
         debug_to_console($resultArr[0][3]);
 
