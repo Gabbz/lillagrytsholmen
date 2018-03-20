@@ -8,7 +8,8 @@
     $user_ts = strtotime($date_from_user);
 
     // Check that user date is between start & end
-    return (($user_ts >= $start_ts) && ($user_ts <= $end_ts));
+    if (($user_ts >= $start_ts) && ($user_ts <= $end_ts)) return 1;
+    else return 0;
     }
 
 ?>

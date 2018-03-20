@@ -3,6 +3,8 @@
     include('db_connect.inc.php');
 
     if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
+
+        include('check_date.inc.php');
         
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
         $from_date = date(substr($book_dates, 0, -19) . ":00");
@@ -22,16 +24,6 @@
             $resultArr[] = $row;
         }
 
-        function check_in_range($start_date, $end_date, $date_from_user) {
-            // Convert to timestamp
-            $start_ts = strtotime($start_date);
-            $end_ts = strtotime($end_date);
-            $user_ts = strtotime($date_from_user);
-
-            // Check that user date is between start & end
-            return (($user_ts >= $start_ts) && ($user_ts <= $end_ts));
-        }
-
         $checker = 0;
         foreach ($resultArr as &$value) {
             $checker = check_in_range($value[3], $value[4], $from_date);
@@ -39,7 +31,7 @@
             debug_to_console($value[3] . " " . $value[4] . " " . $from_date);
             debug_to_console($value[3] . " " . $value[4] . " " . $to_date);
             debug_to_console($checker);
-            if($checker == 1) {
+            if ($checker == 1) {
                 debug_to_console("inne i if");
                 $feedback = "Det här datumet är tyvärr upptaget. Försök med ett annat datum!";
                 break;
