@@ -8,8 +8,8 @@
     $user_ts = strtotime($date_from_user);
 
     debug_to_console(gettype ($start_ts));
-    debug_to_console(echo gettype ($end_ts));
-    debug_to_console(echo gettype ($user_ts));
+    debug_to_console(gettype ($end_ts));
+    debug_to_console(gettype ($user_ts));
 
     // Check that user date is between start & end
     if (($user_ts >= $start_ts) && ($user_ts <= $end_ts)) return 1;
