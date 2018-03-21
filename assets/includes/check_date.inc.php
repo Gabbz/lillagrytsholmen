@@ -14,7 +14,7 @@
     if (($start_user_ts >= $start_ts) && ($start_user_ts <= $end_ts)) return 1;
     elseif (($end_user_ts >= $start_ts) && ($end_user_ts <= $end_ts)) return 1;
     elseif (($start_user_ts <= $start_ts) && ($end_user_ts >= $end_ts)) return 1;
-    else return 0
+    else return 0;
     }
 
 ?>
