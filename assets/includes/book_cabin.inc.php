@@ -29,8 +29,7 @@
 
             $checker = check_in_range($value[3], $value[4], $from_date, $to_date);
             if ($checker == 1) {
-                debug_to_console("inne i if");
-                $feedback = "Det här datumet är tyvärr upptaget. Försök med ett annat datum!";
+                $feedback = "Det här datumen är tyvärr upptagna. Försök med andra datum!";
                 break;
             }
             
@@ -53,7 +52,7 @@
             if ($stmt = $mysqli->prepare($query)) {
                 $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
                 if ($stmt->execute()) {
-                    $feedback = "Bokningen för "  . $book_name . " lyckades!";
+                    $feedback = "Bokningen för "  . $book_name . " från " . $from_date . " till " . $to_date . " lyckades!";
                 } else {
                     $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
                 }
