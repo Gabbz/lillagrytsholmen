@@ -419,7 +419,7 @@ include 'assets/includes/book_cabin.inc.php';
 															},
 															schedules: scheduleArray
 														})	
-													}, 250);
+													}, 150);
 												});
 											</script>
 										</div>
