@@ -44,7 +44,7 @@
             if ($stmt = $mysqli->prepare($query)) {
                 $stmt->bind_param('ssss', $book_name_replace, $from_date, $to_date, $book_message);
                 if ($stmt->execute()) {
-                    $feedback = "Bokningen för "  . $book_name . " från " . $from_date . " till " . $to_date . " lyckades!";
+                    $feedback = "Bokningen för "  . $book_name . " från " . substr($from_date, 0, -31) . " till " . substr($to_date, 21, -8) . " lyckades!";
                 } else {
                     $feedback = "Något med bokningen gick fel. Var vänlig kontakta systemadministratör.";
                 }
