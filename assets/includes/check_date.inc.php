@@ -10,7 +10,7 @@
     debug_to_console("Start: " . $start_date . " End: " . "$end_date" . " User: " . $date_from_user);
 
     // Check that user date is between start & end
-    if (($user_ts >= $start_ts) || ($user_ts <= $end_ts)) return 1;
+    if (($user_ts >= $start_ts) && ($user_ts <= $end_ts)) return 1;
     else return 0;
     }
 
