@@ -32,17 +32,9 @@
                 $feedback = "Det här datumen är tyvärr upptagna. Försök med andra datum!";
                 break;
             }
-            
-            debug_to_console($value[3] . " " . $value[4] . " " . $from_date);
-            debug_to_console($value[3] . " " . $value[4] . " " . $to_date);
-            debug_to_console($checker);
-            
         }
 
         if($checker != 1) {
-        
-            debug_to_console($resultArr[0][3]);
-            debug_to_console($resultArr[0][4]);
 
             // Query som skapar en bokning
             $query = "INSERT INTO booking VALUES (NULL,?,CURRENT_TIMESTAMP,?,?,?)";
