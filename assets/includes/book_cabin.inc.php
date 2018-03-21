@@ -2,7 +2,7 @@
 
     include('db_connect.inc.php');
 
-    if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
+    if ((isset($_POST['book_submit'])) && ($_SESSION['privilege'] == 0)) {
 
         include('check_date.inc.php');
         
@@ -60,7 +60,7 @@
             $stmt->close();
         }
 
-    } elseif (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0 && $_SESSION['username']) {
+    } elseif ((isset($_POST['book_submit'])) && (!$_SESSION['username'])) {
         $feedback = "Du måste logga in för att göra en bokning.";
     }
 
