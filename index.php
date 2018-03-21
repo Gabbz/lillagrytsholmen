@@ -424,7 +424,7 @@ include 'assets/includes/book_cabin.inc.php';
 											</script>
 										</div>
 									</div>
-									<form method="post" action="#">
+									<form method="post" action="#book">
 										<div style="width: 60%;float: left;">
 											<div  class="field">
 												<label for ="dates">Valda datum:</label>
