@@ -53,7 +53,7 @@
             $stmt->close();
         }
 
-    } elseif ((isset($_POST['book_submit'])) && (!$_SESSION['username'])) {
+    } elseif ((isset($_POST['book_submit'])) && ($_SESSION['username'] != "")) {
         $feedback = "Du måste logga in för att göra en bokning.";
     }
 
