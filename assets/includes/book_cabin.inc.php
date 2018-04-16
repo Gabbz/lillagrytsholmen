@@ -2,7 +2,7 @@
 
     include('db_connect.inc.php');
 
-    if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 0) {
+    if (isset($_POST['book_submit']) && $_SESSION['privilege'] == 2) {
 
         debug_to_console($_SESSION);
 

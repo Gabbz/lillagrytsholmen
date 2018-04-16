@@ -11,7 +11,7 @@
         $register_adress = htmlspecialchars(trim($_POST['register_adress']));
         $register_postal = htmlspecialchars(trim($_POST['register_postal']));
         $register_city = strtoupper(htmlspecialchars(trim($_POST['register_city'])));
-        $priv = "0";
+        $priv = "2";
 
         $password_encrypt = password_hash($register_password, PASSWORD_DEFAULT); // Encrypted Password
 
