@@ -4,6 +4,8 @@
 
     if ((isset($_POST['book_submit'])) && ($_SESSION['privilege'] == 0)) {
 
+        debug_to_console($_SESSION);
+
         include('check_date.inc.php');
         
         $book_dates = htmlspecialchars(trim($_POST['book_dates']));
