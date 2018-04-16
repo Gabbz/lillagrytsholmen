@@ -55,7 +55,7 @@
             $stmt->close();
         }
 
-    } else {
+    } elseif (isset($_POST['register_submit']) && $_SESSION['privilege'] == 0) {
         $feedback = "Du måste logga in för att göra en bokning.";
     }
 
