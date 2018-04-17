@@ -24,6 +24,8 @@
         echo json_encode(['error'=>'Hittade inga filer att ladda upp.']); 
         // or you can throw an exception 
         return; // terminate
+    } else {
+        debug_to_console("hittade filer");
     }
     
     // get the files posted
@@ -42,18 +44,21 @@
 
     // file paths to store
     //$paths= [../../uploads];
-    $paths= [];
+    $paths= ["../../uploads"];
+
+    debug_to_console($paths);
 
     // get file names
     $filenames = $images['name'];
     
 
-    $target_dir = "uploads/";
+    $target_dir = "../../uploads/";
     // loop and process files
     for($i=0; $i < count($filenames); $i++){
         $ext = explode('.', basename($filenames[$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
         if(move_uploaded_file($images['name'][$i], $target)) {
+            debug_to_console("succes?");
             $success = true;
             $paths[] = $target;
         } else {
