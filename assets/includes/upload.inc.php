@@ -58,7 +58,6 @@
         $ext = explode('.', basename($filenames[$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);    
         if(move_uploaded_file($images['name'][$i], $target)) {
-            debug_to_console("succes?");
             $success = true;
             $paths[] = $target;
         } else {
@@ -66,6 +65,8 @@
             break;
         } 
     }
+
+    debug_to_console("förbi for-satsen");
 
     // check and process based on successful status 
     if ($success === true) {
