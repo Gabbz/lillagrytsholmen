@@ -12,7 +12,7 @@
 
 
 
-
+    debug_to_console("Körs");
 
 
 
