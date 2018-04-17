@@ -25,7 +25,7 @@
         // or you can throw an exception 
         return; // terminate
     } else {
-        debug_to_console("hittade filer");
+        //debug_to_console("hittade filer");
     }
     
     // get the files posted
@@ -46,7 +46,7 @@
     //$paths= [../../uploads];
     $paths= ["../../uploads"];
 
-    debug_to_console($paths);
+    //debug_to_console($paths);
 
     // get file names
     $filenames = $images['name'];
@@ -61,12 +61,13 @@
             $success = true;
             $paths[] = $target;
         } else {
+            
             $success = false;
             break;
         } 
     }
 
-    debug_to_console("förbi for-satsen");
+    //debug_to_console("förbi for-satsen");
 
     // check and process based on successful status 
     if ($success === true) {
