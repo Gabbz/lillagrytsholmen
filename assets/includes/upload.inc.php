@@ -23,7 +23,7 @@
 
 
     $target_dir = "../../uploads/testingz";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $target_file = $target_dir . basename($_FILES["files"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file);
     debug_to_console(pathinfo($imageFileType));
