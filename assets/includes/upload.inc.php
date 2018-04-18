@@ -18,7 +18,7 @@
 
 
 
-    
+    debug_to_console(basename($_FILES["files"]));
 
 
 
