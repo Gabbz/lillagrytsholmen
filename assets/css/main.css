@@ -23,6 +23,7 @@
 
 	a:focus, a:hover {
 		color: #fff !important;
+		text-decoration: none;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
