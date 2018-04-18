@@ -13,7 +13,7 @@
 
 
     debug_to_console("Körs");
-    debug_to_console($_FILES[]);
+    debug_to_console($_FILES['files']);
 
 
 
