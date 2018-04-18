@@ -61,7 +61,7 @@
     } else {
         for ($i=0; $i < 1; $i++) {
             $ext = explode('.', basename($_FILES["fileToUpload"]["name"]));
-            $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_                                                                                                                                                                                                                                             pop($ext);
+            $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);                                                                                                                                                                                                                                             pop($ext);
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file                                                                                                                                                                                                                                             )) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has                                                                                                                                                                                                                                              been uploaded.";
             } else {
