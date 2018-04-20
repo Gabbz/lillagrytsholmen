@@ -737,9 +737,9 @@ include 'assets/includes/book_cabin.inc.php';
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/snackbar.js"></script>
 			<script src="assets/js/plugins/sortable.js" type="text/javascript"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 			<script src="assets/js/fileinput.js" type="text/javascript"></script>
 			<script src="assets/js/locales/sv.js" type="text/javascript"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 			<script>
 				$('#files').fileinput({
 					language: 'sv',
