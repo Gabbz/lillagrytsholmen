@@ -21,8 +21,9 @@
     }
     
     // get the files posted
-    $ticket = $_FILES['files'];
-    
+    //$ticket = $_FILES['files'];
+    $files = $_FILES['files'];
+
     // get server posted
     $server = empty($_POST['server']) ? '' : $_POST['server'];
     
@@ -36,11 +37,14 @@
     $paths= [];
     
     // loop and process files
-    for($i=0; $i < count($ticket); $i++){
+    //for($i=0; $i < count($ticket); $i++){
+    for($i=0; $i < count($files); $i++){    
         echo $i;
-        $ext = explode('.', basename($ticket['name'][$i]));
+        //$ext = explode('.', basename($ticket['name'][$i]));
+        $ext = explode('.', basename($files['name'][$i]));
         $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
-        if(move_uploaded_file($ticket['tmp_name'][$i], $target)) {
+        //if(move_uploaded_file($ticket['tmp_name'][$i], $target)) {
+        if(move_uploaded_file($files['tmp_name'][$i], $target)) {
             $success = true;
             $paths[] = $target;
             debug_to_console("fan det gick fan");
