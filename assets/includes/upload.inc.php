@@ -41,7 +41,7 @@
     for($i=0; $i < count($files); $i++){    
         echo $i;
         //$ext = explode('.', basename($ticket['name'][$i]));
-        $ext = explode('.', basename($files['files'][$i]));
+        $ext = explode('.', basename($files['name'][$i]));
         $target = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
         //if(move_uploaded_file($ticket['tmp_name'][$i], $target)) {
         if(move_uploaded_file($files['tmp_name'][$i], $target)) {
