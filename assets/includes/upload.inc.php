@@ -63,7 +63,7 @@
         // store a successful response (default at least an empty array). You
         // could return any additional response info you need to the plugin for
         // advanced implementations.
-        $output = json_encode({});
+        $output = json_encode({[]});
     } elseif ($success === false) {
         $output = ['error'=>'Error while uploading ticket. Contact the system administrator'];
         // delete any uploaded files
