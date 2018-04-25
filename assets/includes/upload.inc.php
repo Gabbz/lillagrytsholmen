@@ -38,11 +38,10 @@
     
     // loop and process files
     //for($i=0; $i < count($ticket); $i++){
-    for($i=0; $i < count($files); $i++){    
-        echo $i;
+    for($i=0; $i < count($files['name']); $i++){    
         //$ext = explode('.', basename($ticket['name'][$i]));
         $ext = explode('.', basename($files['name'][$i]));
-        $target = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
+        $target = "uploads" . DIRECTORY_SEPARATOR . md5(uniqid()) . "." . array_pop($ext);
         //if(move_uploaded_file($ticket['tmp_name'][$i], $target)) {
         if(move_uploaded_file($files['tmp_name'][$i], $target)) {
             $success = true;
@@ -55,28 +54,28 @@
     }
     
     // check and process based on successful status
-    //if ($success === true) {
-        // call the function to save all data to database
-        // code for the following function `save_data` is not
-        // mentioned in this example
+    if ($success === true) {
+        /* call the function to save all data to database
+         code for the following function `save_data` is not
+         mentioned in this example */
       //  save_data($userid, $username, $paths);
     
         // store a successful response (default at least an empty array). You
         // could return any additional response info you need to the plugin for
         // advanced implementations.
-        //$output = [];
-    //} elseif ($success === false) {
-      //  $output = ['error'=>'Error while uploading ticket. Contact the system administrator'];
+        $output = [];
+    } elseif ($success === false) {
+        $output = ['error'=>'Error while uploading ticket. Contact the system administrator'];
         // delete any uploaded files
-        //foreach ($paths as $file) {
-      //      unlink($file);
-        //}
-    /*} else {
+        foreach ($paths as $file) {
+            unlink($file);
+        }
+    } else {
         $output = ['error'=>'No files were processed.'];
-    }*/
+    }
     
     // return a json encoded response for plugin to process successfully
-    //echo json_encode($output);
+    echo json_encode($output);
     ?>
     
 
