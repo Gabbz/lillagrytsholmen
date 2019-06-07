@@ -2,7 +2,7 @@
 
     //Anslutning till databasen
     $db_host     = 'localhost';
-    $db_user     = 'reggiepalmer'; //db-user
+    $db_user     = 'admin_cat'; //db-user
     $db_password = 'Xrke$S*j9EJw#M4QKp4$RU*K'; //db-password
     $database = 'lillagrytsholmen.se'; //db
 
