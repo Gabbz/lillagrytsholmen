@@ -65,7 +65,7 @@ include 'assets/includes/book_cabin.inc.php';
 								<p>
 									<!-- MAKE PRETTIER -->
 									<ul class="icons" style="margin:0px;">
-										<li><a href="https://www.facebook.com/Kustkrokarna/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.facebook.com/groups/317297899006745/" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 									</ul>
 								</p>
 							</div>
