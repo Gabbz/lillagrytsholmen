@@ -6,7 +6,7 @@
         $admin_username = htmlspecialchars(trim($_POST['admin_username']));
         $admin_password = htmlspecialchars(trim($_POST['admin_password']));
 
-        $query = "SELECT username, password, privilege FROM admin WHERE username = (?)";
+        $query = "SELECT username, password, privilege FROM user WHERE username = (?)";
 
         if ($stmt = $mysqli->prepare($query)) {
             $stmt->bind_param("s", $admin_username);
