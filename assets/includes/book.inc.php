@@ -2,7 +2,7 @@
     
     include("db_connect.inc.php");
     
-    mysqli_select_db($mysqli, "lillagrytsholmen.se");
+    mysqli_select_db($mysqli, "lillagrytsholmen");
     $query = "SELECT * FROM booking";
     $result = mysqli_query($mysqli,$query);
 
