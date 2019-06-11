@@ -2,7 +2,8 @@
     
     include('db_connect.inc.php');
 
-    if (isset($_POST['register_submit']) && $_SESSION['privilege'] == 1) {
+    //if (isset($_POST['register_submit']) && $_SESSION['privilege'] == 1) {
+        if (isset($_POST['register_submit'])) {
         $register_username = htmlspecialchars(trim($_POST['register_username']));
         $register_password = htmlspecialchars(trim($_POST['register_password']));
         $register_fullname = htmlspecialchars(trim($_POST['register_fullname']));
@@ -35,4 +36,3 @@
         $feedback = "Insufficient permissions.";
     }
 ?>
-
