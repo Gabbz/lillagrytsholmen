@@ -22,9 +22,7 @@ function submitSettings() {
         settings_city: settings_city
     },
     function(data) {
-        var myvar="<?php echo $_SESSION['privilege'];?>";
         console.log(data);
-        console.log(myvar);
 	 //$('#results').html(data);
 	 //$('#myForm')[0].reset();
     });

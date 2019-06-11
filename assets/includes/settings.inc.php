@@ -3,7 +3,7 @@
     include('db_connect.inc.php');
 
     //echo $_POST['settings_fullname'];
-    echo $_SESSION['privilege'];
+    echo $_SESSION['fullname'];
 
     //if (isset($_POST['settings_submit']) && ($_SESSION['privilege'] == 2 || $_SESSION['privilege'] == 1)) {
     if ($_SESSION['privilege'] == 2 || $_SESSION['privilege'] == 1) {
