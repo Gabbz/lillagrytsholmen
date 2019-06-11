@@ -1,4 +1,6 @@
 function submitSettings() {
+    console.log('loggar');
+    /*
     var settings_username = $("#settings_username").val();
     var settings_password = $("#settings_password").val();
     var settings_password2 = $("#settings_password2").val();
@@ -26,5 +28,5 @@ function submitSettings() {
         console.log(data);
 	 //$('#results').html(data);
 	 //$('#myForm')[0].reset();
-    });
+    });*/
 }
