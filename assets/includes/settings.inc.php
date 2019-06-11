@@ -42,7 +42,7 @@
                     fullname = (?), 
                     phone = (?), 
                     email = (?), 
-                    adress = (?), 
+                    address = (?), 
                     postal = (?), 
                     city = (?) 
                     WHERE username = (?)";
@@ -51,7 +51,7 @@
                     fullname = (?), 
                     phone = (?), 
                     email = (?), 
-                    adress = (?), 
+                    address = (?), 
                     postal = (?), 
                     city = (?) 
                     WHERE username = (?)";
