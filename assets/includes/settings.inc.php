@@ -107,6 +107,8 @@
                 $stmt->close();
             } 
         } 
+        echo mysql_errno();
+        echo $feedback;
     }
 ?>
 

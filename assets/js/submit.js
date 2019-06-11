@@ -10,8 +10,6 @@ function submitSettings() {
     var settings_postal = $("#settings_postal").val();
     var settings_city = $("#settings_city").val();
 
-    console.log('settings: ' + settings_email);
-
     $.post("/lillagrytsholmen/assets/includes/settings.inc.php", { 
         settings_username: settings_username, 
         settings_password: settings_password, 
