@@ -2,7 +2,7 @@
     
     include('db_connect.inc.php');
 
-    if (isset($_POST['settings_submit']) && $_SESSION['privilege'] == 2) {
+    if (isset($_POST['settings_submit']) && ($_SESSION['privilege'] == 2 || $_SESSION['privilege'] == 1)) {
         $password_encrypt = "";
         $skip = 0;
 
