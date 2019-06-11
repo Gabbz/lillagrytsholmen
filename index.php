@@ -260,7 +260,7 @@ include 'assets/includes/book_cabin.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="button" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
+													<li><button type="button" id="settings_submit" name="settings_submit">Värkställ</button></li>
 												</ul>
 											</td>
 										</tr>
