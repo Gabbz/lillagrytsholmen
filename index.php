@@ -26,7 +26,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<!-- CSS -->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
-		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/lillagrytsholmen/assets/css/main.css" />
 
 		<link rel="stylesheet" href="assets/css/pignose.calendar.css" />
 		<link rel="stylesheet" href="assets/css/calendar-style.css" />
