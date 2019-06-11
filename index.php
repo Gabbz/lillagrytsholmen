@@ -193,7 +193,7 @@ include 'assets/includes/book_cabin.inc.php';
 										</tr>
 									</table>
 									<ul class="actions" style="padding-left: 0.75rem">
-										<li><input type="button" id="register_submit" name="register_submit" value="Register" /></li>
+										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
 									</ul>
 								</form>
 							</article>
@@ -260,7 +260,7 @@ include 'assets/includes/book_cabin.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="submit" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
+													<li><input type="button" id="settings_submit" name="settings_submit" value="Verkställ" /></li>
 												</ul>
 											</td>
 										</tr>
