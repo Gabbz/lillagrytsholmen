@@ -2,10 +2,14 @@
     
     include('db_connect.inc.php');
 
+    echo $_POST['settings_fullname'];
+
     //if (isset($_POST['settings_submit']) && ($_SESSION['privilege'] == 2 || $_SESSION['privilege'] == 1)) {
     if ($_SESSION['privilege'] == 2 || $_SESSION['privilege'] == 1) {
         $password_encrypt = "";
         $skip = 0;
+
+        echo $_POST['settings_username'];
 
         $settings_username = htmlspecialchars(trim($_POST['settings_username']));
         $settings_password = htmlspecialchars(trim($_POST['settings_password']));
