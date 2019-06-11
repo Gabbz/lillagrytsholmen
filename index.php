@@ -10,7 +10,7 @@ include 'assets/debug/toConsole.php';
 include 'assets/includes/admin.inc.php';
 include 'assets/includes/login.inc.php';
 include 'assets/includes/register.php';
-include 'assets/includes/settings.inc.php';
+//include 'assets/includes/settings.inc.php';
 include 'assets/includes/book_cabin.inc.php';
 
 ?>
@@ -35,6 +35,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/moment.min.js"></script>
 		<script src="assets/js/pignose.calendar.min.js"></script>
+		<script src="assets/js/submit.js"></script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -260,7 +261,7 @@ include 'assets/includes/book_cabin.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><button type="button" id="settings_submit" name="settings_submit">Värkställ</button></li>
+													<li><button type="button" id="settings_submit" name="settings_submit" onClick"submitSettings();">Verkställ</button></li>
 												</ul>
 											</td>
 										</tr>
