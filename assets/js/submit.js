@@ -23,6 +23,7 @@ function submitSettings() {
         settings_city: settings_city
     },
     function(data) {
+        console.log(data);
 	 //$('#results').html(data);
 	 //$('#myForm')[0].reset();
     });
