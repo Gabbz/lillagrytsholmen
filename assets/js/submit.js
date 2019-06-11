@@ -20,7 +20,7 @@ function submitSettings() {
         settings_email: settings_email, 
         settings_adress: settings_adress, 
         settings_postal: settings_postal, 
-        settings_city: settings_city, 
+        settings_city: settings_city
     },
     function(data) {
 	 //$('#results').html(data);
