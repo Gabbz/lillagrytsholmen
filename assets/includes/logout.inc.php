@@ -10,6 +10,6 @@
 
     }
     
-    header("Location: /lillagrytsholmen.se/"); /* Redirect browser */
+    header("Location: /lillagrytsholmen/"); /* Redirect browser */
     exit();
 ?>
