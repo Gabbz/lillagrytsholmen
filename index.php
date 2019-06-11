@@ -451,7 +451,7 @@ include 'assets/includes/book_cabin.inc.php';
 								<h2 class="major">Kontakta administratör</h2>
 								<form method="post" action="#">
 									<div class="field half first">
-										<label for="name">Name</label>
+										<label for="name">Namn</label>
 										<input type="text" name="name" id="name" />
 									</div>
 									<div class="field half">
@@ -459,18 +459,18 @@ include 'assets/includes/book_cabin.inc.php';
 										<input type="email" name="email" id="email" />
 									</div>
 									<div class="field">
-										<label for="message">Message</label>
+										<label for="message">Meddelande</label>
 										<textarea name="message" id="message" rows="4"></textarea>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="Skicka meddelande" class="special" /></li>
+										<li><input type="reset" value="Återställ formulär" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="https://twitter.com/BorgJonas" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/jonas.borg1337" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/jonasborgs/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://twitter.com/BorgJonas" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/jonas.borg1337" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/jonasborgs/" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</article>
 
