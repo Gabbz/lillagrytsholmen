@@ -193,7 +193,7 @@ include 'assets/includes/book_cabin.inc.php';
 										</tr>
 									</table>
 									<ul class="actions" style="padding-left: 0.75rem">
-										<li><input type="submit" id="register_submit" name="register_submit" value="Register" /></li>
+										<li><input type="button" id="register_submit" name="register_submit" value="Register" /></li>
 									</ul>
 								</form>
 							</article>
