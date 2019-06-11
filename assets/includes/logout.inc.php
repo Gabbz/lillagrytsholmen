@@ -9,6 +9,8 @@
         session_destroy();
 
     }
+
+    $feedback = "Du är nu utloggad.";
     
     header("Location: /lillagrytsholmen/"); /* Redirect browser */
     exit();
