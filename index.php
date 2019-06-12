@@ -8,9 +8,7 @@ session_start();
 
 include 'assets/debug/toConsole.php';
 include 'assets/includes/admin.inc.php';
-//include 'assets/includes/login.inc.php';
 include 'assets/includes/register.php';
-//include 'assets/includes/settings.inc.php';
 include 'assets/includes/book_cabin.inc.php';
 
 ?>
@@ -32,12 +30,10 @@ include 'assets/includes/book_cabin.inc.php';
 		<link rel="stylesheet" href="assets/css/calendar-style.css" />
 
 		<!-- JS -->
-		<!--<script src="assets/js/jquery.min.js"></script>-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script src="assets/js/moment.min.js"></script>
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
-		<!--<script src="assets/js/login.js"></script>-->
 		<script src="assets/js/uiActions.js"></script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -79,20 +75,7 @@ include 'assets/includes/book_cabin.inc.php';
 							<form style="margin: 0;" method="post">
 								<ul>
 									<li><a href='#login'>Logga in</a></li>
-
-
-
-									<?php 
-									/*
-										if (isset($_SESSION['username'])) {
-											echo "<li><a href='assets/includes/logout.inc.php'>Logga ut</a></li>";
-										} else {
-											echo "<li><a href='#login'>Logga in</a></li>";
-										} 
-									*/
-									?>
 									<li><a href="#book">Boka Stugan</a></li>
-									<!--<li><a href="#elements">Elements</a></li>-->
 								</ul>
 							</form>
 						</nav>
@@ -140,18 +123,6 @@ include 'assets/includes/book_cabin.inc.php';
 									<ul class="actions">
 										
 										<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>
-										
-										
-										
-										
-										<?php 
-											/*if (isset($_SESSION['username'])) {
-												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logga ut' /></li>";	
-											} else {
-												//echo "<li><input type='button' id='login_submit' name='login_submit' value='Login' /></li>";
-												echo "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
-											} */
-										?>
 									</ul>
 								</form>
 							</article>
@@ -279,7 +250,6 @@ include 'assets/includes/book_cabin.inc.php';
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
 													<li><input type="button" id="settings_submit" name="settings_submit" onclick="submitSettings();" value="Verkställ" /></li>
-													<!--<li><button type="button" id="settings_submit" name="settings_submit" onclick"submitSettings();">Verkställ</button></li>-->
 												</ul>
 											</td>
 										</tr>
@@ -776,15 +746,6 @@ include 'assets/includes/book_cabin.inc.php';
 			</script>
 
 			<script src="assets/js/snackbar.js" type="text/javascript"></script>
-
-			<?php 
-			/*
-				if (isset($_SESSION['feedback'])) $feedback = $_SESSION['feedback'];
-				if (isset($feedback)) {
-					echo "<script>(function(){toggleSnackbar()})();</script>";
-				} 
-			*/
-			?>
 
 	</body>
 </html>

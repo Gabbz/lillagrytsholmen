@@ -7,12 +7,12 @@ function updateHeader(action, fullName) {
         $("#login").find(".actions")[0].innerHTML = "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
 
     } else if (action == 'login') {
-        $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<li><a onclick="logout();">Logga ut</a></li>';
+        $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<li><a onclick="logout();" href>Logga ut</a></li>';
         $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
         $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
 
     } else {
-        $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();">Logga ut</a></li>';
+        $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();" href>Logga ut</a></li>';
         $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
         $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
 
