@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     include('db_connect.inc.php');
 
     //echo $_POST['settings_fullname'];
