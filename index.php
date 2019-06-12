@@ -759,9 +759,13 @@ include 'assets/includes/book_cabin.inc.php';
 				});
 			</script>
 
-			<?php if (isset($feedback)) {
-				echo "<script>(function(){toggleSnackbar()})();</script>";
-			} ?>
+			<?php 
+				if (isset($_SESSION['feedback'])) $feedback = $_SESSION['feedback'];
+				if (isset($feedback)) {
+					echo "<script>(function(){toggleSnackbar()})();</script>";
+				} 
+			
+			?>
 
 	</body>
 </html>
