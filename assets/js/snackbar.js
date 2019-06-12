@@ -1,8 +1,5 @@
 function toggleSnackbar() {
-    function triggerSnackbar() {
-        console.log("trigger triggad");
-        (function(){toggleSnackbar()})();
-    }
+    
 
 
 
@@ -12,4 +9,9 @@ function toggleSnackbar() {
         x.className = "show";
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
     }, 1000)
+}
+
+function triggerSnackbar() {
+    console.log("trigger triggad");
+    (function(){toggleSnackbar()})();
 }
