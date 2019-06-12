@@ -73,6 +73,7 @@ function login() {
     },
     function(data) {
         console.log(typeof data);
+        data = "\"" + data + "\"";
         console.log(data);
         var parsed = JSON.parse(data);
         console.log(parsed);
