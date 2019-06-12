@@ -10,5 +10,7 @@ function login() {
     function(data) {
         
         triggerSnackbar(data);
+        if (data != "Felaktigt lösenord eller användarnamn, försök igen!")
+            updateHeader('login');
     });
 }
