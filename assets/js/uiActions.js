@@ -1,5 +1,5 @@
 function updateHeader() {
-    console.log($("#header"));
+    console.log($("#header").find('nav').find('form').find('ul').find('li').val());
 }
 
 updateHeader();
