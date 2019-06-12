@@ -1,5 +1,5 @@
 function updateHeader() {
-    console.log($("#header").val());
+    console.log($("#header"));
 }
 
 updateHeader();
