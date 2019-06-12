@@ -38,6 +38,8 @@ function login() {
         password_login: password_login
     },
     function(data) {
+        console.log(typeof data);
+        console.log(data);
         var parsed = JSON.parse(data);
         console.log(parsed);
         console.log(typeof parsed.status);
