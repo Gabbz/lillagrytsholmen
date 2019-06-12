@@ -19,19 +19,19 @@ function updateHeader(action, fullName) {
     }
 }
 
-
-
 function logout() {
 
     $.post("/lillagrytsholmen/assets/includes/logout.inc.php", {},
     function(data) {
+
+        var parsed = JSON.parse(data);
         
-        if (data == "Du är nu utloggad.") {
+        if (parsed.status == "0") {
 
             var username_login = "";
             var password_login = "";
             updateHeader('logout', '');
-            triggerSnackbar(data);
+            triggerSnackbar(parsed.feedback);
         } else {
             triggerSnackbar("Något gick fel vid utloggningen.");
         }
@@ -48,15 +48,12 @@ function login() {
         password_login: password_login
     },
     function(data) {
-        console.log(typeof data);
-        //data = "\'" + data + "\'";
-        console.log(data);
+
         var parsed = JSON.parse(data);
-        console.log(parsed);
-        console.log(typeof parsed.status);
         triggerSnackbar(parsed.feedback);
-        //if (data.status == 0)
+        if (data.status == "0")
             updateHeader('login', parsed.fullName);
     });
+
 }
 
