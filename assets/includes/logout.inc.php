@@ -10,8 +10,8 @@
 
     }
 
-    $feedback = "Du är nu utloggad.";
+    echo "Du är nu utloggad.";
     
-    header("Location: /lillagrytsholmen/"); /* Redirect browser */
-    exit();
+    //header("Location: /lillagrytsholmen/"); /* Redirect browser */
+    //exit(); 
 ?>
