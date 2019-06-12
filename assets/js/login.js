@@ -8,9 +8,9 @@ function login() {
         password_login: password_login
     },
     function(data) {
-        
+        var fullName = "Jonas Borg";
         triggerSnackbar(data);
         if (data != "Felaktigt lösenord eller användarnamn, försök igen!")
-            updateHeader('login');
+            updateHeader('login', fullName);
     });
 }

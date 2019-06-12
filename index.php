@@ -36,7 +36,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/moment.min.js"></script>
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
-		<script src="assets/js/login.js"></script>
+		<!--<script src="assets/js/login.js"></script>-->
 		<script src="assets/js/uiActions.js"></script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -732,7 +732,7 @@ include 'assets/includes/book_cabin.inc.php';
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Jonas Borg - 2019 - Frågor? <a href="#contact">Kontakta mig!</a> <?php if (isset($_SESSION['username'])) echo "Inloggad: " . "<a href='#settings'>" . $_SESSION['username'] . "</a>"; ?></p>
+						<p class="copyright">&copy; Jonas Borg - 2019 - Frågor? <a href="#contact">Kontakta mig!</a></p>
 					</footer>
 
 			</div>

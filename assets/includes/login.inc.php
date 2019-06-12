@@ -40,5 +40,6 @@
     }
 
     echo $feedback;
+    echo $_SESSION['fullname'];
     
 ?>
