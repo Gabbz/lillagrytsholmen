@@ -37,6 +37,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
 		<script src="assets/js/login.js"></script>
+		<script src="assets/js/uiActions.js"></script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
