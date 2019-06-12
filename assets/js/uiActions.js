@@ -10,7 +10,7 @@ function updateHeader(action, fullName) {
     }
     else {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();">Logga ut</a></li>';
-        $("#footer").find('p').append('"Inloggad: <a href="#settings">" + fullName + "</a>"');
+        $("#footer").find('p').append('Inloggad: <a href="#settings">' + fullName + '</a>');
     }
 }
 
@@ -38,11 +38,12 @@ function login() {
         password_login: password_login
     },
     function(data) {
-        console.log(data);
-        var fullName = "Jonas Borg";
-        triggerSnackbar(data);
-        //if (data != "Felaktigt lösenord eller användarnamn, försök igen!")
-            updateHeader('login', fullName);
+        var parsed = JSON.parse(data);
+        console.log(parsed);
+        console.log(typeof parsed.status);
+        triggerSnackbar(parsed.feedback);
+        //if (data.status == 0)
+            updateHeader('login', parsed.fullName);
     });
 }
 
