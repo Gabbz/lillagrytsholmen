@@ -1,18 +1,52 @@
 function updateHeader(action, fullName) {
     //console.log($("#header").find('nav').find('form').find('ul').find('li').va);
 
-    if (action == 'logout')
+    if (action == 'logout') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<a href="#login">Logga in</a>';
-    else if (action == 'login') {
+        $("#login").find(".actions")[0].innerHTML = "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
+
+    } else if (action == 'login') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<li><a onclick="logout();">Logga ut</a></li>';
         $("#footer").find('p').append('"Inloggad: <a href="#settings">" + fullName + "</a>"');
-        
-    }
-    else {
+        $("#login").find(".actions")[0].innerHTML = "<li><a onclick='logout();'>Logga ut</a></li>";
+
+    } else {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();">Logga ut</a></li>';
         $("#footer").find('p').append('Inloggad: <a href="#settings">' + fullName + '</a>');
+        $("#login").find(".actions")[0].innerHTML = "<li><a onclick='logout();'>Logga ut</a></li>";
+
     }
 }
+
+
+
+/*
+
+if (isset($_SESSION['username'])) {
+echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logga ut' /></li>";	
+} else {
+//echo "<li><input type='button' id='login_submit' name='login_submit' value='Login' /></li>";
+echo "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function logout() {
 
@@ -29,7 +63,7 @@ function logout() {
 }
 
 function login() {
-    
+
     var username_login = $("#username_login").val();
     var password_login = $("#password_login").val();
 

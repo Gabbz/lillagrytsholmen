@@ -32,7 +32,8 @@ include 'assets/includes/book_cabin.inc.php';
 		<link rel="stylesheet" href="assets/css/calendar-style.css" />
 
 		<!-- JS -->
-		<script src="assets/js/jquery.min.js"></script>
+		<!--<script src="assets/js/jquery.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script src="assets/js/moment.min.js"></script>
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
@@ -137,13 +138,19 @@ include 'assets/includes/book_cabin.inc.php';
 										value="<?php print $password;?>" placeholder="Enter your password" />
 									
 									<ul class="actions">
+										
+										<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>
+										
+										
+										
+										
 										<?php 
-											if (isset($_SESSION['username'])) {
+											/*if (isset($_SESSION['username'])) {
 												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logga ut' /></li>";	
 											} else {
 												//echo "<li><input type='button' id='login_submit' name='login_submit' value='Login' /></li>";
 												echo "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
-											} 
+											} */
 										?>
 									</ul>
 								</form>
