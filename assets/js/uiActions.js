@@ -3,48 +3,21 @@ function updateHeader(action, fullName) {
 
     if (action == 'logout') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<a href="#login">Logga in</a>';
+        $("#settings_toggle").remove();
         $("#login").find(".actions")[0].innerHTML = "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
 
     } else if (action == 'login') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<li><a onclick="logout();">Logga ut</a></li>';
-        $("#footer").find('p').append('"Inloggad: <a href="#settings">" + fullName + "</a>"');
-        $("#login").find(".actions")[0].innerHTML = "<li><a onclick='logout();'>Logga ut</a></li>";
+        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
+        $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
 
     } else {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();">Logga ut</a></li>';
-        $("#footer").find('p').append('Inloggad: <a href="#settings">' + fullName + '</a>');
-        $("#login").find(".actions")[0].innerHTML = "<li><a onclick='logout();'>Logga ut</a></li>";
+        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
+        $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
 
     }
 }
-
-
-
-/*
-
-if (isset($_SESSION['username'])) {
-echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logga ut' /></li>";	
-} else {
-//echo "<li><input type='button' id='login_submit' name='login_submit' value='Login' /></li>";
-echo "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
-}
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -54,6 +27,9 @@ function logout() {
     function(data) {
         
         if (data == "Du är nu utloggad.") {
+
+            var username_login = "";
+            var password_login = "";
             updateHeader('logout', '');
             triggerSnackbar(data);
         } else {
