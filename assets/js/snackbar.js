@@ -4,7 +4,7 @@ function toggleSnackbar(feedback) {
 
         var x = document.getElementById("snackbar")
         x.className = "show";
-        x.innerHTML = "<p>" + feedback + "</p>";
+        x.html = "<p>" + feedback + "</p>";
         setTimeout(function(){ 
             x.className = x.className.replace("show", ""); 
         }, 6000);
