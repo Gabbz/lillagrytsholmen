@@ -736,7 +736,6 @@ include 'assets/includes/book_cabin.inc.php';
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/snackbar.js"></script>
 			<script src="assets/js/plugins/sortable.js" type="text/javascript"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 			<script src="assets/js/fileinput.js" type="text/javascript"></script>
@@ -760,12 +759,7 @@ include 'assets/includes/book_cabin.inc.php';
 				});
 			</script>
 
-			<script>
-				function triggerSnackbar() {
-					console.log(trigger triggad);
-					(function(){toggleSnackbar()})();
-				}
-			</script>
+			<script src="assets/js/snackbar.js" type="text/javascript"></script>
 
 			<?php 
 			/*

@@ -1,4 +1,11 @@
 function toggleSnackbar() {
+    function triggerSnackbar() {
+        console.log("trigger triggad");
+        (function(){toggleSnackbar()})();
+    }
+
+
+
     setTimeout(function(){
 
         var x = document.getElementById("snackbar")
