@@ -1,5 +1,5 @@
 function updateHeader() {
-    console.log($("#header nav form ul li").val());
+    console.log($("#header").val());
 }
 
 updateHeader();
