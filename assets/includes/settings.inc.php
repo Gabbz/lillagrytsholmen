@@ -108,7 +108,6 @@
             } 
         } 
     }
-    $_SESSION['feedback'] = $feedback;
     echo $feedback;
 ?>
 

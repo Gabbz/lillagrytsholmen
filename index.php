@@ -8,7 +8,7 @@ session_start();
 
 include 'assets/debug/toConsole.php';
 include 'assets/includes/admin.inc.php';
-include 'assets/includes/login.inc.php';
+//include 'assets/includes/login.inc.php';
 include 'assets/includes/register.php';
 //include 'assets/includes/settings.inc.php';
 include 'assets/includes/book_cabin.inc.php';
@@ -36,6 +36,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/moment.min.js"></script>
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
+		<script src="assets/js/login.js"></script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -131,9 +132,10 @@ include 'assets/includes/book_cabin.inc.php';
 									<ul class="actions">
 										<?php 
 											if (isset($_SESSION['username'])) {
-												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logout' /></li>";	
+												echo "<li><input type='submit' id='logout_submit' name='logout_submit' value='Logga ut' /></li>";	
 											} else {
-												echo "<li><input type='submit' id='login_submit' name='login_submit' value='Login' /></li>";
+												//echo "<li><input type='button' id='login_submit' name='login_submit' value='Login' /></li>";
+												echo "<li><input type='button' id='login_submit' name='login_submit' onclick='login();' value='Logga in' /></li>";
 											} 
 										?>
 									</ul>
@@ -262,7 +264,6 @@ include 'assets/includes/book_cabin.inc.php';
 											<td>
 												<label style="opacity: 0;">spacer</label>
 												<ul class="actions" style="float: right; margin: 0;">
-													<li><input type="button" class="close" value="Stäng" /></li>
 													<li><input type="button" id="settings_submit" name="settings_submit" onclick="submitSettings();" value="Verkställ" /></li>
 													<!--<li><button type="button" id="settings_submit" name="settings_submit" onclick"submitSettings();">Verkställ</button></li>-->
 												</ul>

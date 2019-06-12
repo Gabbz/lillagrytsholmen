@@ -13,6 +13,5 @@ function toggleSnackbar(feedback) {
 
 function triggerSnackbar(feedback) {
 
-    console.log("trigger triggad");
     (function(){toggleSnackbar(feedback)})();
 }
