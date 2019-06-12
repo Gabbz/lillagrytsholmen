@@ -23,7 +23,7 @@ function submitSettings() {
     },
     function(data) {
         console.log(data);
-        triggerSnackbar();
+        triggerSnackbar(data);
 	 //$('#results').html(data);
 	 //$('#myForm')[0].reset();
     });

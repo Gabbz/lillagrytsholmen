@@ -1,15 +1,18 @@
-function toggleSnackbar() {
+function toggleSnackbar(feedback) {
 
     setTimeout(function(){
 
         var x = document.getElementById("snackbar")
         x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 6000);
+        x.innerHTML = "<p>" + feedback + "</p>";
+        setTimeout(function(){ 
+            x.className = x.className.replace("show", ""); 
+        }, 6000);
     }, 1000)
 }
 
-function triggerSnackbar() {
-    
+function triggerSnackbar(feedback) {
+
     console.log("trigger triggad");
-    (function(){toggleSnackbar()})();
+    (function(){toggleSnackbar(feedback)})();
 }

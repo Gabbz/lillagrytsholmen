@@ -49,7 +49,8 @@ include 'assets/includes/book_cabin.inc.php';
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-			<div id="snackbar"><?php echo $feedback; ?></div>
+			<!--<div id="snackbar"><?php echo $feedback; ?></div>-->
+			<div id="snackbar"></div>
 
 				<?php include 'assets/includes/db_connect.inc.php'; ?>
 
