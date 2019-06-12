@@ -39,8 +39,8 @@
         } 
     }
 
-    echo "{feedback: " . $feedback . ",";
-    echo "fullName: " . $_SESSION['fullname'] . ",";
-    echo "status: 0}";
+    echo "'{\"feedback\": " . $feedback . ",";
+    echo "\"fullName\": " . $_SESSION['fullname'] . ",";
+    echo "\"status\": \"0\"}'";
     
 ?>
