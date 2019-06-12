@@ -1,7 +1,4 @@
 function toggleSnackbar() {
-    
-
-
 
     setTimeout(function(){
 
@@ -12,6 +9,7 @@ function toggleSnackbar() {
 }
 
 function triggerSnackbar() {
+    
     console.log("trigger triggad");
     (function(){toggleSnackbar()})();
 }
