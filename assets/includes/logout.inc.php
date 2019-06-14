@@ -5,9 +5,12 @@
     //if (isset($_SESSION['username'])) {
         
         $_SESSION = [];
-        $_SESSION["logged_out"] = "true";
 
         session_destroy();
+
+        session_start();
+
+        $_SESSION["logged_out"] = "true";
 
     //}
 
