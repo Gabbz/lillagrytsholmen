@@ -36,6 +36,10 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
 		<script src="assets/js/uiActions.js"></script>
+		<script type="text/javascript">
+			var strUser = <?php echo json_encode($session_value); ?>;
+			console.log(strUser);
+		</script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
