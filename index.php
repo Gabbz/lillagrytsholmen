@@ -752,6 +752,9 @@ include 'assets/includes/book_cabin.inc.php';
 					} */
 				});
 			</script>
+
+			<script src="assets/js/snackbar.js" type="text/javascript"></script>
+
 			<script type="text/javascript">
 				var sessionUserName = <?php echo json_encode($session_username); ?>;
 				var sessionName = <?php echo json_encode($session_fullname); ?>;
@@ -762,7 +765,7 @@ include 'assets/includes/book_cabin.inc.php';
 				if (sessionUserName == "no_session" &&isLoggedOut == "true") triggerSnackbar("Du är nu utloggad.");
 			</script>
 
-			<script src="assets/js/snackbar.js" type="text/javascript"></script>
+			
 
 	</body>
 </html>
