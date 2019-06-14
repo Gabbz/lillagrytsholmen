@@ -62,7 +62,8 @@ function login() {
 
         var parsed = JSON.parse(data);
         triggerSnackbar(parsed.feedback);
-        if (data.status == "0")
+        console.log('Loggar in ' + parsed.fullName + ' status: ' + parsed.status)
+        if (parsed.status == "0")
             updateHeader('login', parsed.fullName);
     });
 
