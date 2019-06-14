@@ -193,7 +193,7 @@ include 'assets/includes/book_cabin.inc.php';
 						<!-- personal settings --> 
 							<article id="settings">
 								<h2 class="major">Personliga inställningar</h2>
-								<form name="settings_form" id="settings_form" style="margin: 0;" method="post" action="#">
+								<form name="settings_form" id="settings_form" style="margin: 0;" method="post" action="#" autocomplete="off">
 									<table style="margin: 0;">
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
