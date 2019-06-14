@@ -63,8 +63,10 @@ function login() {
         var parsed = JSON.parse(data);
         triggerSnackbar(parsed.feedback);
         console.log('Loggar in ' + parsed.fullName + ' status: ' + parsed.status)
-        if (parsed.status == "0")
+        if (parsed.status == "0") {
             updateHeader('login', parsed.fullName);
+            window.location.replace('http://ts.jonasborg.eu/lillagrytsholmen/#');
+        }
     });
 
 }
