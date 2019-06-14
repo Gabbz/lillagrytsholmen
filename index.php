@@ -1,6 +1,7 @@
 <?php
 session_start();
-$session_value = (isset($_SESSION['username'])) ? $_SESSION['username'] : 'no_session'; 
+$session_username = (isset($_SESSION['username'])) ? $_SESSION['username'] : 'no_session'; 
+$session_fullname = (isset($_SESSION['fullname'])) ? $_SESSION['username'] : 'no_name'; 
 ?>
 
 <!DOCTYPE HTML>
@@ -37,8 +38,9 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/submit.js"></script>
 		<script src="assets/js/uiActions.js"></script>
 		<script type="text/javascript">
-			var strUser = <?php echo json_encode($session_value); ?>;
-			console.log(strUser);
+			var loginStatus = <?php echo json_encode($session_username); ?>;
+			var sessionName = <?php echo json_encode($session_fullname); ?>;
+			checkLoginStatus(loginStatus, sessionName);
 		</script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->

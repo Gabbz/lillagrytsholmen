@@ -1,7 +1,7 @@
-function checkLoginStatus() {
-    
-    console.log(loginStatus);
+function checkLoginStatus(loginStatus, sessionName) {
 
+    if (loginStatus == 'no_session') updateHeader('logout', '');
+    else updateHeader('login', sessionName);
     console.log(loginStatus);
 }
 
