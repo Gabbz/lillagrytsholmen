@@ -766,7 +766,7 @@ include 'assets/includes/book_cabin.inc.php';
 
 				if (sessionUserName == "no_session" && isLoggedOut == "true") {
 					triggerSnackbar("Du är nu utloggad.");
-					
+					<?php $_SESSION["logged_out"] = "false"; ?>
 				}
 			</script>
 
