@@ -116,7 +116,7 @@ include 'assets/includes/book_cabin.inc.php';
 						<!-- login -->
 							<article id="login">
 								<h2 class="major">Logga in</h2>
-								<form name="login_form" id="login_form" method="post" <?php if (isset($_SESSION['username'])) {echo "action='assets/includes/logout.inc.php'";}else {echo "action='#'";} ?> >
+								<form name="login_form" id="login_form" method="post" <?php //if (isset($_SESSION['username'])) {echo "action='assets/includes/logout.inc.php'";}else {echo "action='#'";} ?> >
 									<label>Användarnamn</label>
 									<input type="text" name="username_login" id="username_login" 
 										value="<?php print $username;?>" placeholder="Enter your username" />
@@ -762,7 +762,9 @@ include 'assets/includes/book_cabin.inc.php';
 
 				var isLoggedOut = <?php echo json_encode($session_logged_out); ?>;
 
-				if (sessionUserName == "no_session" &&isLoggedOut == "true") triggerSnackbar("Du är nu utloggad.");
+				console.log("logout status: " + isLoggedOut);
+
+				if (sessionUserName == "no_session" && isLoggedOut == "true") triggerSnackbar("Du är nu utloggad.");
 			</script>
 
 			
