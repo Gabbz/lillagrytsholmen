@@ -1,6 +1,6 @@
 function checkLoginStatus(sessionUserName, sessionName) {
     
-    console.log("Checkar loginstatus för: " + loginStatus);
+    console.log("Checkar loginstatus för: " + sessionUserName);
 
     if (sessionUserName == 'no_session') updateHeader('logout', '');
     else updateHeader('login', sessionName);
