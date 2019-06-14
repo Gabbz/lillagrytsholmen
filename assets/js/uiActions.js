@@ -2,12 +2,12 @@ function checkLoginStatus(sessionUserName, sessionName) {
     
     console.log("Checkar loginstatus för: " + sessionUserName);
 
-    if (sessionUserName == 'no_session') updateHeader('logout', '');
-    else updateHeader('login', sessionName);
+    if (sessionUserName == 'no_session') updateHeader('logout', '', true);
+    else updateHeader('login', {fullName : sessionName}, true);
     
 }
 
-function updateHeader(action, fullName) {
+function updateHeader(action, sessionData, firstLoad) {
     //console.log($("#header").find('nav').find('form').find('ul').find('li').va);
 
     console.log('uppdaterar header med action: ' + action);
@@ -19,13 +19,33 @@ function updateHeader(action, fullName) {
 
     } else if (action == 'login') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<li><a onclick="logout();" href>Logga ut</a></li>';
-        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
+        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + sessionData.fullName + '</a></p>');
         $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
+
+        if (!firstLoad) {
+            $("#settings_username").attr('value', sessionData.userName);
+            $("#settings_fullname").attr('value', sessionData.fullName);
+            $("#settings_adress").attr('value', sessionData.adress);
+            $("#settings_postal").attr('value', sessionData.postal);
+            $("#settings_city").attr('value', sessionData.city);
+            $("#settings_phone").attr('value', sessionData.phone);
+            $("#settings_email").attr('value', sessionData.email);
+        }
 
     } else {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML =  '<li><a onclick="logout();" href>Logga ut</a></li>';
-        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + fullName + '</a></p>');
+        $("#footer").find('p').append('<p id="settings_toggle">Inloggad: <a href="#settings">' + sessionData.fullName + '</a></p>');
         $("#login").find(".actions")[0].innerHTML = "<li><input type='submit' id='logout_submit' name='logout_submit' onclick='logout();' value='Logga ut'></li>";
+
+        if (!firstLoad) {
+            $("#settings_username").attr('value', sessionData.userName);
+            $("#settings_fullname").attr('value', sessionData.fullName);
+            $("#settings_adress").attr('value', sessionData.adress);
+            $("#settings_postal").attr('value', sessionData.postal);
+            $("#settings_city").attr('value', sessionData.city);
+            $("#settings_phone").attr('value', sessionData.phone);
+            $("#settings_email").attr('value', sessionData.email);
+        }
 
     }
 }
@@ -41,7 +61,7 @@ function logout() {
 
             var username_login = "";
             var password_login = "";
-            updateHeader('logout', '');
+            updateHeader('logout', '', false);
             triggerSnackbar(parsed.feedback);
         } else {
             triggerSnackbar("Något gick fel vid utloggningen.");
@@ -64,7 +84,7 @@ function login() {
         triggerSnackbar(parsed.feedback);
         console.log('Loggar in ' + parsed.fullName + ' status: ' + parsed.status)
         if (parsed.status == "0") {
-            updateHeader('login', parsed.fullName);
+            updateHeader('login', parsed, false);
             window.location.replace('http://ts.jonasborg.eu/lillagrytsholmen/#');
         }
     });

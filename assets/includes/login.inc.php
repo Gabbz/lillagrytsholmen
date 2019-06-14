@@ -42,7 +42,13 @@
     }
 
     echo "{\"feedback\": \"" . $feedback . "\",";
+    echo "\"userName\": \"" . $_SESSION['username'] . "\",";
     echo "\"fullName\": \"" . $_SESSION['fullname'] . "\",";
+    echo "\"phone\": \"" . $_SESSION['phone'] . "\",";
+    echo "\"email\": \"" . $_SESSION['email'] . "\",";
+    echo "\"adress\": \"" . $_SESSION['adress'] . "\",";
+    echo "\"postal\": \"" . $_SESSION['postal'] . "\",";
+    echo "\"city\": \"" . $_SESSION['city'] . "\",";
     echo "\"status\": \"" . $status . "\"}";
     
 ?>
