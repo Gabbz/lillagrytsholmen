@@ -1,9 +1,9 @@
 function checkLoginStatus(sessionUserName, sessionName) {
     
-    if (sessionUserName != 'no_session') updateHeader('login', sessionName);
+    //if (sessionUserName != 'no_session') updateHeader('login', sessionName);
 
-    /*if (loginStatus == 'no_session') updateHeader('logout', '');
-    else updateHeader('login', sessionName);*/
+    if (sessionUserName == 'no_session') updateHeader('logout', '');
+    else updateHeader('login', sessionName);
     //console.log(loginStatus);
 }
 
