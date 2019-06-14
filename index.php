@@ -37,11 +37,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script src="assets/js/pignose.calendar.min.js"></script>
 		<script src="assets/js/submit.js"></script>
 		<script src="assets/js/uiActions.js"></script>
-		<script type="text/javascript">
-			var sessionUserName = <?php echo json_encode($session_username); ?>;
-			var sessionName = <?php echo json_encode($session_fullname); ?>;
-			checkLoginStatus(sessionUserName, sessionName);
-		</script>
+		
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -750,6 +746,11 @@ include 'assets/includes/book_cabin.inc.php';
 						};
 					} */
 				});
+			</script>
+			<script type="text/javascript">
+				var sessionUserName = <?php echo json_encode($session_username); ?>;
+				var sessionName = <?php echo json_encode($session_fullname); ?>;
+				checkLoginStatus(sessionUserName, sessionName);
 			</script>
 
 			<script src="assets/js/snackbar.js" type="text/javascript"></script>
