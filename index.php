@@ -764,7 +764,10 @@ include 'assets/includes/book_cabin.inc.php';
 
 				console.log("logout status: " + isLoggedOut);
 
-				if (sessionUserName == "no_session" && isLoggedOut == "true") triggerSnackbar("Du är nu utloggad.");
+				if (sessionUserName == "no_session" && isLoggedOut == "true") {
+					triggerSnackbar("Du är nu utloggad.");
+					<?php $_SESSION = []; ?>
+				}
 			</script>
 
 			
