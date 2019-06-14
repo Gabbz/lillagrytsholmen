@@ -34,7 +34,7 @@
                 $feedback = "Välkommen " . $_SESSION['fullname'] . "!";
             } else {
                 $feedback = "Felaktigt lösenord eller användarnamn, försök igen!";
-                $status = "401"
+                $status = "401";
             }
             $stmt->close();
         } 
