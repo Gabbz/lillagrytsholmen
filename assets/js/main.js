@@ -106,6 +106,13 @@
 									$main.show();
 									$article.show();
 
+									$(".fake-autofill-fields").show();
+									// some DOM manipulation/ajax here
+									window.setTimeout(function () {
+										$(".fake-autofill-fields").hide();
+									},1);
+
+
 								// Activate article.
 									$article.addClass('active');
 
@@ -140,6 +147,12 @@
 
 									// Show article.
 										$article.show();
+
+										$(".fake-autofill-fields").show();
+										// some DOM manipulation/ajax here
+										window.setTimeout(function () {
+											$(".fake-autofill-fields").hide();
+										},1);
 
 									// Activate article.
 										setTimeout(function() {
@@ -179,6 +192,13 @@
 									// Show main, article.
 										$main.show();
 										$article.show();
+
+										$(".fake-autofill-fields").show();
+										// some DOM manipulation/ajax here
+										window.setTimeout(function () {
+											$(".fake-autofill-fields").hide();
+										},1);
+
 
 									// Activate article.
 										setTimeout(function() {

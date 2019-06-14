@@ -197,10 +197,9 @@ include 'assets/includes/book_cabin.inc.php';
 									<table style="margin: 0;">
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
-												<!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
-												<input style="display:none" type="text" name="fakeusernameremembered"/>
-												<input style="display:none" type="password" name="fakepasswordremembered"/>
 												<label>Anändarnamn</label>
+												<!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+												<input class="fake-autofill-fields" style="display:none" type="text" name="fakeusernameremembered"/>
 												<input type="text" name="settings_username" id="settings_username" 
 													value="<?php print $_SESSION['username'];?>" placeholder="Ange det nya användarnamnet" />
 											</td>
@@ -214,7 +213,8 @@ include 'assets/includes/book_cabin.inc.php';
 											<td>
 												<label>Nytt lösenord</label>
 												<input type="password" name="settings_password" id="settings_password" 
-													value="" placeholder="Ange nytt lösenord" />
+													value="" placeholder="Ange nytt lösenord" 
+													autocomplete="new-password"/>
 											</td>
 											<td>
 												<label>Konfirmera det nya lösenordet</label>
