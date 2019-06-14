@@ -1,8 +1,8 @@
 function checkLoginStatus() {
-    var loginStatus = "<?php echo $session_value; ?>";
+    var loginStatus = <?php echo $session_value; ?>;
     console.log(loginStatus);
 
-    var loginStatus = '<?php echo $_SESSION["username"]';
+    var loginStatus = <?php echo $_SESSION["username"] ?>;
     console.log(loginStatus);
 }
 
