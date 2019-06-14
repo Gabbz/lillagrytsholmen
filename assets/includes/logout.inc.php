@@ -15,6 +15,6 @@
     echo "{\"feedback\": \"" . $feedback . "\",";
     echo "\"status\": \"0\"}";
     
-    //header("Location: /lillagrytsholmen/"); /* Redirect browser */
-    //exit(); 
+    header("Location: /lillagrytsholmen/"); /* Redirect browser */
+    exit(); 
 ?>
