@@ -1,5 +1,11 @@
+function checkLoginStatus() {
+    var loginStatus = '<?php echo $session_value;?>';
+    console.log(loginStatus);
+}
+
 function updateHeader(action, fullName) {
     //console.log($("#header").find('nav').find('form').find('ul').find('li').va);
+
 
     if (action == 'logout') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<a href="#login">Logga in</a>';
@@ -56,4 +62,7 @@ function login() {
     });
 
 }
+
+
+checkLoginStatus();
 

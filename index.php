@@ -1,5 +1,6 @@
 <?php
 session_start();
+$session_value = (isset($_SESSION['username'])) ? $_SESSION['username'] : 'no_session'; 
 ?>
 
 <!DOCTYPE HTML>
