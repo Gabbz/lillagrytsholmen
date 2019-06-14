@@ -197,6 +197,9 @@ include 'assets/includes/book_cabin.inc.php';
 									<table style="margin: 0;">
 										<tr style="background-color: inherit; border: inherit;">
 											<td>
+												<!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+												<input style="display:none" type="text" name="fakeusernameremembered"/>
+												<input style="display:none" type="password" name="fakepasswordremembered"/>
 												<label>Anändarnamn</label>
 												<input type="text" name="settings_username" id="settings_username" 
 													value="<?php print $_SESSION['username'];?>" placeholder="Ange det nya användarnamnet" />
