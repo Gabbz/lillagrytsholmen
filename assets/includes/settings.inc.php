@@ -9,8 +9,6 @@
         $password_encrypt = "";
         $skip = 0;
 
-        //echo $_POST['settings_username'];
-
         $settings_username = htmlspecialchars(trim($_POST['settings_username']));
         $settings_password = htmlspecialchars(trim($_POST['settings_password']));
         $settings_password2 = htmlspecialchars(trim($_POST['settings_password2']));
