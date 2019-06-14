@@ -1,5 +1,11 @@
 <?php
     session_start();
+
+    $_SESSION = [];
+    session_destroy();
+
+    session_start();
+
     include("db_connect.inc.php");
 
     $feedback = "Någonting, gick fel! :( Försök igen eller kontakta administratör!";
