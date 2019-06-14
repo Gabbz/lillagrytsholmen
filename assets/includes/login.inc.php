@@ -3,6 +3,7 @@
     include("db_connect.inc.php");
 
     $feedback = "Någonting, gick fel! :( Försök igen eller kontakta administratör!";
+    $status = "0";
 
     $username = htmlspecialchars(trim($_POST['username_login']));
     $password = htmlspecialchars(trim($_POST['password_login']));
