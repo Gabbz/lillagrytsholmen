@@ -43,6 +43,6 @@
 
     echo "{\"feedback\": \"" . $feedback . "\",";
     echo "\"fullName\": \"" . $_SESSION['fullname'] . "\",";
-    echo "\"status\": \". $status .\"}";
+    echo "\"status\": \"" . $status . "\"}";
     
 ?>
