@@ -63,6 +63,7 @@ function logout() {
             var password_login = "";
             updateHeader('logout', '', false);
             triggerSnackbar(parsed.feedback);
+            window.location.replace('http://ts.jonasborg.eu/lillagrytsholmen');
         } else {
             triggerSnackbar("Något gick fel vid utloggningen.");
         }

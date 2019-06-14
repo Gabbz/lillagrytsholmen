@@ -4,17 +4,18 @@
 
     //if (isset($_SESSION['username'])) {
         
-        $_SESSION = array();
+        $_SESSION = [];
 
         session_destroy();
 
     //}
 
     $feedback = "Du är nu utloggad.";
+    $status = 0;
 
     echo "{\"feedback\": \"" . $feedback . "\",";
-    echo "\"status\": \"0\"}";
+    echo "\"status\": \"" . $status . "\"}";
     
-    header("Location: /lillagrytsholmen/"); /* Redirect browser */
-    exit(); 
+    //header("Location: /lillagrytsholmen/"); /* Redirect browser */
+    //exit(); 
 ?>
