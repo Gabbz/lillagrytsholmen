@@ -30,6 +30,8 @@ function updateHeader(action, sessionData, firstLoad) {
             $("#settings_city").attr('value', sessionData.city);
             $("#settings_phone").attr('value', sessionData.phone);
             $("#settings_email").attr('value', sessionData.email);
+            
+            $("#book_name").attr('value', sessionData.fullName);
         }
 
     } else {
@@ -45,6 +47,8 @@ function updateHeader(action, sessionData, firstLoad) {
             $("#settings_city").attr('value', sessionData.city);
             $("#settings_phone").attr('value', sessionData.phone);
             $("#settings_email").attr('value', sessionData.email);
+
+            $("#book_name").attr('value', sessionData.fullName);
         }
 
     }
