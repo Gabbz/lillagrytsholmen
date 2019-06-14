@@ -40,7 +40,7 @@ include 'assets/includes/book_cabin.inc.php';
 		<script type="text/javascript">
 			var loginStatus = <?php echo json_encode($session_username); ?>;
 			var sessionName = <?php echo json_encode($session_fullname); ?>;
-			checkLoginStatus(loginStatus, sessionName);
+			//checkLoginStatus(loginStatus, sessionName);
 		</script>
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->

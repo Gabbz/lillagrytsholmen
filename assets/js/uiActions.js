@@ -67,3 +67,4 @@ function login() {
 
 }
 
+checkLoginStatus(loginStatus, sessionName);
