@@ -2,6 +2,8 @@
 session_start();
 $session_username = (isset($_SESSION['username'])) ? $_SESSION['username'] : 'no_session'; 
 $session_fullname = (isset($_SESSION['fullname'])) ? $_SESSION['username'] : 'no_name'; 
+$session_logged_out = (isset($_SESSION['logged_out'])) ? $_SESSION['logged_out'] : 'false'; 
+
 ?>
 
 <!DOCTYPE HTML>
@@ -754,6 +756,10 @@ include 'assets/includes/book_cabin.inc.php';
 				var sessionUserName = <?php echo json_encode($session_username); ?>;
 				var sessionName = <?php echo json_encode($session_fullname); ?>;
 				checkLoginStatus(sessionUserName, sessionName);
+
+				var isLoggedOut = <?php echo json_encode($session_logged_out); ?>;
+
+				if (sessionUserName == "no_session" &&isLoggedOut == "true") triggerSnackbar("Du är nu utloggad.");
 			</script>
 
 			<script src="assets/js/snackbar.js" type="text/javascript"></script>
