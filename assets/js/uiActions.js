@@ -1,10 +1,10 @@
-function checkLoginStatus(loginStatus, sessionName) {
+function checkLoginStatus(sessionUserName, sessionName) {
     
-    if (loginStatus != 'no_session') updateHeader('login', sessionName);
+    if (sessionUserName != 'no_session') updateHeader('login', sessionName);
 
     /*if (loginStatus == 'no_session') updateHeader('logout', '');
     else updateHeader('login', sessionName);*/
-    console.log(loginStatus);
+    //console.log(loginStatus);
 }
 
 function updateHeader(action, fullName) {
@@ -67,4 +67,4 @@ function login() {
 
 }
 
-checkLoginStatus(loginStatus, sessionName);
+//checkLoginStatus(loginStatus, sessionName);
