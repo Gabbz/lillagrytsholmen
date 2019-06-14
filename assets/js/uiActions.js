@@ -1,15 +1,16 @@
 function checkLoginStatus(sessionUserName, sessionName) {
     
-    //if (sessionUserName != 'no_session') updateHeader('login', sessionName);
+    console.log("Checkar loginstatus för: " + loginStatus);
 
     if (sessionUserName == 'no_session') updateHeader('logout', '');
     else updateHeader('login', sessionName);
-    //console.log(loginStatus);
+    
 }
 
 function updateHeader(action, fullName) {
     //console.log($("#header").find('nav').find('form').find('ul').find('li').va);
 
+    console.log('uppdaterar header med action: ' + action);
 
     if (action == 'logout') {
         $("#header").find('nav').find('form').find('ul').find('li')[0].innerHTML = '<a href="#login">Logga in</a>';
